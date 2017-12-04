@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98b9b815-3b54-4463-a0da-c63d45ed4e00" name="Default" comment="Prepare wishlist tests">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/appmanager/helpers/PersonalMenuHelper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/appmanager/helpers/RegistrationHelper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/appmanager/helpers/header/HeaderHelper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/tests/registration/CorrectRegistrationTests.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/tests/wishlist/AddToWishlist.java" />
+    <list default="true" id="98b9b815-3b54-4463-a0da-c63d45ed4e00" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/allure-report/app.js" afterPath="" />
       <change beforePath="$PROJECT_DIR$/allure-report/data/behaviors.json" afterPath="" />
@@ -14,8 +10,6 @@
       <change beforePath="$PROJECT_DIR$/allure-report/data/graph.json" afterPath="" />
       <change beforePath="$PROJECT_DIR$/allure-report/data/packages.json" afterPath="" />
       <change beforePath="$PROJECT_DIR$/allure-report/data/suites.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/data/test-cases/1cac511196d921fb.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/data/test-cases/4b3ce28c6d32001f.json" afterPath="" />
       <change beforePath="$PROJECT_DIR$/allure-report/data/timeline.json" afterPath="" />
       <change beforePath="$PROJECT_DIR$/allure-report/data/widgets.json" afterPath="" />
       <change beforePath="$PROJECT_DIR$/allure-report/export/mail.html" afterPath="" />
@@ -29,11 +23,6 @@
       <change beforePath="$PROJECT_DIR$/allure-report/plugins/screen-diff/index.js" afterPath="" />
       <change beforePath="$PROJECT_DIR$/allure-report/plugins/screen-diff/styles.css" afterPath="" />
       <change beforePath="$PROJECT_DIR$/allure-report/styles.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/appmanager/ApplicationManager.java" afterPath="$PROJECT_DIR$/src/test/java/appmanager/ApplicationManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/appmanager/helpers/BaseHelper.java" afterPath="$PROJECT_DIR$/src/test/java/appmanager/helpers/BaseHelper.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/appmanager/helpers/NavigationHelper.java" afterPath="$PROJECT_DIR$/src/test/java/appmanager/helpers/NavigationHelper.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/authorization/CorrectAuthorizationPopUpTests.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/authorization/CorrectAuthorizationTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/authorization/CorrectAuthorizationTests.java" />
       <change beforePath="$PROJECT_DIR$/target/allure-results/5544035e-71de-4586-a31a-9ae91352a2cf-testsuite.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/allure-results/e4bec816-2865-4648-872b-61dd25994124-testsuite.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/allure-results/f2483698-c5d4-43f1-98e9-90eb6e19b622-testsuite.xml" afterPath="" />
@@ -89,7 +78,7 @@
       <file leaf-file-name="RegistrationHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/RegistrationHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="285">
               <caret line="22" column="88" lean-forward="false" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -102,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseHelper.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/BaseHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="21" column="3" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+            <state relative-caret-position="450">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <element signature="e#410#411#0" expanded="true" />
                 <element signature="e#454#455#0" expanded="true" />
@@ -116,10 +105,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CorrectRegistrationTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/registration/CorrectRegistrationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="240">
               <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -131,7 +130,7 @@
       <file leaf-file-name="AddToWishlist.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/wishlist/AddToWishlist.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="120">
               <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -143,7 +142,7 @@
       <file leaf-file-name="NavigationHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/NavigationHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="225">
               <caret line="28" column="70" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="70" />
               <folding>
                 <element signature="e#490#491#0" expanded="true" />
@@ -157,22 +156,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserProfileHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/UserProfileHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="method#getProfileEmail#0;class#UserProfileHelper#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PersonalMenuHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/PersonalMenuHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="120">
               <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -187,7 +174,7 @@
       <file leaf-file-name="HeaderHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/header/HeaderHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="150">
               <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -203,7 +190,7 @@
       <file leaf-file-name="CorrectAuthorizationTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/authorization/CorrectAuthorizationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="225">
               <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
               <folding />
             </state>
@@ -602,7 +589,6 @@
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/gradle.properties" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/java/tests/authorization/CorrectAuthorizationPopUpTests.java" />
         <option value="$PROJECT_DIR$/src/test/resources/allure.properties" />
         <option value="$PROJECT_DIR$/src/test/java/appmanager/helpers/UserProfileHelper.java" />
@@ -615,6 +601,7 @@
         <option value="$PROJECT_DIR$/src/test/java/tests/wishlist/AddToWishlist.java" />
         <option value="$PROJECT_DIR$/src/test/java/appmanager/helpers/NavigationHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/appmanager/helpers/RegistrationHelper.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -641,7 +628,6 @@
     <panes>
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -649,11 +635,6 @@
             <path>
               <item name="butik" type="b2602c69:ProjectViewProjectNode" />
               <item name="butik" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="butik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="butik" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="allure-report" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="butik" type="b2602c69:ProjectViewProjectNode" />
@@ -748,6 +729,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1062,6 +1044,14 @@
       <option name="presentableId" value="Default" />
       <updated>1512287692347</updated>
     </task>
+    <task id="LOCAL-00001" summary="Prepare wishlist tests">
+      <created>1512386748774</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1512386748774</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1098,10 +1088,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1016" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1112,7 +1102,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24567474" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24866596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25133404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3030888" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1125,6 +1115,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1240,7 +1231,12 @@
         <state relative-caret-position="150">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#783#784#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1366,21 +1362,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/allure-results/264db25c-de0c-4a1c-a376-bcac8bdf2ffa-testsuite.xml" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/authorization/CorrectAuthorizationPopUpTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/authorization/CorrectAuthorizationPopUpTests.java" />
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1401,7 +1383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1409,31 +1390,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/allure-results/f2483698-c5d4-43f1-98e9-90eb6e19b622-testsuite.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/allure-results/e4bec816-2865-4648-872b-61dd25994124-testsuite.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="106" lean-forward="false" selection-start-line="1" selection-start-column="106" selection-end-line="1" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/target/allure-results/f2483698-c5d4-43f1-98e9-90eb6e19b622-testsuite.xml" />
+    <entry file="file://$PROJECT_DIR$/target/allure-results/e4bec816-2865-4648-872b-61dd25994124-testsuite.xml" />
     <entry file="file://$PROJECT_DIR$/src/test/resources/allure.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1468,7 +1433,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/PersonalMenuHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="120">
           <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1481,7 +1446,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/header/HeaderHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="150">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1495,7 +1460,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/authorization/CorrectAuthorizationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="225">
           <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
           <folding />
         </state>
@@ -1503,7 +1468,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/wishlist/AddToWishlist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="120">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1513,7 +1478,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/NavigationHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="225">
           <caret line="28" column="70" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="70" />
           <folding>
             <element signature="e#490#491#0" expanded="true" />
@@ -1528,7 +1493,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/registration/CorrectRegistrationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="240">
           <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1538,7 +1503,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/RegistrationHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="285">
           <caret line="22" column="88" lean-forward="false" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1563,13 +1528,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/BaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="21" column="3" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+        <state relative-caret-position="450">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
             <element signature="e#410#411#0" expanded="true" />
             <element signature="e#454#455#0" expanded="true" />
             <element signature="method#isAlertPresent#0;class#BaseHelper#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
