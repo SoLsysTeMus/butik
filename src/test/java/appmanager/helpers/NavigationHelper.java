@@ -1,5 +1,6 @@
 package appmanager.helpers;
 
+import appmanager.ApplicationManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,13 +18,14 @@ public class NavigationHelper extends BaseHelper {
    }
 
    public void openLoginPage() {
-      wd.get("http://butik.ru/login");
+      wd.get(ApplicationManager.getBaseUrl() + "login");
    }
 
-   public void gotoProfile()  {
-      Actions action = new Actions(wd);
-      WebElement we = wd.findElement(By.xpath("/html/body/header/div[2]/div[5]/div[4]/div/div[1]/span"));
-      action.moveToElement(we).moveToElement(wd.findElement(By.xpath("/html/body/header/div[2]/div[5]/div[4]/div/div[1]/span"))).build().perform();
-      click(By.xpath("(//a[contains(text(),'Персональные данные')])[2]"));
+   public void openRegistrationPage() {
+      wd.get(ApplicationManager.getBaseUrl() + "register");
+   }
+
+   public void gotoRegistrationPopUpForm(){
+      click(By.xpath("//*[@id=\"authPopup\"]/div[2]/div[1]/div[2]/span"));
    }
 }

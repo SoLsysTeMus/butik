@@ -2,7 +2,9 @@ package appmanager.helpers;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class BaseHelper {
 
@@ -23,8 +25,6 @@ public class BaseHelper {
       wd.findElement(locator).sendKeys(text);
    }
 
-
-
    public boolean isAlertPresent() {
       try {
          wd.switchTo().alert();
@@ -32,6 +32,12 @@ public class BaseHelper {
       } catch (NoAlertPresentException e) {
          return false;
       }
+   }
+
+   protected void moveTo(By locator) {
+       Actions action = new Actions(wd);
+       WebElement we = wd.findElement(locator);
+       action.moveToElement(we).moveToElement(wd.findElement(locator)).build().perform();
    }
 }
 
