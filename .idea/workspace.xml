@@ -4,28 +4,6 @@
     <list default="true" id="98b9b815-3b54-4463-a0da-c63d45ed4e00" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/allure-report/app.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/data/behaviors.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/data/categories.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/data/graph.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/data/packages.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/data/suites.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/data/timeline.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/data/widgets.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/export/mail.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/export/summary.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/history/history-trend.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/history/history.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/plugins/behaviors/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/plugins/packages/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/plugins/screen-diff/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/plugins/screen-diff/styles.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/allure-report/styles.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/5544035e-71de-4586-a31a-9ae91352a2cf-testsuite.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/e4bec816-2865-4648-872b-61dd25994124-testsuite.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/f2483698-c5d4-43f1-98e9-90eb6e19b622-testsuite.xml" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -108,8 +86,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1051,7 +1029,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512386748774</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Delete allures dir">
+      <created>1512388108396</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1512388108400</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1152,7 +1137,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactoring tests" />
     <MESSAGE value="Prepare wishlist tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prepare wishlist tests" />
+    <MESSAGE value="Delete allures dir" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete allures dir" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1540,8 +1526,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
