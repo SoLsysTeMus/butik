@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
 
     ChromeDriver wd;
-    public static String baseUrl = "https://stage.butik.ru/";
+    public static String baseUrl = "http://dev2.butik.ru/";
 
     private NavigationHelper navigationHelper;
     private RegistrationHelper registrationHelper;

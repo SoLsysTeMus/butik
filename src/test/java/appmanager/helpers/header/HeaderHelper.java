@@ -13,4 +13,10 @@ public class HeaderHelper extends BaseHelper{
     public void openPersonalMenu(){
         moveTo(By.xpath("/html/body/header/div[2]/div[5]/div[4]/div/div[1]/span"));
     }
+
+    public void gotoWishlist(){
+        click(By.xpath("/html/body/header/div[2]/div[5]/div[3]/a/div"));
+    }
+
+
 }

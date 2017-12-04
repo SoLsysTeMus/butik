@@ -25,6 +25,19 @@ public class BaseHelper {
       wd.findElement(locator).sendKeys(text);
    }
 
+   protected void moveTo(By locator) {
+      Actions action = new Actions(wd);
+      WebElement we = wd.findElement(locator);
+      action.moveToElement(we).moveToElement(wd.findElement(locator)).build().perform();
+   }
+
+   protected void getTitle(){
+      wd.getTitle();
+   }
+
+
+
+
    public boolean isAlertPresent() {
       try {
          wd.switchTo().alert();
@@ -34,10 +47,6 @@ public class BaseHelper {
       }
    }
 
-   protected void moveTo(By locator) {
-       Actions action = new Actions(wd);
-       WebElement we = wd.findElement(locator);
-       action.moveToElement(we).moveToElement(wd.findElement(locator)).build().perform();
-   }
+
 }
 
