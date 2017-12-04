@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
 
     ChromeDriver wd;
+
     public static String baseUrl = "http://dev2.butik.ru/";
 
     private NavigationHelper navigationHelper;
@@ -20,11 +21,15 @@ public class ApplicationManager {
 
     public void init() {
 
-        System.setProperty("webdriver.chrome.driver", "/home/sol/drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         wd = new ChromeDriver();
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         wd.get(baseUrl);
 
+        initHelpers();
+    }
+
+    private void initHelpers() {
         navigationHelper = new NavigationHelper(wd);
         registrationHelper = new RegistrationHelper(wd);
         authorizationHelper = new AuthorizationHelper(wd);

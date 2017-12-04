@@ -16,4 +16,4 @@ gradle-app.setting
 allure-report/
 target/
 out/
-src/main/
+/.idea/workspace.xml
