@@ -26,9 +26,7 @@ public class BaseHelper {
    }
 
    protected void moveTo(By locator) {
-      Actions action = new Actions(wd);
-      WebElement we = wd.findElement(locator);
-      action.moveToElement(we).moveToElement(wd.findElement(locator)).build().perform();
+      new Actions(wd).moveToElement(wd.findElement(locator)).build().perform();
    }
 
    public void getTitle(){
