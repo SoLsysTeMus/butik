@@ -6,6 +6,8 @@ import tests.BaseTest;
 
 public class CheckWishlistCounter extends BaseTest{
 
+
+
     @Test
     public void testWishlistCounter(){
 

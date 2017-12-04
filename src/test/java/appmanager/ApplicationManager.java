@@ -20,6 +20,7 @@ public class ApplicationManager {
    private PersonalMenuHelper personalMenuHelper;
    private HeaderHelper headerHelper;
    private MainMenuHelper mainMenuHelper;
+   private CatalogHelper catalogHelper;
 
    public void init() {
 
@@ -40,6 +41,7 @@ public class ApplicationManager {
       userProfileHelper = new UserProfileHelper(wd);
       personalMenuHelper = new PersonalMenuHelper(wd);
       headerHelper = new HeaderHelper(wd);
+      catalogHelper = new CatalogHelper(wd);
    }
 
    public void stop() {
@@ -72,6 +74,10 @@ public class ApplicationManager {
 
    public MainMenuHelper getMainMenuHelper() {
       return mainMenuHelper;
+   }
+
+   public CatalogHelper getCatalogHelper() {
+      return catalogHelper;
    }
 
    public static String getBaseUrl() {
