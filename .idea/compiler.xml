@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="allure-testng-gradle-example_main" target="1.8" />
+      <module name="allure-testng-gradle-example_test" target="1.8" />
       <module name="butik_main" target="1.8" />
       <module name="butik_test" target="1.8" />
     </bytecodeTargetLevel>

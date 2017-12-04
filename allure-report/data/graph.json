@@ -1,0 +1,21 @@
+[ {
+  "uid" : "1cac511196d921fb",
+  "name" : "testCorrectAuthorization",
+  "time" : {
+    "start" : 1512371328033,
+    "stop" : 1512371332194,
+    "duration" : 4161
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4b3ce28c6d32001f",
+  "name" : "testCorrectAuthorizationPopUp",
+  "time" : {
+    "start" : 1512371318578,
+    "stop" : 1512371324725,
+    "duration" : 6147
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

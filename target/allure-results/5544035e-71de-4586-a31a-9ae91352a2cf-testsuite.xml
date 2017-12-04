@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1512371094260" stop="1512371108641">
+    <name>Gradle suite</name>
+    <test-cases>
+        <test-case start="1512371098094" stop="1512371102072" status="passed">
+            <name>testCorrectAuthorizationPopUp</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+        <test-case start="1512371105016" stop="1512371108570" status="passed">
+            <name>testCorrectAuthorization</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+    </test-cases>
+    <labels/>
+</ns2:test-suite>

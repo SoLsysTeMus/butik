@@ -1,0 +1,29 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "testCorrectAuthorizationPopUp",
+    "uid" : "4b3ce28c6d32001f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1512371318578,
+      "stop" : 1512371324725,
+      "duration" : 6147
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "testCorrectAuthorization",
+    "uid" : "1cac511196d921fb",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1512371328033,
+      "stop" : 1512371332194,
+      "duration" : 4161
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  } ],
+  "name" : "behaviors"
+}

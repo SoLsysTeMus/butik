@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/butik.iml" filepath="$PROJECT_DIR$/.idea/butik.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/butik.iml" filepath="$PROJECT_DIR$/.idea/modules/butik.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/butik_main.iml" filepath="$PROJECT_DIR$/.idea/modules/butik_main.iml" group="butik" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/butik_test.iml" filepath="$PROJECT_DIR$/.idea/modules/butik_test.iml" group="butik" />
     </modules>

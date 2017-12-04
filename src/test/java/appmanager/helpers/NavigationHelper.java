@@ -24,6 +24,6 @@ public class NavigationHelper extends BaseHelper {
       Actions action = new Actions(wd);
       WebElement we = wd.findElement(By.xpath("/html/body/header/div[2]/div[5]/div[4]/div/div[1]/span"));
       action.moveToElement(we).moveToElement(wd.findElement(By.xpath("/html/body/header/div[2]/div[5]/div[4]/div/div[1]/span"))).build().perform();
-      wd.findElement(By.xpath("(//a[contains(text(),'Персональные данные')])[2]")).click();
+      click(By.xpath("(//a[contains(text(),'Персональные данные')])[2]"));
    }
 }
