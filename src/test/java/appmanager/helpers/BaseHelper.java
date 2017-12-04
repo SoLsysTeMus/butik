@@ -5,6 +5,8 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseHelper {
 
@@ -52,6 +54,11 @@ public class BaseHelper {
 
    protected String getTextForElement(By locator){
       return wd.findElement(locator).getText();
+   }
+
+   protected void waitLoadingElement(By locator, int timeOutInSeconds) {
+      WebDriverWait wait = new WebDriverWait(wd, timeOutInSeconds);
+      WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
    }
 }
 
