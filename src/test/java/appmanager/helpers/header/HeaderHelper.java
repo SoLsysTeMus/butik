@@ -18,5 +18,10 @@ public class HeaderHelper extends BaseHelper{
         click(By.xpath("/html/body/header/div[2]/div[5]/div[3]/a/div"));
     }
 
+    public int getWishlistItemscount(){
+       System.out.println(getTextForElement(By.xpath("/html/body/header/div[2]/div[5]/div[3]/a/div/span")));
+       return Integer.parseInt(getTextForElement(By.xpath("/html/body/header/div[2]/div[5]/div[3]/a/div/span")));
+    }
+
 
 }

@@ -31,7 +31,7 @@ public class BaseHelper {
       action.moveToElement(we).moveToElement(wd.findElement(locator)).build().perform();
    }
 
-   protected void getTitle(){
+   public void getTitle(){
       wd.getTitle();
    }
 
@@ -48,5 +48,12 @@ public class BaseHelper {
    }
 
 
+   protected String getValueForElement(By locator) {
+       return wd.findElement(locator).getAttribute("value");
+   }
+
+   protected String getTextForElement(By locator){
+      return wd.findElement(locator).getText();
+   }
 }
 
