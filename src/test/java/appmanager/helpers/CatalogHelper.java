@@ -10,8 +10,8 @@ public class CatalogHelper extends BaseHelper {
    }
 
    public int getProductsCountInCategory(){
-      waitLoadingElement(By.xpath("/html/body/div[2]/div[1]/div[2]/div[1]/div/span[2]"), 5);
-      return Integer.parseInt(getTextForElement(By.xpath("/html/body/div[2]/div[1]/div[2]/div[1]/div/span[2]")).replaceAll("\\D",""));
+      waitLoadingElement(By.xpath("//span[contains(text(),'товар')]"), 5);
+      return Integer.parseInt(getTextForElement(By.xpath("//span[contains(text(),'товар')]")).replaceAll("\\D",""));
    }
 
 

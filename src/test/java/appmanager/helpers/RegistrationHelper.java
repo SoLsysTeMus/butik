@@ -11,7 +11,8 @@ public class RegistrationHelper extends BaseHelper{
 
 
     public void fillPopUpRegistrationForm(String name, String randomEmail, String password) {
-        type(By.cssSelector("#js-registration-name"), name);
+        waitLoadingElement(By.xpath("//*[@id=\"js-registration-name\"]"),5);
+        type(By.xpath("//*[@id=\"js-registration-name\"]"), name);
         type(By.xpath("//*[@id=\"authPopup\"]/div[2]/div[2]/div/div[2]/form/div[2]/input"), randomEmail);
         type(By.xpath("//*[@id=\"authPopup\"]/div[2]/div[2]/div/div[2]/form/div[5]/input"), password);
     }

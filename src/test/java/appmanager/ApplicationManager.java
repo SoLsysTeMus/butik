@@ -11,7 +11,7 @@ public class ApplicationManager {
 
    ChromeDriver wd;
 
-   public static String baseUrl = "https://butik.ru/";
+   public static String baseUrl = "http://dev2.butik.ru/";
 
    private NavigationHelper navigationHelper;
    private RegistrationHelper registrationHelper;
@@ -24,7 +24,7 @@ public class ApplicationManager {
 
    public void init() {
 
-      System.setProperty("webdriver.chrome.driver", "/home/solsystem/qa/chromedriver");
+      System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
       wd = new ChromeDriver();
       wd.manage().window().maximize();
       wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
