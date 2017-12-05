@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class AuthorizationHelper extends BaseHelper{
+public class AuthorizationHelper extends BaseHelper {
 
    public AuthorizationHelper(ChromeDriver wd) {
       super(wd);
@@ -12,12 +12,12 @@ public class AuthorizationHelper extends BaseHelper{
 
    public void fillPopUpAuthorizationForm(String login, String password) {
       type(By.id("js-login-email"), login);
-      type(By.xpath("//input[@type='password']"),password);
+      type(By.xpath("//input[@type='password']"), password);
    }
 
    public void fillAuthorizationForm(String login, String password) {
       type(By.xpath("/html/body/div[2]/div[1]/div/div[1]/form/div[1]/input"), login);
-      type(By.xpath("//input[@type='password']"),password);
+      type(By.xpath("//input[@type='password']"), password);
    }
 
    public void submitPopUpLoginData() {

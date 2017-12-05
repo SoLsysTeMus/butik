@@ -25,7 +25,7 @@ public class NavigationHelper extends BaseHelper {
       wd.get(ApplicationManager.getBaseUrl() + "register");
    }
 
-   public void gotoRegistrationPopUpForm(){
+   public void gotoRegistrationPopUpForm() {
       click(By.xpath("//*[@id=\"authPopup\"]/div[2]/div[1]/div[2]/span"));
    }
 }

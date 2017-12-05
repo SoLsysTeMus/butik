@@ -31,13 +31,9 @@ public class BaseHelper {
       new Actions(wd).moveToElement(wd.findElement(locator)).build().perform();
    }
 
-   public void getTitle(){
+   public void getTitle() {
       wd.getTitle();
    }
-
-
-
-
 
 
    public boolean isAlertPresent() {
@@ -51,10 +47,10 @@ public class BaseHelper {
 
 
    protected String getValueForElement(By locator) {
-       return wd.findElement(locator).getAttribute("value");
+      return wd.findElement(locator).getAttribute("value");
    }
 
-   protected String getTextForElement(By locator){
+   protected String getTextForElement(By locator) {
       return wd.findElement(locator).getText();
    }
 

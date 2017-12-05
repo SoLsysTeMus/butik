@@ -3,7 +3,7 @@ package appmanager.helpers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ProductCardHelpers extends BaseHelper{
+public class ProductCardHelpers extends BaseHelper {
 
    public ProductCardHelpers(ChromeDriver wd) {
       super(wd);
