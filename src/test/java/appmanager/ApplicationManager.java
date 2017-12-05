@@ -11,7 +11,7 @@ public class ApplicationManager {
 
    ChromeDriver wd;
 
-   public static String baseUrl = "http://dev2.butik.ru/";
+   public static String baseUrl = "https://stage.butik.ru/";
 
    private NavigationHelper navigationHelper;
    private RegistrationHelper registrationHelper;
@@ -21,6 +21,7 @@ public class ApplicationManager {
    private HeaderHelper headerHelper;
    private MainMenuHelper mainMenuHelper;
    private CatalogHelper catalogHelper;
+   private ProductCardHelpers productCardHelpers;
 
    public void init() {
 
@@ -42,6 +43,7 @@ public class ApplicationManager {
       personalMenuHelper = new PersonalMenuHelper(wd);
       headerHelper = new HeaderHelper(wd);
       catalogHelper = new CatalogHelper(wd);
+      productCardHelpers = new ProductCardHelpers(wd);
    }
 
    public void stop() {
@@ -78,6 +80,10 @@ public class ApplicationManager {
 
    public CatalogHelper getCatalogHelper() {
       return catalogHelper;
+   }
+
+   public ProductCardHelpers getProductCardHelpers() {
+      return productCardHelpers;
    }
 
    public static String getBaseUrl() {
