@@ -33,7 +33,7 @@ public class ApplicationManager {
       wd = null;
       try {
          wd = new RemoteWebDriver(new URL("http://172.16.83.128:32768/wd/hub"),
-                 DesiredCapabilities.chrome());
+                 DesiredCapabilities.firefox());
       } catch (MalformedURLException e) {
          e.printStackTrace();
       }
