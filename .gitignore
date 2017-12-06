@@ -1,6 +1,6 @@
 .gradle
 build/
-
+.idea/workspace.xml
 # Ignore Gradle GUI config
 gradle-app.setting
 
@@ -14,6 +14,5 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 allure-report/
-target/
 out/
-/.idea/workspace.xml
+
