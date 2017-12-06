@@ -2,13 +2,14 @@ package appmanager.helpers;
 
 import appmanager.ApplicationManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class NavigationHelper extends BaseHelper {
 
-   public NavigationHelper(ChromeDriver wd) {
+   public NavigationHelper(WebDriver wd) {
       super(wd);
    }
 

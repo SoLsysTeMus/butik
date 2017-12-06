@@ -2,11 +2,12 @@ package appmanager.helpers.header;
 
 import appmanager.helpers.BaseHelper;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HeaderHelper extends BaseHelper{
 
-    public HeaderHelper(ChromeDriver wd) {
+    public HeaderHelper(WebDriver wd) {
         super(wd);
     }
 

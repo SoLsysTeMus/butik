@@ -1,12 +1,13 @@
 package appmanager.helpers;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
 public class AuthorizationHelper extends BaseHelper {
 
-   public AuthorizationHelper(ChromeDriver wd) {
+   public AuthorizationHelper(WebDriver wd) {
       super(wd);
    }
 

@@ -3,13 +3,18 @@ package appmanager;
 import appmanager.helpers.*;
 import appmanager.helpers.header.HeaderHelper;
 import appmanager.helpers.header.MainMenuHelper;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
 
-   ChromeDriver wd;
+   protected WebDriver wd;
 
    public static String baseUrl = "https://stage.butik.ru/";
 
@@ -25,9 +30,14 @@ public class ApplicationManager {
 
    public void init() {
 
-      System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
-      wd = new ChromeDriver();
-      wd.manage().window().maximize();
+      wd = null;
+      try {
+         wd = new RemoteWebDriver(new URL("http://172.16.83.128:32768/wd/hub"),
+                 DesiredCapabilities.chrome());
+      } catch (MalformedURLException e) {
+         e.printStackTrace();
+      }
+      //wd.manage().window().;
       wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
       wd.get(baseUrl);
 

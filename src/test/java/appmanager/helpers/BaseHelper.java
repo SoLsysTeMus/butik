@@ -2,6 +2,7 @@ package appmanager.helpers;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -10,9 +11,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseHelper {
 
-   protected ChromeDriver wd;
+   protected WebDriver wd;
 
-   public BaseHelper(ChromeDriver wd) {
+   public BaseHelper(WebDriver wd) {
       this.wd = wd;
    }
 
