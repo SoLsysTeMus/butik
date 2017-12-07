@@ -57,7 +57,7 @@ public class BaseHelper {
 
    protected void waitLoadingElement(By locator, int timeOutInSeconds) {
       WebDriverWait wait = new WebDriverWait(wd, timeOutInSeconds);
-      WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+      WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
    }
 }
 

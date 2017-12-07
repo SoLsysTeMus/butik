@@ -10,7 +10,10 @@ public class BaseTest {
 
       @BeforeMethod
       public void setUp() throws Exception {
+         Thread test = new Thread();
+         test.run();
          app.init();
+
       }
 
       @AfterMethod

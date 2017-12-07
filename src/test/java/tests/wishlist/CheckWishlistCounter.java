@@ -5,8 +5,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-public class CheckWishlistCounter extends BaseTest {
+import static appmanager.ApplicationManager.baseUrl;
 
+public class CheckWishlistCounter extends BaseTest {
 
    @Test
    public void testWishlistCounter() {
@@ -28,11 +29,11 @@ public class CheckWishlistCounter extends BaseTest {
       String testLoginEmail = "testwishlist@testwishlist.ru";
       String testPassword = "12345";
 
-      app.getMainMenuHelper().gotoCategory(By.xpath("//header/div[2]/div[4]/nav[1]/div[1]/span"));
+
+      app.getNavigationHelper().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-black-gubka/");
       app.getNavigationHelper().openAuthorizationPopUp();
       app.getAuthorizationHelper().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.getAuthorizationHelper().submitPopUpLoginData();
-      app.getCatalogHelper().openFirstProductCard();
       app.getProductCardHelpers().addToWishlist();
       app.getHeaderHelper().gotoWishlist();
 
@@ -45,12 +46,11 @@ public class CheckWishlistCounter extends BaseTest {
       String testLoginEmail = "testwishlist@testwishlist.ru";
       String testPassword = "12345";
 
-      app.getMainMenuHelper().gotoCategory(By.xpath("//header/div[2]/div[4]/nav[1]/div[1]/span"));
+      app.getNavigationHelper().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-black-gubka/");
       app.getNavigationHelper().openAuthorizationPopUp();
       app.getAuthorizationHelper().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.getAuthorizationHelper().submitPopUpLoginData();
-      app.getCatalogHelper().openFirstProductCard();
-      app.getProductCardHelpers().ramoveFromlist();
+      app.getProductCardHelpers().removeFromlist();
       app.getHeaderHelper().gotoWishlist();
 
       Assert.assertEquals(app.getHeaderHelper().getWishlistItemscount(), 47);

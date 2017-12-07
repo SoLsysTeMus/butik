@@ -12,10 +12,12 @@ public class ProductCardHelpers extends BaseHelper {
 
 
    public void addToWishlist() {
-      click(By.xpath("/html/body/div[2]/div[1]/div[3]/div[1]/div[4]/div[2]/button"));
+      waitLoadingElement(By.xpath("html/body/div[2]/div[1]/div[3]/div[1]/div[4]/div[2]/button"),5);
+      click(By.xpath("html/body/div[2]/div[1]/div[3]/div[1]/div[4]/div[2]/button"));
    }
 
-   public void ramoveFromlist() {
-      click(By.xpath("/html/body/div[2]/div[1]/div[3]/div[1]/div[4]/div[2]/button/i"));
+   public void removeFromlist() {
+      waitLoadingElement(By.xpath("html/body/div[2]/div[1]/div[3]/div[1]/div[4]/div[2]/button"),5);
+      click(By.xpath("html/body/div[2]/div[1]/div[3]/div[1]/div[4]/div[2]/button"));
    }
 }

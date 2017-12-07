@@ -15,6 +15,7 @@ public class CatalogHelper extends BaseHelper {
    }
 
    public void openFirstProductCard() {
+      waitLoadingElement(By.xpath("/html/body/div[2]/div[1]/div[4]/div[1]/div/div[6]/div[1]/div[1]/a"), 5);
       click(By.xpath("/html/body/div[2]/div[1]/div[4]/div[1]/div/div[6]/div[1]/div[1]/a"));
    }
 
