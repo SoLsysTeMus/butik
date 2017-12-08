@@ -59,6 +59,8 @@ public class ApplicationManager {
       DesiredCapabilities capabilities = new DesiredCapabilities();
       capabilities.setBrowserName("firefox");
       capabilities.setVersion("56.0");
+      capabilities.setCapability("enableVNC",true);
+      capabilities.setCapability("enableVideo",true);
 
       try {
          wd = new RemoteWebDriver(

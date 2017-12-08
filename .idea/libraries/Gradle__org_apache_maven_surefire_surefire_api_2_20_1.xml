@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.maven.surefire:surefire-api:2.20.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.maven.surefire/surefire-api/2.20.1/281785202e198b6cd2d3c75f10fb8c73f8fbbaa3/surefire-api-2.20.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.maven.surefire/surefire-api/2.20.1/1d046755e895419b63ef5d34e7142cecc0553fc5/surefire-api-2.20.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,16 +1,15 @@
 package tests.wishlist;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static appmanager.ApplicationManager.baseUrl;
 
-public class CheckWishlistCounter extends BaseTest {
+public class WishlistTests extends BaseTest {
 
    @Test
-   public void testWishlistCounter() {
+   public void testWishlistCounterVisibleInHeader() {
 
       String testLoginEmail = "testwishlist@testwishlist.ru";
       String testPassword = "12345";
