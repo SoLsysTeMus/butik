@@ -1,20 +1,23 @@
 package appmanager.helpers;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ProductCardHelpers extends BaseHelper {
 
-   public ProductCardHelpers(ChromeDriver wd) {
+   public ProductCardHelpers(WebDriver wd) {
       super(wd);
    }
 
 
    public void addToWishlist() {
-      click(By.xpath("/html/body/div[2]/div[1]/div[3]/div[1]/div[4]/div[2]/button"));
+      waitLoadingElement(By.xpath("html/body/div[2]/div[1]/div[3]/div[1]/div[4]/div[2]/button"),5);
+      click(By.xpath("html/body/div[2]/div[1]/div[3]/div[1]/div[4]/div[2]/button"));
    }
 
-   public void ramoveFromlist() {
-      click(By.xpath("/html/body/div[2]/div[1]/div[3]/div[1]/div[4]/div[2]/button/i"));
+   public void removeFromlist() {
+      waitLoadingElement(By.xpath("html/body/div[2]/div[1]/div[3]/div[1]/div[4]/div[2]/button"),5);
+      click(By.xpath("html/body/div[2]/div[1]/div[3]/div[1]/div[4]/div[2]/button"));
    }
 }

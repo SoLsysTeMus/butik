@@ -3,15 +3,28 @@ package appmanager;
 import appmanager.helpers.*;
 import appmanager.helpers.header.HeaderHelper;
 import appmanager.helpers.header.MainMenuHelper;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.MalformedURLException;
+import java.net.URI;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
 
-   ChromeDriver wd;
+   protected WebDriver wd;
 
    public static String baseUrl = "https://stage.butik.ru/";
+
+   private String browser = BrowserType.CHROME;
+   private boolean useSelenoid = false;
+
 
    private NavigationHelper navigationHelper;
    private RegistrationHelper registrationHelper;
@@ -25,13 +38,58 @@ public class ApplicationManager {
 
    public void init() {
 
-      System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
-      wd = new ChromeDriver();
-      wd.manage().window().maximize();
-      wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+      if (useSelenoid) {
+         initSelenoidDriver();
+      } else {
+         initLocalDriver();
+      }
+
       wd.get(baseUrl);
 
       initHelpers();
+   }
+
+   private void initLocalDriver() {
+
+      switch (browser) {
+         case BrowserType.FIREFOX:
+            System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
+            wd = new FirefoxDriver();
+            break;
+         case BrowserType.CHROME:
+            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+            wd = new ChromeDriver();
+            break;
+         case BrowserType.IE:
+            System.setProperty("webdriver.ie.driver", "drivers/IEDriverServer.exe");
+            wd = new InternetExplorerDriver();
+            break;
+      }
+
+      wd.manage().window().setSize(new Dimension(1920,1080));
+      wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+
+   }
+
+   private void initSelenoidDriver() {
+
+      DesiredCapabilities capabilities = new DesiredCapabilities();
+      capabilities.setBrowserName("chrome");
+      capabilities.setVersion("63.0");
+      capabilities.setCapability("enableVNC",true);
+      capabilities.setCapability("enableVideo",true);
+
+      try {
+         wd = new RemoteWebDriver(
+                 URI.create("http://172.16.83.128:4444/wd/hub").toURL(),
+                 capabilities
+         );
+      } catch (MalformedURLException e) {
+         e.printStackTrace();
+      }
+      wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+      wd.manage().window().setSize(new Dimension(1920,1080));
    }
 
    private void initHelpers() {

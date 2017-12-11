@@ -1,11 +1,12 @@
 package appmanager.helpers;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class UserProfileHelper extends BaseHelper {
 
-   public UserProfileHelper(ChromeDriver wd) {
+   public UserProfileHelper(WebDriver wd) {
       super(wd);
    }
 

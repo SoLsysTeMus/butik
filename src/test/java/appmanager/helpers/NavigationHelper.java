@@ -2,13 +2,14 @@ package appmanager.helpers;
 
 import appmanager.ApplicationManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class NavigationHelper extends BaseHelper {
 
-   public NavigationHelper(ChromeDriver wd) {
+   public NavigationHelper(WebDriver wd) {
       super(wd);
    }
 
@@ -28,4 +29,6 @@ public class NavigationHelper extends BaseHelper {
    public void gotoRegistrationPopUpForm() {
       click(By.xpath("//*[@id=\"authPopup\"]/div[2]/div[1]/div[2]/span"));
    }
+
+   public void openUrl(String url){ wd.get(url);}
 }

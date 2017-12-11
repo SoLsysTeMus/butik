@@ -1,11 +1,12 @@
 package appmanager.helpers;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class PersonalMenuHelper extends BaseHelper {
 
-   public PersonalMenuHelper(ChromeDriver wd) {
+   public PersonalMenuHelper(WebDriver wd) {
       super(wd);
    }
 

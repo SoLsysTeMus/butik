@@ -1,16 +1,18 @@
 package appmanager.helpers;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
 public class AuthorizationHelper extends BaseHelper {
 
-   public AuthorizationHelper(ChromeDriver wd) {
+   public AuthorizationHelper(WebDriver wd) {
       super(wd);
    }
 
    public void fillPopUpAuthorizationForm(String login, String password) {
+      waitLoadingElement(By.id("js-login-email"),5);
       type(By.id("js-login-email"), login);
       type(By.xpath("//input[@type='password']"), password);
    }
