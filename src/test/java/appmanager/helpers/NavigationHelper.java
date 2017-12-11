@@ -1,11 +1,12 @@
 package appmanager.helpers;
 
-import appmanager.ApplicationManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+
+
+import static appmanager.ApplicationManager.baseUrl;
+import static appmanager.ApplicationManager.getBaseUrl;
 
 public class NavigationHelper extends BaseHelper {
 
@@ -19,11 +20,11 @@ public class NavigationHelper extends BaseHelper {
    }
 
    public void openLoginPage() {
-      wd.get(ApplicationManager.getBaseUrl() + "login");
+      wd.get(getBaseUrl() + "login");
    }
 
    public void openRegistrationPage() {
-      wd.get(ApplicationManager.getBaseUrl() + "register");
+      wd.get(getBaseUrl() + "register");
    }
 
    public void gotoRegistrationPopUpForm() {
@@ -31,4 +32,6 @@ public class NavigationHelper extends BaseHelper {
    }
 
    public void openUrl(String url){ wd.get(url);}
+
+   public void gotoCheckout() { wd.get(baseUrl + "checkout");}
 }

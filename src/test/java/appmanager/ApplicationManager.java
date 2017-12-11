@@ -35,6 +35,7 @@ public class ApplicationManager {
    private MainMenuHelper mainMenuHelper;
    private CatalogHelper catalogHelper;
    private ProductCardHelpers productCardHelpers;
+   private CheckoutHelper checkoutHelper;
 
    public void init() {
 
@@ -102,6 +103,7 @@ public class ApplicationManager {
       headerHelper = new HeaderHelper(wd);
       catalogHelper = new CatalogHelper(wd);
       productCardHelpers = new ProductCardHelpers(wd);
+      checkoutHelper = new CheckoutHelper(wd);
    }
 
    public void stop() {
@@ -146,6 +148,10 @@ public class ApplicationManager {
 
    public static String getBaseUrl() {
       return baseUrl;
+   }
+
+   public CheckoutHelper getCheckoutHelper() {
+      return checkoutHelper;
    }
 }
 

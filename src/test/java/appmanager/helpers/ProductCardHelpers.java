@@ -20,4 +20,9 @@ public class ProductCardHelpers extends BaseHelper {
       waitLoadingElement(By.xpath("html/body/div[2]/div[1]/div[3]/div[1]/div[4]/div[2]/button"),5);
       click(By.xpath("html/body/div[2]/div[1]/div[3]/div[1]/div[4]/div[2]/button"));
    }
+
+   public void addToCart() {
+      waitLoadingElement(By.cssSelector(".col-xs-12.col-sm-9.col-lg-6.m-b-xs_1.m-b-sm_0.butn-black-s.br-rnd"),5);
+      click(By.cssSelector(".col-xs-12.col-sm-9.col-lg-6.m-b-xs_1.m-b-sm_0.butn-black-s.br-rnd"));
+   }
 }

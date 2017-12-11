@@ -26,5 +26,6 @@ test.doFirst {
 }
 
 test {
+    maxParallelForks = Runtime.runtime.availableProcessors()
     useTestNG()
 }
