@@ -19,7 +19,7 @@ public class WishlistTests extends BaseTest {
       app.getAuthorizationHelper().submitPopUpLoginData();
       app.getHeaderHelper().gotoWishlist();
 
-      Assert.assertEquals(app.getHeaderHelper().getWishlistItemscount(), 48);
+      Assert.assertNotEquals(app.getHeaderHelper().getWishlistItemscount(), 0);
    }
 
    @Test

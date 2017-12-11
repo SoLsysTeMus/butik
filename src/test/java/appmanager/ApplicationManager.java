@@ -7,6 +7,8 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -19,7 +21,10 @@ public class ApplicationManager {
    protected WebDriver wd;
 
    public static String baseUrl = "https://stage.butik.ru/";
-   public boolean useSelenoid = true;
+
+   private String browser = BrowserType.CHROME;
+   private boolean useSelenoid = false;
+
 
    private NavigationHelper navigationHelper;
    private RegistrationHelper registrationHelper;
@@ -45,20 +50,33 @@ public class ApplicationManager {
    }
 
    private void initLocalDriver() {
-      //System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
-      System.setProperty("webdriver.gecko.driver", "drivers/firefox");
-      wd = new FirefoxDriver();
-      wd.manage().window().maximize();
+
+      switch (browser) {
+         case BrowserType.FIREFOX:
+            System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
+            wd = new FirefoxDriver();
+            break;
+         case BrowserType.CHROME:
+            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+            wd = new ChromeDriver();
+            break;
+         case BrowserType.IE:
+            System.setProperty("webdriver.ie.driver", "drivers/IEDriverServer.exe");
+            wd = new InternetExplorerDriver();
+            break;
+      }
+
+      wd.manage().window().setSize(new Dimension(1920,1080));
       wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 
    }
 
    private void initSelenoidDriver() {
-      wd = null;
+
       DesiredCapabilities capabilities = new DesiredCapabilities();
-      capabilities.setBrowserName("firefox");
-      capabilities.setVersion("56.0");
+      capabilities.setBrowserName("chrome");
+      capabilities.setVersion("63.0");
       capabilities.setCapability("enableVNC",true);
       capabilities.setCapability("enableVideo",true);
 
