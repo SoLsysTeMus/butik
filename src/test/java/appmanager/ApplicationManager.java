@@ -44,7 +44,8 @@ public class ApplicationManager {
       } else {
          initLocalDriver();
       }
-
+      wd.manage().window().setSize(new Dimension(1920,1080));
+      wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
       wd.get(baseUrl);
 
       initHelpers();
@@ -67,8 +68,7 @@ public class ApplicationManager {
             break;
       }
 
-      wd.manage().window().setSize(new Dimension(1920,1080));
-      wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 
 
    }
@@ -89,8 +89,6 @@ public class ApplicationManager {
       } catch (MalformedURLException e) {
          e.printStackTrace();
       }
-      wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-      wd.manage().window().setSize(new Dimension(1920,1080));
    }
 
    private void initHelpers() {

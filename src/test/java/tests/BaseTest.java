@@ -9,10 +9,8 @@ public class BaseTest {
       protected final ApplicationManager app = new ApplicationManager();
 
       @BeforeMethod
-      public void setUp() throws Exception {
-         Thread test = new Thread();
-         test.run();
-         app.init();
+      public void setUp() {
+        app.init();
 
       }
 
