@@ -78,8 +78,8 @@ public class ApplicationManager {
       DesiredCapabilities capabilities = new DesiredCapabilities();
       capabilities.setBrowserName("chrome");
       capabilities.setVersion("63.0");
-      capabilities.setCapability("enableVNC",true);
-      capabilities.setCapability("enableVideo",true);
+      //capabilities.setCapability("enableVNC",true);
+      //capabilities.setCapability("enableVideo",true);
 
       try {
          wd = new RemoteWebDriver(

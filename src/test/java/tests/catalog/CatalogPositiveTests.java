@@ -1,7 +1,6 @@
 package tests.catalog;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Capabilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;

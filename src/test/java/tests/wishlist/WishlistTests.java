@@ -27,32 +27,36 @@ public class WishlistTests extends BaseTest {
 
       String testLoginEmail = "testwishlist@testwishlist.ru";
       String testPassword = "12345";
+      Integer itemsCount;
 
 
       app.getNavigationHelper().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-black-gubka/");
       app.getNavigationHelper().openAuthorizationPopUp();
       app.getAuthorizationHelper().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.getAuthorizationHelper().submitPopUpLoginData();
+      itemsCount = app.getHeaderHelper().getWishlistItemscount();
       app.getProductCardHelpers().addToWishlist();
       app.getHeaderHelper().gotoWishlist();
 
-      Assert.assertEquals(app.getHeaderHelper().getWishlistItemscount(), 48);
+      Assert.assertEquals(app.getHeaderHelper().getWishlistItemscount(), ++itemsCount);
    }
 
    @Test
-   public void testWishlistCounterDecrementFromProductCard() {
+   public void testDeleteWishlistCounterDecrementFromProductCard() {
 
       String testLoginEmail = "testwishlist@testwishlist.ru";
       String testPassword = "12345";
+      Integer itemsCount;
 
       app.getNavigationHelper().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-black-gubka/");
       app.getNavigationHelper().openAuthorizationPopUp();
       app.getAuthorizationHelper().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.getAuthorizationHelper().submitPopUpLoginData();
+      itemsCount = app.getHeaderHelper().getWishlistItemscount();
       app.getProductCardHelpers().removeFromlist();
       app.getHeaderHelper().gotoWishlist();
 
-      Assert.assertEquals(app.getHeaderHelper().getWishlistItemscount(), 47);
+      Assert.assertEquals(app.getHeaderHelper().getWishlistItemscount(), --itemsCount);
    }
 
    @Test
@@ -60,11 +64,13 @@ public class WishlistTests extends BaseTest {
 
       String testLoginEmail = "testwishlist@testwishlist.ru";
       String testPassword = "12345";
+      Integer itemsCount;
 
       app.getNavigationHelper().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-gubka/");
       app.getNavigationHelper().openAuthorizationPopUp();
       app.getAuthorizationHelper().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.getAuthorizationHelper().submitPopUpLoginData();
+      itemsCount = app.getHeaderHelper().getWishlistItemscount();
       app.getProductCardHelpers().addToWishlist();
       app.getProductCardHelpers().addToCart();
       app.getNavigationHelper().gotoCheckout();
@@ -72,7 +78,7 @@ public class WishlistTests extends BaseTest {
       app.getNavigationHelper().openUrl(baseUrl);
       app.getHeaderHelper().gotoWishlist();
 
-      Assert.assertEquals(app.getHeaderHelper().getWishlistItemscount(), 47);
+      Assert.assertEquals(app.getHeaderHelper().getWishlistItemscount(), itemsCount);
 
    }
 

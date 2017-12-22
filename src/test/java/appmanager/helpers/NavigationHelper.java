@@ -4,7 +4,6 @@ package appmanager.helpers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-
 import static appmanager.ApplicationManager.baseUrl;
 import static appmanager.ApplicationManager.getBaseUrl;
 
@@ -16,7 +15,7 @@ public class NavigationHelper extends BaseHelper {
 
 
    public void openAuthorizationPopUp() {
-      click(By.xpath("//div[5]/div[3]/div/div/div"));
+      click(By.xpath("//header/div[2]/div[5]/div[3]/div"));
    }
 
    public void openLoginPage() {

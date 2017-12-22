@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -58,6 +57,7 @@ public class BaseHelper {
    protected void waitLoadingElement(By locator, int timeOutInSeconds) {
       WebDriverWait wait = new WebDriverWait(wd, timeOutInSeconds);
       WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+
    }
 }
 
