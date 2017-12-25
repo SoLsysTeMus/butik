@@ -11,7 +11,7 @@ public class HeaderHelper extends BaseHelper {
    }
 
    public void openPersonalMenu() {
-      waitLoadingElement(By.xpath("//header/div[2]/div[5]/div[4]/div/div[1]/span"),5);
+      waitLoadingElement(By.xpath("//header/div[2]/div[5]/div[4]/div/div[1]/span"), 5);
       moveTo(By.xpath("//header/div[2]/div[5]/div[4]/div/div[1]/span"));
    }
 
@@ -20,7 +20,7 @@ public class HeaderHelper extends BaseHelper {
    }
 
    public Integer getWishlistItemscount() {
-      waitLoadingElement(By.xpath("//header/div[2]/div[5]/div[3]/a/span"),5);
+      waitLoadingElement(By.xpath("//header/div[2]/div[5]/div[3]/a/span"), 5);
       return Integer.parseInt(getTextForElement(By.xpath("//header/div[2]/div[5]/div[3]/a/span")));
    }
 

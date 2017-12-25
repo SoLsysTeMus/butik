@@ -30,7 +30,11 @@ public class NavigationHelper extends BaseHelper {
       click(By.xpath("//*[@id=\"authPopup\"]/div[2]/div[1]/div[2]/span"));
    }
 
-   public void openUrl(String url){ wd.get(url);}
+   public void openUrl(String url) {
+      wd.get(url);
+   }
 
-   public void gotoCheckout() { wd.get(baseUrl + "checkout");}
+   public void gotoCheckout() {
+      wd.get(baseUrl + "checkout");
+   }
 }

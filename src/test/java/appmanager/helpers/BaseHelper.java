@@ -59,5 +59,10 @@ public class BaseHelper {
       WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
 
    }
+
+   protected void waitForElementInvisible(By locator, int timeOutSeconds){
+      WebDriverWait wait = new WebDriverWait(wd,timeOutSeconds);
+      Boolean element = wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+   }
 }
 

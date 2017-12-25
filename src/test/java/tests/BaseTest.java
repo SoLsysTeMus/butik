@@ -6,19 +6,18 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 
-      protected final ApplicationManager app = new ApplicationManager();
+   protected final ApplicationManager app = new ApplicationManager();
 
-      @BeforeMethod
-      public void setUp() {
-        app.init();
+   @BeforeMethod
+   public void setUp() {
+      app.init();
 
-      }
+   }
 
-      @AfterMethod
-      public void tearDown() {
-         app.stop();
-      }
-
+   @AfterMethod
+   public void tearDown() {
+      app.stop();
+   }
 
 
 }

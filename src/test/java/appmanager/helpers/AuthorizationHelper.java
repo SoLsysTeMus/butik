@@ -11,7 +11,7 @@ public class AuthorizationHelper extends BaseHelper {
    }
 
    public void fillPopUpAuthorizationForm(String login, String password) {
-      waitLoadingElement(By.id("js-login-email"),5);
+      waitLoadingElement(By.id("js-login-email"), 5);
       type(By.id("js-login-email"), login);
       type(By.xpath("//input[@type='password']"), password);
    }

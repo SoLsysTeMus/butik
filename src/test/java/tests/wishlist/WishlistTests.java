@@ -60,7 +60,7 @@ public class WishlistTests extends BaseTest {
    }
 
    @Test
-   public void testWishlistDeleteItemFromCheckout(){
+   public void testWishlistDeleteItemFromCheckout() {
 
       String testLoginEmail = "testwishlist@testwishlist.ru";
       String testPassword = "12345";

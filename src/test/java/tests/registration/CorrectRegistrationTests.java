@@ -11,7 +11,7 @@ public class CorrectRegistrationTests extends BaseTest {
    public void testRegistrationWithValidDataPopUp() {
 
       String name = "Test";
-      String randomEmail = "test" + (int) (Math.random() * 2000) + "@test" + (int) (Math.random() * 2000) + ".ru";
+      String randomEmail = "test" + (int) (Math.random() * 20000) + "@test" + (int) (Math.random() * 20000) + ".ru";
       String password = "12345";
 
       System.out.println(randomEmail);
@@ -29,7 +29,7 @@ public class CorrectRegistrationTests extends BaseTest {
    public void testRegistrationWithValidData() {
 
       String name = "Test";
-      String randomEmail = "test" + (int) (Math.random() * 2000) + "@test" + (int) (Math.random() * 2000) + ".ru";
+      String randomEmail = "test" + (int) (Math.random() * 20000) + "@test" + (int) (Math.random() * 20000) + ".ru";
       String password = "12345";
 
       System.out.println(randomEmail);

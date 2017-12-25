@@ -10,7 +10,7 @@ public class PersonalMenuHelper extends BaseHelper {
    }
 
    public void gotoProfile() {
-      waitLoadingElement(By.xpath("(//a[contains(text(),'Персональные данные')])[2]"),5);
+      waitLoadingElement(By.xpath("(//a[contains(text(),'Персональные данные')])[2]"), 5);
       click(By.xpath("(//a[contains(text(),'Персональные данные')])[2]"));
    }
 

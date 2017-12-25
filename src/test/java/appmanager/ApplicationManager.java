@@ -18,10 +18,8 @@ import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
 
-   protected WebDriver wd;
-
    public static String baseUrl = "https://stage.butik.ru/";
-
+   protected WebDriver wd;
    private String browser = BrowserType.CHROME;
    private boolean useSelenoid = false;
 
@@ -37,6 +35,10 @@ public class ApplicationManager {
    private ProductCardHelpers productCardHelpers;
    private CheckoutHelper checkoutHelper;
 
+   public static String getBaseUrl() {
+      return baseUrl;
+   }
+
    public void init() {
 
       if (useSelenoid) {
@@ -44,8 +46,8 @@ public class ApplicationManager {
       } else {
          initLocalDriver();
       }
-      wd.manage().window().setSize(new Dimension(1920,1080));
-      wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+      wd.manage().window().setSize(new Dimension(1920, 1080));
+      wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
       wd.get(baseUrl);
 
       initHelpers();
@@ -67,8 +69,6 @@ public class ApplicationManager {
             wd = new InternetExplorerDriver();
             break;
       }
-
-
 
 
    }
@@ -142,10 +142,6 @@ public class ApplicationManager {
 
    public ProductCardHelpers getProductCardHelpers() {
       return productCardHelpers;
-   }
-
-   public static String getBaseUrl() {
-      return baseUrl;
    }
 
    public CheckoutHelper getCheckoutHelper() {
