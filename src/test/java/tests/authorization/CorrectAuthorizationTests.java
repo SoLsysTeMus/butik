@@ -14,13 +14,13 @@ public class CorrectAuthorizationTests extends BaseTest {
       String testLoginEmail = "auth_test@auth.test";
       String testPassword = "12345";
 
-      app.getNavigationHelper().openLoginPage();
-      app.getAuthorizationHelper().fillAuthorizationForm(testLoginEmail, testPassword);
-      app.getAuthorizationHelper().submitLoginData();
-      app.getHeaderHelper().openPersonalMenu();
-      app.getPersonalMenuHelper().gotoProfile();
+      app.navigation().openLoginPage();
+      app.authorization().fillAuthorizationForm(testLoginEmail, testPassword);
+      app.authorization().submitLoginData();
+      app.header().openPersonalMenu();
+      app.personalMenu().gotoProfile();
 
-      Assert.assertEquals(app.getUserProfileHelper().getProfileEmail(), testLoginEmail);
+      Assert.assertEquals(app.userProfile().getProfileEmail(), testLoginEmail);
    }
 
    @Step("Авторизация через Pop-up")
@@ -30,13 +30,13 @@ public class CorrectAuthorizationTests extends BaseTest {
       String testLoginEmail = "auth_test@auth.test";
       String testPassword = "12345";
 
-      app.getNavigationHelper().openAuthorizationPopUp();
-      app.getAuthorizationHelper().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
-      app.getAuthorizationHelper().submitPopUpLoginData();
-      app.getHeaderHelper().openPersonalMenu();
-      app.getPersonalMenuHelper().gotoProfile();
+      app.navigation().openAuthorizationPopUp();
+      app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
+      app.authorization().submitPopUpLoginData();
+      app.header().openPersonalMenu();
+      app.personalMenu().gotoProfile();
 
-      Assert.assertEquals(app.getUserProfileHelper().getProfileEmail(), testLoginEmail);
+      Assert.assertEquals(app.userProfile().getProfileEmail(), testLoginEmail);
    }
 
 

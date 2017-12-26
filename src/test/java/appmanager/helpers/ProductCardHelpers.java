@@ -32,11 +32,12 @@ public class ProductCardHelpers extends BaseHelper {
    public void pressCheckoutButtonOnPopUp() {
       waitLoadingElement(By.xpath("//a[contains(text(),'Оформить заказ')]"), 5);
       click(By.xpath("//a[contains(text(),'Оформить заказ')]"));
+      waitForElementInvisible(By.xpath("//div[contains(@data-bind,\"showLoader\")]"), 5);
    }
 
    public List getProductRusSizes() {
 
-      List <String> sizes = new ArrayList<>();
+      List<String> sizes = new ArrayList<>();
 
       List<WebElement> allSizes = getAllSizes();
 

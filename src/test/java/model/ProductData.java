@@ -4,19 +4,56 @@ import java.util.Objects;
 
 public class ProductData {
 
-   private final String name;
-   private final String brandName;
-   private final String sku;
-   private final String label;
-   private final Integer priceMultiplyCount;
+   private String name;
+   private String brandName;
+   private String sku;
+   private String label;
+   private Integer priceMultiplyCount;
+   private Integer quantity;
+   private Integer price;
+   private String rusSize;
 
-   public ProductData(String name, String brandName, String sku, String label, Integer priceMultiplyCount) {
+   public ProductData() {
+   }
 
+   public ProductData withName(String name) {
       this.name = name;
+      return this;
+   }
+
+   public ProductData withBrandName(String brandName) {
       this.brandName = brandName;
+      return this;
+   }
+
+   public ProductData withSku(String sku) {
       this.sku = sku;
+      return this;
+   }
+
+   public ProductData withLabel(String label) {
       this.label = label;
+      return this;
+   }
+
+   public ProductData withPriceMultiplyCount(Integer priceMultiplyCount) {
       this.priceMultiplyCount = priceMultiplyCount;
+      return this;
+   }
+
+   public ProductData withQuantity(Integer count) {
+      this.quantity = count;
+      return this;
+   }
+
+   public ProductData withPrice(Integer price) {
+      this.price = price;
+      return this;
+   }
+
+   public ProductData withRusSize(String rusSize) {
+      this.rusSize = rusSize;
+      return this;
    }
 
    public String getName() {
@@ -48,13 +85,13 @@ public class ProductData {
               Objects.equals(brandName, that.brandName) &&
               Objects.equals(sku, that.sku) &&
               Objects.equals(label, that.label) &&
-              Objects.equals(priceMultiplyCount, that.priceMultiplyCount);
+              Objects.equals(price, that.price);
    }
 
    @Override
    public int hashCode() {
 
-      return Objects.hash(name, brandName, sku, label, priceMultiplyCount);
+      return Objects.hash(name, brandName, sku, label, price);
    }
 
    @Override
@@ -65,6 +102,9 @@ public class ProductData {
               ", sku='" + sku + '\'' +
               ", label='" + label + '\'' +
               ", priceMultiplyCount=" + priceMultiplyCount +
+              ", quantity=" + quantity +
+              ", price=" + price +
+              ", rusSize='" + rusSize + '\'' +
               '}';
    }
 }

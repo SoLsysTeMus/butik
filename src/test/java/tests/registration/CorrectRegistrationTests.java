@@ -15,14 +15,14 @@ public class CorrectRegistrationTests extends BaseTest {
       String password = "12345";
 
       System.out.println(randomEmail);
-      app.getNavigationHelper().openAuthorizationPopUp();
-      app.getNavigationHelper().gotoRegistrationPopUpForm();
-      app.getRegistrationHelper().fillPopUpRegistrationForm(name, randomEmail, password);
-      app.getRegistrationHelper().submitPopUpRegistrationData();
-      app.getHeaderHelper().openPersonalMenu();
-      app.getPersonalMenuHelper().gotoProfile();
+      app.navigation().openAuthorizationPopUp();
+      app.navigation().gotoRegistrationPopUpForm();
+      app.registration().fillPopUpRegistrationForm(name, randomEmail, password);
+      app.registration().submitPopUpRegistrationData();
+      app.header().openPersonalMenu();
+      app.personalMenu().gotoProfile();
 
-      Assert.assertEquals(app.getUserProfileHelper().getProfileEmail(), randomEmail);
+      Assert.assertEquals(app.userProfile().getProfileEmail(), randomEmail);
    }
 
    @Test
@@ -33,13 +33,13 @@ public class CorrectRegistrationTests extends BaseTest {
       String password = "12345";
 
       System.out.println(randomEmail);
-      app.getNavigationHelper().openRegistrationPage();
-      app.getRegistrationHelper().fillRegistrationForm(name, randomEmail, password);
-      app.getRegistrationHelper().submitRegistrationData();
-      app.getHeaderHelper().openPersonalMenu();
-      app.getPersonalMenuHelper().gotoProfile();
+      app.navigation().openRegistrationPage();
+      app.registration().fillRegistrationForm(name, randomEmail, password);
+      app.registration().submitRegistrationData();
+      app.header().openPersonalMenu();
+      app.personalMenu().gotoProfile();
 
-      Assert.assertEquals(app.getUserProfileHelper().getProfileEmail(), randomEmail);
+      Assert.assertEquals(app.userProfile().getProfileEmail(), randomEmail);
    }
 
 

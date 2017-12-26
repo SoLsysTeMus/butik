@@ -108,43 +108,43 @@ public class ApplicationManager {
       wd.quit();
    }
 
-   public NavigationHelper getNavigationHelper() {
+   public NavigationHelper navigation() {
       return navigationHelper;
    }
 
-   public AuthorizationHelper getAuthorizationHelper() {
+   public AuthorizationHelper authorization() {
       return authorizationHelper;
    }
 
-   public UserProfileHelper getUserProfileHelper() {
+   public UserProfileHelper userProfile() {
       return userProfileHelper;
    }
 
-   public RegistrationHelper getRegistrationHelper() {
+   public RegistrationHelper registration() {
       return registrationHelper;
    }
 
-   public PersonalMenuHelper getPersonalMenuHelper() {
+   public PersonalMenuHelper personalMenu() {
       return personalMenuHelper;
    }
 
-   public HeaderHelper getHeaderHelper() {
+   public HeaderHelper header() {
       return headerHelper;
    }
 
-   public MainMenuHelper getMainMenuHelper() {
+   public MainMenuHelper mainMenu() {
       return mainMenuHelper;
    }
 
-   public CatalogHelper getCatalogHelper() {
+   public CatalogHelper catalog() {
       return catalogHelper;
    }
 
-   public ProductCardHelpers getProductCardHelpers() {
+   public ProductCardHelpers productCard() {
       return productCardHelpers;
    }
 
-   public CheckoutHelper getCheckoutHelper() {
+   public CheckoutHelper checkout() {
       return checkoutHelper;
    }
 }

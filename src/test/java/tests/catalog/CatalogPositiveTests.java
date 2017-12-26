@@ -10,8 +10,8 @@ public class CatalogPositiveTests extends BaseTest {
 
    @Test
    public void testCatalogItemCountAboveZero() {
-      app.getMainMenuHelper().gotoSubcategory(By.xpath("//a[contains( text(),'Одежда')]"), By.linkText("Верхняя одежда"));
+      app.mainMenu().gotoSubcategory(By.xpath("//a[contains( text(),'Одежда')]"), By.linkText("Верхняя одежда"));
       System.out.println("test");
-      Assert.assertNotEquals(app.getCatalogHelper().getProductsCountInCategory(), 0);
+      Assert.assertNotEquals(app.catalog().getProductsCountInCategory(), 0);
    }
 }

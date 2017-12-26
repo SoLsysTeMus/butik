@@ -8,6 +8,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
+
 public class BaseHelper {
 
    protected WebDriver wd;
@@ -57,12 +60,29 @@ public class BaseHelper {
    protected void waitLoadingElement(By locator, int timeOutInSeconds) {
       WebDriverWait wait = new WebDriverWait(wd, timeOutInSeconds);
       WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
-
    }
 
-   protected void waitForElementInvisible(By locator, int timeOutSeconds){
-      WebDriverWait wait = new WebDriverWait(wd,timeOutSeconds);
+   protected void waitForElementInvisible(By locator, int timeOutSeconds) {
+      WebDriverWait wait = new WebDriverWait(wd, timeOutSeconds);
       Boolean element = wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
    }
+
+   public boolean elementIsNotPresent(WebElement element) {
+
+      boolean notExist;
+
+      try {
+         wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+         notExist = element.isEnabled();
+      } catch (NoSuchElementException e) {
+         notExist = true;
+      } finally {
+         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+      }
+
+      return notExist;
+
+   }
+
 }
 
