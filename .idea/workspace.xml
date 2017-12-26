@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98b9b815-3b54-4463-a0da-c63d45ed4e00" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/tests/checkout/CheckoutTests.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/appmanager/ApplicationManager.java" afterPath="$PROJECT_DIR$/src/test/java/appmanager/ApplicationManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/appmanager/helpers/BaseHelper.java" afterPath="$PROJECT_DIR$/src/test/java/appmanager/helpers/BaseHelper.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/appmanager/helpers/CheckoutHelper.java" afterPath="$PROJECT_DIR$/src/test/java/appmanager/helpers/CheckoutHelper.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/appmanager/helpers/ProductCardHelpers.java" afterPath="$PROJECT_DIR$/src/test/java/appmanager/helpers/ProductCardHelpers.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/model/ProductData.java" afterPath="$PROJECT_DIR$/src/test/java/model/ProductData.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/authorization/CorrectAuthorizationTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/authorization/CorrectAuthorizationTests.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/catalog/CatalogPositiveTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/catalog/CatalogPositiveTests.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/productCard/ProductCardTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/productCard/ProductCardTests.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/registration/CorrectRegistrationTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/registration/CorrectRegistrationTests.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/wishlist/WishlistTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/wishlist/WishlistTests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -78,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WishlistTests.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WishlistTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/wishlist/WishlistTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+            <state relative-caret-position="-891">
+              <caret line="21" column="3" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -115,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckoutTests.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CheckoutTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/checkout/CheckoutTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="834">
-              <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+            <state relative-caret-position="178">
+              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -837,7 +826,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.tests.wishlist">
+  <component name="RunManager" selected="TestNG.tests">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -885,38 +874,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-    </configuration>
-    <configuration name="CheckoutTests.testOrderByAuthUserWithSavedAddress" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="tests.checkout.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="butik_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="tests.checkout" />
-      <option name="MAIN_CLASS_NAME" value="tests.checkout.CheckoutTests" />
-      <option name="METHOD_NAME" value="testOrderByAuthUserWithSavedAddress" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
     </configuration>
     <configuration name="CheckoutTests.testOrderByAuthUserWithSavedAddressWithNewAddress" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -1041,6 +998,38 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration name="tests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="butik_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
     <configuration name="tests.wishlist" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1093,18 +1082,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="TestNG.CheckoutTests.testOrderByAuthUserWithSavedAddressWithNewAddress" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.CheckoutTests.testOrderByAuthUserWithSavedAddress" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.WishlistTests" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.WishlistTests.testAddtoWishlistCounterIncrementFromProductCard" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.tests.wishlist" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.WishlistTests" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.WishlistTests.testAddtoWishlistCounterIncrementFromProductCard" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.tests.wishlist" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.tests" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.tests.wishlist" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.WishlistTests.testAddtoWishlistCounterIncrementFromProductCard" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.WishlistTests" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.CheckoutTests.testOrderByAuthUserWithSavedAddressWithNewAddress" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.CheckoutTests.testOrderByAuthUserWithSavedAddress" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.tests" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.tests.wishlist" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.WishlistTests.testAddtoWishlistCounterIncrementFromProductCard" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.WishlistTests" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.CheckoutTests.testOrderByAuthUserWithSavedAddressWithNewAddress" />
       </list>
     </recent_temporary>
   </component>
@@ -1255,15 +1244,19 @@
       <option name="project" value="LOCAL" />
       <updated>1514189022312</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added checkout tests">
+      <created>1514293564183</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1514293564184</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
     <history-entry file="CheckoutTests_testOrderByAuthUserWithSavedAddress - 2017.12.26 at 13h 00m 33s.xml">
       <configuration name="CheckoutTests.testOrderByAuthUserWithSavedAddress" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="CheckoutTests_testOrderByAuthUserWithSavedAddressWithNewAddress - 2017.12.26 at 12h 31m 13s.xml">
-      <configuration name="CheckoutTests.testOrderByAuthUserWithSavedAddressWithNewAddress" configurationId="TestNG" />
     </history-entry>
     <history-entry file="CheckoutTests_testOrderByAuthUserWithSavedAddressWithNewAddress - 2017.12.26 at 12h 54m 54s.xml">
       <configuration name="CheckoutTests.testOrderByAuthUserWithSavedAddressWithNewAddress" configurationId="TestNG" />
@@ -1283,6 +1276,9 @@
     <history-entry file="WishlistTests_testAddtoWishlistCounterIncrementFromProductCard - 2017.12.26 at 14h 37m 01s.xml">
       <configuration name="WishlistTests.testAddtoWishlistCounterIncrementFromProductCard" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="tests - 2017.12.26 at 16h 15m 19s.xml">
+      <configuration name="tests" configurationId="TestNG" />
+    </history-entry>
     <history-entry file="tests_wishlist - 2017.12.26 at 14h 37m 35s.xml">
       <configuration name="tests.wishlist" configurationId="TestNG" />
     </history-entry>
@@ -1292,7 +1288,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1016" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1302,7 +1297,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32641292" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32641292" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24567474" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1372,7 +1367,8 @@
     <MESSAGE value="Repair tests" />
     <MESSAGE value="Refactoring init" />
     <MESSAGE value="Added product card tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added product card tests" />
+    <MESSAGE value="Added checkout tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added checkout tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1730,16 +1726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/checkout/CheckoutTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="834">
-          <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/CheckoutHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1760,9 +1746,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/wishlist/WishlistTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+        <state relative-caret-position="-891">
+          <caret line="21" column="3" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/checkout/CheckoutTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
