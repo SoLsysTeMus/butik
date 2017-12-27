@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98b9b815-3b54-4463-a0da-c63d45ed4e00" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/appmanager/helpers/FooterHelper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/appmanager/helpers/PageHelper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/tests/staticPages/StaticPagesTests.java" />
+    <list default="true" id="98b9b815-3b54-4463-a0da-c63d45ed4e00" name="Default" comment="Added checkout and static pages tests">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beust_jcommander_1_27.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_codeborne_phantomjsdriver_1_4_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_codeborne_selenide_4_9.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_annotations_2_8_9.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_8_9.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_8_9.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_23_5_jre.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jcraft_jzlib_1_1_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_commons_codec_1_11.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_io_commons_io_2_5.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__dnsjava_dnsjava_2_1_8.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_github_bonigarcia_webdrivermanager_2_0_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_all_4_0_51_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_10.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_lightbody_bmp_browsermob_core_2_1_5.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_lightbody_bmp_littleproxy_1_1_0_beta_bmp_17.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_lightbody_bmp_mitm_2_1_5.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_compress_1_9.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_lang3_3_5.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_beanshell_bsh_2_0b4.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_bouncycastle_bcpkix_jdk15on_1_58.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_bouncycastle_bcprov_jdk15on_1_58.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_checkerframework_checker_qual_2_0_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jsoup_jsoup_1_10_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_rauschig_jarchivelib_0_7_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_jcl_over_slf4j_1_7_25.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_testng_testng_6_8.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_yaml_snakeyaml_1_6.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beust_jcommander_1_64.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_23_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_commons_codec_1_10.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpcore_4_4_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpcore_4_4_8.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_safari_driver_3_8_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_7.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_testng_testng_6_11.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_yaml_snakeyaml_1_17.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/butik_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/butik_main.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/butik_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/butik_test.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change beforePath="$PROJECT_DIR$/src/test/java/appmanager/ApplicationManager.java" afterPath="$PROJECT_DIR$/src/test/java/appmanager/ApplicationManager.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/appmanager/helpers/BaseHelper.java" afterPath="$PROJECT_DIR$/src/test/java/appmanager/helpers/BaseHelper.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/appmanager/helpers/CheckoutHelper.java" afterPath="$PROJECT_DIR$/src/test/java/appmanager/helpers/CheckoutHelper.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/checkout/CheckoutTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/checkout/CheckoutTests.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/appmanager/helpers/FooterHelper.java" afterPath="$PROJECT_DIR$/src/test/java/appmanager/helpers/FooterHelper.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/appmanager/helpers/PageHelper.java" afterPath="$PROJECT_DIR$/src/test/java/appmanager/helpers/PageHelper.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -74,12 +113,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApplicationManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ApplicationManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/ApplicationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+            <state relative-caret-position="369">
+              <caret line="111" column="4" lean-forward="false" selection-start-line="111" selection-start-column="4" selection-end-line="111" selection-end-column="4" />
               <folding>
+                <element signature="method#initLocalDriver#0;class#ApplicationManager#0" expanded="false" />
                 <element signature="method#initSelenoidDriver#0;class#ApplicationManager#0" expanded="false" />
               </folding>
             </state>
@@ -89,8 +129,8 @@
       <file leaf-file-name="StaticPagesTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/staticPages/StaticPagesTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="49" column="42" lean-forward="false" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+            <state relative-caret-position="191">
+              <caret line="73" column="47" lean-forward="false" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,31 +138,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PageHelper.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tests/BaseTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/PageHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="180">
+              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#179#180#0" expanded="true" />
-                <element signature="e#201#202#0" expanded="true" />
-                <element signature="e#232#233#0" expanded="true" />
-                <element signature="e#265#266#0" expanded="true" />
-                <element signature="e#336#337#0" expanded="true" />
-                <element signature="e#529#530#0" expanded="true" />
-                <element signature="e#591#592#0" expanded="true" />
+                <element signature="e#229#230#0" expanded="true" />
+                <element signature="e#251#252#0" expanded="true" />
+                <element signature="e#315#316#0" expanded="true" />
+                <element signature="e#348#349#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
+                <element signature="e#566#567#0" expanded="true" />
+                <element signature="e#615#616#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductCardHelpers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/ProductCardHelpers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -130,7 +170,7 @@
       <file leaf-file-name="ProductCardTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/productCard/ProductCardTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="97">
               <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
@@ -141,7 +181,7 @@
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+              <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -150,12 +190,12 @@
       <file leaf-file-name="BaseHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/BaseHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+            <state relative-caret-position="253">
+              <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#585#586#0" expanded="true" />
-                <element signature="e#629#630#0" expanded="true" />
+                <element signature="e#635#636#0" expanded="true" />
+                <element signature="e#666#667#0" expanded="true" />
                 <element signature="method#type#0;class#BaseHelper#0" expanded="false" />
                 <element signature="method#isAlertPresent#0;class#BaseHelper#0" expanded="false" />
               </folding>
@@ -177,11 +217,11 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/FooterHelper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+              <caret line="14" column="89" lean-forward="true" selection-start-line="14" selection-start-column="89" selection-end-line="14" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#184#185#0" expanded="true" />
-                <element signature="e#206#207#0" expanded="true" />
+                <element signature="e#234#235#0" expanded="true" />
+                <element signature="e#256#257#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -404,8 +444,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6051484927000" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="735157084" />
+        <entry key="$PROJECT_DIR$" value="6051485489000" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="3407455645" />
         <entry key="$PROJECT_DIR$/gradle.properties" value="2665269511" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="615277776" />
         <entry key="$PROJECT_DIR$/setting.gradle" value="703162095" />
@@ -621,7 +661,6 @@
         <option value="$PROJECT_DIR$/src/test/java/appmanager/helpers/header/HeaderHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/appmanager/helpers/PersonalMenuHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/data/ProductData.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/productCard/ProductCardTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/model/ProductData.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/wishlist/WishlistTests.java" />
@@ -632,12 +671,13 @@
         <option value="$PROJECT_DIR$/src/test/java/appmanager/helpers/AuthorizationHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/checkout/CheckoutTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/appmanager/helpers/CheckoutHelper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/appmanager/helpers/FooterHelper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/appmanager/ApplicationManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/staticPages/StaticPagesTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/appmanager/helpers/PageHelper.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/java/appmanager/helpers/BaseHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/appmanager/ApplicationManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/appmanager/helpers/FooterHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/appmanager/helpers/PageHelper.java" />
       </list>
     </option>
   </component>
@@ -743,6 +783,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="butik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="butik" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="staticPages" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -781,7 +830,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ProductCardTests.testAddItemWithSizesToNotAuthCart">
+  <component name="RunManager" selected="TestNG.StaticPagesTests">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -823,6 +872,31 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="tests.staticPages in butik_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tests.staticPages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="butik_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tests.staticPages" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -830,10 +904,10 @@
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
     </configuration>
-    <configuration name="ProductCardTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="StaticPagesTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="tests.productCard.*" />
+          <option name="PATTERN" value="tests.staticPages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -841,8 +915,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="tests.productCard" />
-      <option name="MAIN_CLASS_NAME" value="tests.productCard.ProductCardTests" />
+      <option name="PACKAGE_NAME" value="tests.staticPages" />
+      <option name="MAIN_CLASS_NAME" value="tests.staticPages.StaticPagesTests" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -862,39 +936,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="ProductCardTests.testAddItemWithSizesToNotAuthCart" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="tests.productCard.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="butik_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="tests.productCard" />
-      <option name="MAIN_CLASS_NAME" value="tests.productCard.ProductCardTests" />
-      <option name="METHOD_NAME" value="testAddItemWithSizesToNotAuthCart" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="0" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="StaticPagesTests.testCheckOpenCertificatesPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="StaticPagesTests.testCheckOpenAboutPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="tests.staticPages.*" />
@@ -907,43 +949,75 @@
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="tests.staticPages" />
       <option name="MAIN_CLASS_NAME" value="tests.staticPages.StaticPagesTests" />
-      <option name="METHOD_NAME" value="testCheckOpenCertificatesPage" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="0" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="StaticPagesTests.testCheckOpenInstashopPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="tests.staticPages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="butik_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="tests.staticPages" />
-      <option name="MAIN_CLASS_NAME" value="tests.staticPages.StaticPagesTests" />
-      <option name="METHOD_NAME" value="testCheckOpenInstashopPage" />
+      <option name="METHOD_NAME" value="testCheckOpenAboutPage" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="StaticPagesTests.testCheckOpenRefundPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tests.staticPages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="butik_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="tests.staticPages" />
+      <option name="MAIN_CLASS_NAME" value="tests.staticPages.StaticPagesTests" />
+      <option name="METHOD_NAME" value="testCheckOpenRefundPage" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="StaticPagesTests.testCheckOpenReviewsOnYandexPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tests.staticPages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="butik_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="tests.staticPages" />
+      <option name="MAIN_CLASS_NAME" value="tests.staticPages.StaticPagesTests" />
+      <option name="METHOD_NAME" value="testCheckOpenReviewsOnYandexPage" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="0" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
@@ -985,38 +1059,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="tests.staticPages" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="tests.staticPages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="butik_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="tests.staticPages" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -1036,19 +1078,19 @@
       <envs />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.StaticPagesTests.testCheckOpenInstashopPage" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.tests.staticPages" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.StaticPagesTests.testCheckOpenCertificatesPage" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.ProductCardTests" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.ProductCardTests.testAddItemWithSizesToNotAuthCart" />
+      <item index="0" class="java.lang.String" itemvalue="TestNG.StaticPagesTests.testCheckOpenRefundPage" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.tests.staticPages in butik_test" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.StaticPagesTests.testCheckOpenAboutPage" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.StaticPagesTests" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.StaticPagesTests.testCheckOpenReviewsOnYandexPage" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.ProductCardTests.testAddItemWithSizesToNotAuthCart" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.ProductCardTests" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.StaticPagesTests.testCheckOpenCertificatesPage" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.tests.staticPages" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.StaticPagesTests.testCheckOpenInstashopPage" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.StaticPagesTests" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.StaticPagesTests.testCheckOpenReviewsOnYandexPage" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.tests.staticPages in butik_test" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.StaticPagesTests.testCheckOpenAboutPage" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.StaticPagesTests.testCheckOpenRefundPage" />
       </list>
     </recent_temporary>
   </component>
@@ -1213,43 +1255,51 @@
       <option name="project" value="LOCAL" />
       <updated>1514307452747</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added checkout and static pages tests">
+      <created>1514376783549</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1514376783549</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProductCardTests - 2017.12.27 at 15h 01m 21s.xml">
-      <configuration name="ProductCardTests" configurationId="TestNG" />
+    <history-entry file="StaticPagesTests - 2017.12.27 at 15h 29m 32s.xml">
+      <configuration name="StaticPagesTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ProductCardTests_testAddItemWithSizesToNotAuthCart - 2017.12.27 at 15h 04m 13s.xml">
-      <configuration name="ProductCardTests.testAddItemWithSizesToNotAuthCart" configurationId="TestNG" />
+    <history-entry file="StaticPagesTests - 2017.12.27 at 15h 31m 38s.xml">
+      <configuration name="StaticPagesTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="StaticPagesTests_testCheckOpenAboutPage - 2017.12.27 at 13h 58m 12s.xml">
+    <history-entry file="StaticPagesTests - 2017.12.27 at 15h 34m 19s.xml">
+      <configuration name="StaticPagesTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="StaticPagesTests - 2017.12.27 at 15h 35m 52s.xml">
+      <configuration name="StaticPagesTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="StaticPagesTests - 2017.12.27 at 15h 38m 56s.xml">
+      <configuration name="StaticPagesTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="StaticPagesTests - 2017.12.27 at 15h 40m 44s.xml">
+      <configuration name="StaticPagesTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="StaticPagesTests_testCheckOpenAboutPage - 2017.12.27 at 15h 27m 20s.xml">
       <configuration name="StaticPagesTests.testCheckOpenAboutPage" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="StaticPagesTests_testCheckOpenCertificatesPage - 2017.12.27 at 14h 12m 37s.xml">
-      <configuration name="StaticPagesTests.testCheckOpenCertificatesPage" configurationId="TestNG" />
+    <history-entry file="StaticPagesTests_testCheckOpenAboutPage - 2017.12.27 at 15h 28m 58s.xml">
+      <configuration name="StaticPagesTests.testCheckOpenAboutPage" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="StaticPagesTests_testCheckOpenCertificatesPage - 2017.12.27 at 14h 12m 58s.xml">
-      <configuration name="StaticPagesTests.testCheckOpenCertificatesPage" configurationId="TestNG" />
+    <history-entry file="StaticPagesTests_testCheckOpenReviewsOnYandexPage - 2017.12.27 at 15h 36m 30s.xml">
+      <configuration name="StaticPagesTests.testCheckOpenReviewsOnYandexPage" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="StaticPagesTests_testCheckOpenCertificatesPage - 2017.12.27 at 14h 13m 57s.xml">
-      <configuration name="StaticPagesTests.testCheckOpenCertificatesPage" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="StaticPagesTests_testCheckOpenContactPage - 2017.12.27 at 14h 02m 13s.xml">
-      <configuration name="StaticPagesTests.testCheckOpenContactPage" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="StaticPagesTests_testCheckOpenDeliveryPage - 2017.12.27 at 14h 02m 21s.xml">
-      <configuration name="StaticPagesTests.testCheckOpenDeliveryPage" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="StaticPagesTests_testCheckOpenInstashopPage - 2017.12.27 at 14h 10m 20s.xml">
-      <configuration name="StaticPagesTests.testCheckOpenInstashopPage" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="tests_staticPages - 2017.12.27 at 14h 11m 35s.xml">
-      <configuration name="tests.staticPages" configurationId="TestNG" />
+    <history-entry file="tests_staticPages_in_butik_test - 2017.12.27 at 15h 29m 11s.xml">
+      <configuration name="tests.staticPages in butik_test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1016" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1259,9 +1309,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32641292" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32641292" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24567474" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24567474" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27588046" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1330,20 +1380,11 @@
     <MESSAGE value="Refactoring init" />
     <MESSAGE value="Added product card tests" />
     <MESSAGE value="Added checkout tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added checkout tests" />
+    <MESSAGE value="Added checkout and static pages tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added checkout and static pages tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/appmanager/helpers/BaseHelper.java</url>
-          <line>67</line>
-          <properties class="appmanager.helpers.BaseHelper" method="elementIsNotPresent">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager />
@@ -1591,18 +1632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="69" lean-forward="false" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#347#348#0" expanded="false" />
-            <element signature="e#370#371#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/checkout/CheckoutTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1185">
@@ -1637,15 +1666,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/FooterHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/ProductCardHelpers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#184#185#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="114">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1667,33 +1700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/staticPages/StaticPagesTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="49" column="42" lean-forward="false" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/PageHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#232#233#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/PersonalMenuHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1702,50 +1708,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/ProductCardHelpers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/productCard/ProductCardTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="97">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/ApplicationManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
-          <folding />
+        <state relative-caret-position="369">
+          <caret line="111" column="4" lean-forward="false" selection-start-line="111" selection-start-column="4" selection-end-line="111" selection-end-column="4" />
+          <folding>
+            <element signature="method#initLocalDriver#0;class#ApplicationManager#0" expanded="false" />
+            <element signature="method#initSelenoidDriver#0;class#ApplicationManager#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/BaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+        <state relative-caret-position="253">
+          <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
             <element signature="method#type#0;class#BaseHelper#0" expanded="false" />
             <element signature="method#isAlertPresent#0;class#BaseHelper#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/ApplicationManager.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+        <state relative-caret-position="255">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/FooterHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="89" lean-forward="true" selection-start-line="14" selection-start-column="89" selection-end-line="14" selection-end-column="89" />
           <folding>
-            <element signature="method#initSelenoidDriver#0;class#ApplicationManager#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#256#257#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/staticPages/StaticPagesTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="73" column="47" lean-forward="false" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/helpers/PageHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#229#230#0" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
           </folding>
         </state>
       </provider>

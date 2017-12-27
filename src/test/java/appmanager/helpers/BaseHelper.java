@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
+import static com.codeborne.selenide.Selenide.$;
+
 public class BaseHelper {
 
    protected WebDriver wd;
@@ -21,7 +23,7 @@ public class BaseHelper {
 
 
    protected void click(By locator) {
-      wd.findElement(locator).click();
+      $(locator).click();
    }
 
    protected void type(By locator, String text) {
@@ -33,8 +35,6 @@ public class BaseHelper {
    protected void moveTo(By locator) {
       new Actions(wd).moveToElement(wd.findElement(locator)).build().perform();
    }
-
-
 
 
    public boolean isAlertPresent() {

@@ -16,6 +16,9 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
 
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+
 public class ApplicationManager {
 
    public static String baseUrl = "https://stage.butik.ru/";
@@ -41,19 +44,19 @@ public class ApplicationManager {
       return baseUrl;
    }
 
-   public void init() {
-
-      if (useSelenoid) {
-         initSelenoidDriver();
-      } else {
-         initLocalDriver();
-      }
-      wd.manage().window().setSize(new Dimension(1920, 1080));
-      wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-      wd.get(baseUrl);
-
-      initHelpers();
-   }
+ public void init() {
+//
+//      if (useSelenoid) {
+//         initSelenoidDriver();
+//      } else {
+//         initLocalDriver();
+//      }
+//      wd.manage().window().setSize(new Dimension(1920, 1080));
+//      wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+         open(baseUrl);
+//
+         initHelpers();
+  }
 
    private void initLocalDriver() {
 
@@ -106,10 +109,6 @@ public class ApplicationManager {
       checkoutHelper = new CheckoutHelper(wd);
       footerHelper = new FooterHelper(wd);
       pageHelper = new PageHelper(wd);
-   }
-
-   public void stop() {
-      wd.quit();
    }
 
    public NavigationHelper navigation() {

@@ -3,6 +3,8 @@ package appmanager.helpers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static com.codeborne.selenide.Selenide.$;
+
 public class PageHelper extends BaseHelper {
    public PageHelper(WebDriver wd) {
       super(wd);
@@ -17,10 +19,10 @@ public class PageHelper extends BaseHelper {
    }
 
    public boolean pageContainsText(By locator, String text) {
-      return wd.findElement(locator).getText().toLowerCase().contains(text);
+      return $(locator).getText().toLowerCase().contains(text);
    }
 
    public String getLinkForLocator(By xpath) {
-      return wd.findElement(xpath).getAttribute("href");
+      return $(xpath).getAttribute("href");
    }
 }
