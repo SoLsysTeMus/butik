@@ -84,13 +84,17 @@ public class CheckoutHelper extends BaseHelper {
       type(By.id("citySuggester"), city);
       waitForElementInvisible(By.xpath("//div[contains(@data-bind,\"showLoader\")]"), 5);
       waitLoadingElement(By.xpath(String.format("//b[contains(text(),'%s')]", city)), 5);
-      wd.findElement(By.xpath(String.format("//b[contains(text(),'%s')]", city))).click();
+      try {
+         wd.findElement(By.xpath(String.format("//b[contains(text(),'%s')]", city))).click();
+      } catch (StaleElementReferenceException e) {
+         wd.findElement(By.xpath(String.format("//b[contains(text(),'%s')]", city))).click();
+      }
       waitForElementInvisible(By.xpath("//div[contains(@data-bind,\"showLoader\")]"), 5);
 
    }
 
    public void selectDeliveryService(String service) {
-      waitLoadingElement(By.xpath(String.format("//span[contains(text(),'%s')]", service)),5);
+      waitLoadingElement(By.xpath(String.format("//span[contains(text(),'%s')]", service)), 5);
       wd.findElement(By.xpath(String.format("//span[contains(text(),'%s')]", service))).click();
    }
 
@@ -115,9 +119,9 @@ public class CheckoutHelper extends BaseHelper {
 
    public void fillAddressForm(String street, String house, String flat) {
       type(By.id("streetSuggester"), street);
-      waitLoadingElement(By.xpath(String.format("//b[contains(text(),'%s')]", street)),5);
+      waitLoadingElement(By.xpath(String.format("//b[contains(text(),'%s')]", street)), 7);
       click(By.xpath(String.format("//b[contains(text(),'%s')]", street)));
-      waitLoadingElement(By.id("houseSuggester"),5);
+      waitLoadingElement(By.id("houseSuggester"), 7);
       type(By.id("houseSuggester"), house);
    }
 
@@ -128,20 +132,18 @@ public class CheckoutHelper extends BaseHelper {
    }
 
    public void openDeliveryPointMap() {
-      wd.findElement(By.xpath("//span[contains(@class,'hidden-xs') and text() = 'Выбрать']")).click();
-      waitLoadingElement(By.xpath("//td[contains(@class,'arcticmodal-container_i2')]"), 5);
-      waitLoadingElement(By.xpath("//ymaps[contains(@class,'places-pane')]"),5);
+      try {
+         wd.findElement(By.xpath("//span[contains(@class,'hidden-xs') and text() = 'Выбрать']")).click();
+         waitLoadingElement(By.xpath("//td[contains(@class,'arcticmodal-container_i2')]"), 5);
+         waitLoadingElement(By.xpath("//ymaps[contains(@class,'places-pane')]"), 5);
+      } catch (TimeoutException e) {
+         System.out.println("Failed to load maps point");
+      }
       waitLoadingElement(By.cssSelector("div.arcticmodal-container"), 5);
-
    }
 
    public void selectDeliveryPoint(String subway, String street, By point) {
-      try {
-         Thread.sleep(1000);
-      } catch (InterruptedException e) {
-         e.printStackTrace();
-      }
-      waitLoadingElement(By.xpath("//ymaps[contains(@class,'places-pane')]"),5);
+      waitLoadingElement(By.xpath("//ymaps[contains(@class,'places-pane')]"), 5);
       waitLoadingElement(By.cssSelector("div.arcticmodal-container"), 5);
       waitLoadingElement(By.id("map"), 5);
 
@@ -171,5 +173,10 @@ public class CheckoutHelper extends BaseHelper {
    public void selectPaymentMethod(String paymentMethod) {
       waitLoadingElement(By.xpath(String.format("//div[contains(text(),'%s')]", paymentMethod)), 5);
       click(By.xpath(paymentMethod));
+   }
+
+   public void fillCommentaryForm(String commentText) {
+      click(By.xpath("//span[contains(@data-bind,'OrderDescription')]"));
+      type(By.id("order-description"), commentText);
    }
 }

@@ -49,6 +49,26 @@ public class CheckoutTests extends BaseTest {
    }
 
    @Test
+   public void testOrderByNotAuthUserWithRegionalDelivery() {
+      String testName = "test";
+      String testEmail = "checkoutaddress@test.ru";
+      String phone = "+7(964)538-80-80";
+      String commentText = "Test Order Commentary";
+
+      app.navigation().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-gubka/");
+      app.productCard().addToCart();
+      app.productCard().pressCheckoutButtonOnPopUp();
+      app.checkout().fillBuyerFrom(testName, phone, testEmail);
+      app.checkout().selectCityForDilivery("Уфа");
+      app.checkout().selectDeliveryService("DPD курьерская доставка");
+      app.checkout().fillAddressForm("Смоленская", "34", "1");
+      app.checkout().fillCommentaryForm(commentText);
+      app.checkout().submitOrder();
+
+      Assert.assertEquals(app.checkout().isSuccesOrder(), true);
+   }
+
+   @Test
    public void testOrderByNotAuthUserWithPickPointService() {
       String testName = "test";
       String testEmail = "checkoutaddress@test.ru";
@@ -69,4 +89,5 @@ public class CheckoutTests extends BaseTest {
 
       Assert.assertEquals(app.checkout().isSuccesOrder(), true);
    }
+
 }

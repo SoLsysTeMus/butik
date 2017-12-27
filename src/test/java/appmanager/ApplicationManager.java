@@ -34,6 +34,8 @@ public class ApplicationManager {
    private CatalogHelper catalogHelper;
    private ProductCardHelpers productCardHelpers;
    private CheckoutHelper checkoutHelper;
+   private FooterHelper footerHelper;
+   private PageHelper pageHelper;
 
    public static String getBaseUrl() {
       return baseUrl;
@@ -102,6 +104,8 @@ public class ApplicationManager {
       catalogHelper = new CatalogHelper(wd);
       productCardHelpers = new ProductCardHelpers(wd);
       checkoutHelper = new CheckoutHelper(wd);
+      footerHelper = new FooterHelper(wd);
+      pageHelper = new PageHelper(wd);
    }
 
    public void stop() {
@@ -146,6 +150,14 @@ public class ApplicationManager {
 
    public CheckoutHelper checkout() {
       return checkoutHelper;
+   }
+
+   public FooterHelper footer() {
+      return footerHelper;
+   }
+
+   public PageHelper page() {
+      return pageHelper;
    }
 }
 

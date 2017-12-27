@@ -34,9 +34,7 @@ public class BaseHelper {
       new Actions(wd).moveToElement(wd.findElement(locator)).build().perform();
    }
 
-   public void getTitle() {
-      wd.getTitle();
-   }
+
 
 
    public boolean isAlertPresent() {
