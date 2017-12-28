@@ -1,5 +1,6 @@
 package tests.checkout;
 
+import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -8,7 +9,6 @@ import tests.BaseTest;
 
 import static appmanager.ApplicationManager.baseUrl;
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
-import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 public class CheckoutTests extends BaseTest {
@@ -17,7 +17,7 @@ public class CheckoutTests extends BaseTest {
    public void cleanUpSession() {
       clearBrowserCookies();
       clearBrowserCache();
-      open(baseUrl);
+      app.navigation().openUrl(Configuration.baseUrl);
    }
 
    @Test

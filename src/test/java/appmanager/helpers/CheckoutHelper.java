@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 
 public class CheckoutHelper extends BaseHelper {
 
@@ -132,7 +133,7 @@ public class CheckoutHelper extends BaseHelper {
          type(By.id("addressSuggester"), street);
          click(By.xpath(String.format("//b[contains(text(),'%s')]", street)));
       }
-
+      sleep(1000);
       $(point).shouldBe(Condition.visible);
       $(point).hover();
       moveTo(point);
