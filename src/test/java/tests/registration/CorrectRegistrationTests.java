@@ -1,10 +1,21 @@
 package tests.registration;
 
-import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
+import static appmanager.ApplicationManager.baseUrl;
+import static com.codeborne.selenide.Selenide.clearBrowserCookies;
+import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
+
 public class CorrectRegistrationTests extends BaseTest {
+
+   @BeforeMethod
+   public void cleanUpSession() {
+      clearBrowserCookies();
+      clearBrowserCache();
+      app.navigation().openUrl(baseUrl);
+   }
 
 
    @Test
@@ -22,7 +33,7 @@ public class CorrectRegistrationTests extends BaseTest {
       app.header().openPersonalMenu();
       app.personalMenu().gotoProfile();
 
-      Assert.assertEquals(app.userProfile().getProfileEmail(), randomEmail);
+      app.userProfile().checkProfileEmail(randomEmail);
    }
 
    @Test
@@ -39,7 +50,7 @@ public class CorrectRegistrationTests extends BaseTest {
       app.header().openPersonalMenu();
       app.personalMenu().gotoProfile();
 
-      Assert.assertEquals(app.userProfile().getProfileEmail(), randomEmail);
+      app.userProfile().checkProfileEmail(randomEmail);
    }
 
 

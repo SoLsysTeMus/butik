@@ -2,12 +2,23 @@ package tests.checkout;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static appmanager.ApplicationManager.baseUrl;
+import static com.codeborne.selenide.Selenide.clearBrowserCookies;
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 public class CheckoutTests extends BaseTest {
+
+   @BeforeMethod
+   public void cleanUpSession() {
+      clearBrowserCookies();
+      clearBrowserCache();
+      open(baseUrl);
+   }
 
    @Test
    public void testOrderByAuthUserWithSavedAddress() {

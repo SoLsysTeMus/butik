@@ -1,12 +1,22 @@
 package tests.productCard;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static appmanager.ApplicationManager.baseUrl;
+import static com.codeborne.selenide.Selenide.clearBrowserCookies;
+import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 public class ProductCardTests extends BaseTest {
+
+   @BeforeMethod
+   public void cleanUpSession() {
+      clearBrowserCookies();
+      clearBrowserCache();
+      app.navigation().openUrl(baseUrl);
+   }
 
    @Test
    public void testAddItemWithOutSizesToNotAuthCart() {

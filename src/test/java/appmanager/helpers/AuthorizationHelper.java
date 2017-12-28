@@ -1,19 +1,16 @@
 package appmanager.helpers;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+
+import static com.codeborne.selenide.Selenide.$;
 
 
 public class AuthorizationHelper extends BaseHelper {
 
-   public AuthorizationHelper(WebDriver wd) {
-      super(wd);
-   }
 
    public void fillPopUpAuthorizationForm(String login, String password) {
-      waitLoadingElement(By.id("js-login-email"), 5);
-      type(By.id("js-login-email"), login);
-      type(By.xpath("//input[@type='password']"), password);
+      $(By.id("js-login-email")).setValue(login).click();
+      $(By.xpath("//input[@type='password']")).setValue(password).click();
    }
 
    public void fillAuthorizationForm(String login, String password) {

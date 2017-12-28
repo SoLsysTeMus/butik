@@ -1,28 +1,18 @@
 package appmanager.helpers;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
+import static com.codeborne.selenide.Condition.attribute;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class PageHelper extends BaseHelper {
-   public PageHelper(WebDriver wd) {
-      super(wd);
+
+   public void pageContainsText(By locator, String text) {
+      $(locator).shouldHave(text(text));
    }
 
-   public String getTitle() {
-      return wd.getTitle();
-   }
-
-   public String getPageUrl() {
-      return wd.getCurrentUrl();
-   }
-
-   public boolean pageContainsText(By locator, String text) {
-      return $(locator).getText().toLowerCase().contains(text);
-   }
-
-   public String getLinkForLocator(By xpath) {
-      return $(xpath).getAttribute("href");
+   public void locatorContainsLink(By locator, String url) {
+      $(locator).shouldHave(attribute("href", url));
    }
 }

@@ -1,12 +1,24 @@
 package tests.wishlist;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static appmanager.ApplicationManager.baseUrl;
+import static com.codeborne.selenide.Selenide.clearBrowserCookies;
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
+
 
 public class WishlistTests extends BaseTest {
+
+   @BeforeMethod
+   public void cleanUpSession() {
+      clearBrowserCookies();
+      clearBrowserCache();
+      open(baseUrl);
+   }
 
    @Test
    public void testWishlistCounterVisibleInHeader() {
@@ -28,7 +40,6 @@ public class WishlistTests extends BaseTest {
       String testLoginEmail = "testwishlist@testwishlist.ru";
       String testPassword = "12345";
       Integer itemsCount;
-
 
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-black-gubka/");
       app.navigation().openAuthorizationPopUp();

@@ -1,13 +1,23 @@
 package tests.authorization;
 
-import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.Step;
 import tests.BaseTest;
+
+import static appmanager.ApplicationManager.baseUrl;
+import static com.codeborne.selenide.Selenide.clearBrowserCookies;
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 public class CorrectAuthorizationTests extends BaseTest {
 
-   @Step("Авторизация с cтраницы /login")
+   @BeforeMethod
+   public void cleanUpSession() {
+      clearBrowserCookies();
+      clearBrowserCache();
+      open(baseUrl);
+   }
+
    @Test
    public void testCorrectAuthorization() {
 
@@ -20,10 +30,10 @@ public class CorrectAuthorizationTests extends BaseTest {
       app.header().openPersonalMenu();
       app.personalMenu().gotoProfile();
 
-      Assert.assertEquals(app.userProfile().getProfileEmail(), testLoginEmail);
+      app.userProfile().checkProfileEmail(testLoginEmail);
    }
 
-   @Step("Авторизация через Pop-up")
+
    @Test
    public void testCorrectAuthorizationPopUp() {
 
@@ -36,7 +46,7 @@ public class CorrectAuthorizationTests extends BaseTest {
       app.header().openPersonalMenu();
       app.personalMenu().gotoProfile();
 
-      Assert.assertEquals(app.userProfile().getProfileEmail(), testLoginEmail);
+      app.userProfile().checkProfileEmail(testLoginEmail);
    }
 
 
