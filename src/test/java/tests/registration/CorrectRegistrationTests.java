@@ -1,5 +1,6 @@
 package tests.registration;
 
+import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import tests.BaseTest;
@@ -14,7 +15,7 @@ public class CorrectRegistrationTests extends BaseTest {
    public void cleanUpSession() {
       clearBrowserCookies();
       clearBrowserCache();
-      app.navigation().openUrl(baseUrl);
+      app.navigation().openUrl(Configuration.baseUrl);
    }
 
 
@@ -30,10 +31,7 @@ public class CorrectRegistrationTests extends BaseTest {
       app.navigation().gotoRegistrationPopUpForm();
       app.registration().fillPopUpRegistrationForm(name, randomEmail, password);
       app.registration().submitPopUpRegistrationData();
-      app.header().openPersonalMenu();
-      app.personalMenu().gotoProfile();
-
-      app.userProfile().checkProfileEmail(randomEmail);
+      app.header().checkUserName(name);
    }
 
    @Test
@@ -47,10 +45,7 @@ public class CorrectRegistrationTests extends BaseTest {
       app.navigation().openRegistrationPage();
       app.registration().fillRegistrationForm(name, randomEmail, password);
       app.registration().submitRegistrationData();
-      app.header().openPersonalMenu();
-      app.personalMenu().gotoProfile();
-
-      app.userProfile().checkProfileEmail(randomEmail);
+      app.header().checkUserName(name);
    }
 
 

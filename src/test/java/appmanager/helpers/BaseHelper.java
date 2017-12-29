@@ -27,7 +27,7 @@ public class BaseHelper {
    }
 
    protected String getTextForElement(By locator) {
-      return $(locator).getText();
+      return $(locator).shouldBe(Condition.visible).getText();
    }
 
    public void waitLoader() {

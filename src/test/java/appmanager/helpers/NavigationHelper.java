@@ -4,7 +4,6 @@ package appmanager.helpers;
 import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;
 
-import static appmanager.ApplicationManager.baseUrl;
 import static appmanager.ApplicationManager.getBaseUrl;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -33,6 +32,10 @@ public class NavigationHelper extends BaseHelper {
    }
 
    public void gotoCheckout() {
-      open(baseUrl + "checkout");
+      open(getBaseUrl() + "checkout");
+   }
+
+   public void logoutBylink(){
+      openUrl(getBaseUrl() + "logout");
    }
 }

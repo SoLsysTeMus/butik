@@ -64,7 +64,7 @@ public class CheckoutHelper extends BaseHelper {
    }
 
    public boolean cartIsEmpty() {
-      return $(By.xpath("//div[contains(text(),'В корзину ничего не добавлено')]")).isDisplayed();
+      return $(By.xpath("//div[contains(text(),'В корзину ничего не добавлено')]")).shouldBe(Condition.visible).isDisplayed();
    }
 
    public String getSelectedSizeForProduct(WebElement product) {
@@ -79,6 +79,7 @@ public class CheckoutHelper extends BaseHelper {
    }
 
    public void selectCityForDilivery(String city) {
+      waitLoader();
       $(By.id("citySuggester")).setValue(city);
       $(By.xpath(String.format("//b[contains(text(),'%s')]", city))).click();
 
@@ -89,6 +90,7 @@ public class CheckoutHelper extends BaseHelper {
    }
 
    public void submitOrder() {
+      waitLoader();
       $(By.xpath("//div[contains(@data-bind,'click: sendOrder')]")).click();
       waitLoader();
 
@@ -100,12 +102,14 @@ public class CheckoutHelper extends BaseHelper {
    }
 
    public void addNewAddress() {
+      waitLoader();
       click(By.xpath("//span[contains(@data-bind,'html: selectedItem()')]"));
       click(By.xpath("//li[contains(@data-bind,'newAddressItem')]"));
       waitLoader();
    }
 
    public void fillAddressForm(String street, String house, String flat) {
+      waitLoader();
       type(By.id("streetSuggester"), street);
       click(By.xpath(String.format("//b[contains(text(),'%s')]", street)));
       type(By.id("houseSuggester"), house);
@@ -118,6 +122,8 @@ public class CheckoutHelper extends BaseHelper {
    }
 
    public void openDeliveryPointMap() {
+      waitLoader();
+      sleep(1000);
       $(By.xpath("//span[contains(@class,'hidden-xs') and text() = 'Выбрать']")).click();
       $(By.xpath("//div[contains(@class,'arcticmodal-container')]//ymaps[contains(@class,'ymaps-2-1-59-places-pane')]")).should(Condition.visible);
    }
@@ -127,13 +133,15 @@ public class CheckoutHelper extends BaseHelper {
 
       if (subway != null) {
          type(By.id("subwaySuggester"), subway);
+         sleep(500);
          click(By.xpath(String.format("//b[contains(text(),'%s')]", subway)));
       }
       if (street != null) {
          type(By.id("addressSuggester"), street);
+         sleep(500);
          click(By.xpath(String.format("//b[contains(text(),'%s')]", street)));
       }
-      sleep(1000);
+      sleep(500);
       $(point).shouldBe(Condition.visible);
       $(point).hover();
       moveTo(point);
@@ -141,7 +149,7 @@ public class CheckoutHelper extends BaseHelper {
 
 
       $(By.xpath("//div[@id='map']//button[.='Выбрать']")).hover().click();
-
+      $(By.xpath("//div[contains(@class,'arcticmodal-container')]")).shouldNotBe(Condition.visible);
    }
 
    public void selectPaymentMethod(String paymentMethod) {

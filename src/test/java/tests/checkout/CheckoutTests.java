@@ -19,7 +19,6 @@ public class CheckoutTests extends BaseTest {
       clearBrowserCache();
       app.navigation().openUrl(Configuration.baseUrl);
    }
-
    @Test
    public void testOrderByAuthUserWithSavedAddress() {
       String testLoginEmail = "checkoutaddress@test.ru";

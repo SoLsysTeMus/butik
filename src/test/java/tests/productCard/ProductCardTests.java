@@ -1,5 +1,6 @@
 package tests.productCard;
 
+import com.codeborne.selenide.Configuration;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -15,7 +16,7 @@ public class ProductCardTests extends BaseTest {
    public void cleanUpSession() {
       clearBrowserCookies();
       clearBrowserCache();
-      app.navigation().openUrl(baseUrl);
+      app.navigation().openUrl(Configuration.baseUrl);
    }
 
    @Test
@@ -26,8 +27,6 @@ public class ProductCardTests extends BaseTest {
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
 
-      System.out.println(app.checkout().getItemsInTheCartList());
-
       Assert.assertEquals(app.checkout().getItemsInTheCartList().size(), 2);
    }
 
@@ -37,8 +36,6 @@ public class ProductCardTests extends BaseTest {
       app.productCard().selectSize(1);
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
-
-      System.out.println(app.checkout().getItemsInTheCartList());
 
       Assert.assertEquals(app.checkout().getItemsInTheCartList().size(), 1);
    }
@@ -58,12 +55,9 @@ public class ProductCardTests extends BaseTest {
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
 
-      System.out.println(app.checkout().getItemsInTheCartList());
-
       Assert.assertEquals(app.checkout().getItemsInTheCartList().size(), 2);
 
       app.checkout().removeAllProducts();
-
       Assert.assertEquals(app.checkout().cartIsEmpty(), true);
 
 
@@ -82,10 +76,7 @@ public class ProductCardTests extends BaseTest {
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
 
-      System.out.println(app.checkout().getItemsInTheCartList());
-
       Assert.assertEquals(app.checkout().getItemsInTheCartList().size(), 1);
-
       app.checkout().removeAllProducts();
 
       Assert.assertEquals(app.checkout().cartIsEmpty(), true);

@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 public class CatalogHelper extends BaseHelper {
 
    public int getProductsCountInCategory() {
+      waitLoader();
       return Integer.parseInt(getTextForElement(By.xpath("//span[contains(text(),'товар')]")).replaceAll("\\D", ""));
    }
 

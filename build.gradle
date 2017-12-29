@@ -21,6 +21,7 @@ sourceSets {
     }
 }
 
+
 dependencies{
     compile 'org.testng:testng:6.11'
     compile 'com.codeborne:selenide:4.9'
@@ -38,3 +39,11 @@ test {
     maxParallelForks = Runtime.runtime.availableProcessors()
     useTestNG()
 }
+
+tasks.withType(Test).all { testTask ->
+    testTask.systemProperties['file.encoding'] = 'UTF-8'
+    testTask.systemProperties['selenide.browser'] = System.getProperty('browser', "browser")
+    testTask.testLogging.showStandardStreams = false
+    testTask.outputs.upToDateWhen { false }
+}
+

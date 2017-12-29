@@ -8,6 +8,7 @@ import tests.BaseTest;
 
 import static appmanager.ApplicationManager.baseUrl;
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
+import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 
@@ -32,7 +33,7 @@ public class WishlistTests extends BaseTest {
       app.header().gotoWishlist();
 
       Assert.assertNotEquals(app.header().getWishlistItemscount(), 0);
-   }
+      }
 
    @Test
    public void testAddtoWishlistCounterIncrementFromProductCard() {
@@ -50,7 +51,7 @@ public class WishlistTests extends BaseTest {
       app.header().gotoWishlist();
 
       Assert.assertEquals(app.header().getWishlistItemscount(), ++itemsCount);
-   }
+      }
 
    @Test
    public void testDeleteWishlistCounterDecrementFromProductCard() {
@@ -68,7 +69,7 @@ public class WishlistTests extends BaseTest {
       app.header().gotoWishlist();
 
       Assert.assertEquals(app.header().getWishlistItemscount(), --itemsCount);
-   }
+      }
 
    @Test
    public void testWishlistDeleteItemFromCheckout() {
@@ -91,7 +92,6 @@ public class WishlistTests extends BaseTest {
       app.header().gotoWishlist();
 
       Assert.assertEquals(app.header().getWishlistItemscount(), itemsCount);
-
    }
 
    @Test
@@ -113,7 +113,6 @@ public class WishlistTests extends BaseTest {
       app.checkout().selectDeliveryService("Butik самовывоз");
       app.checkout().submitOrder();
       app.navigation().openUrl(baseUrl);
-      app.header().gotoWishlist();
 
       Assert.assertEquals(app.header().getWishlistItemscount(), itemsCount);
    }

@@ -6,7 +6,7 @@ import appmanager.helpers.header.MainMenuHelper;
 
 public class ApplicationManager {
 
-   public static String baseUrl = "http://stage.butik.ru/";
+   public static String baseUrl = "https://stage.butik.ru/";
 
 
    private NavigationHelper navigationHelper;

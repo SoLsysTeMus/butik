@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
+import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 public class CorrectAuthorizationTests extends BaseTest {
@@ -22,15 +23,13 @@ public class CorrectAuthorizationTests extends BaseTest {
 
       String testLoginEmail = "auth_test@auth.test";
       String testPassword = "12345";
+      String name = "authtest";
 
       app.navigation().openLoginPage();
       app.authorization().fillAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitLoginData();
-      app.header().openPersonalMenu();
-      app.personalMenu().gotoProfile();
-
-      app.userProfile().checkProfileEmail(testLoginEmail);
-   }
+      app.header().checkUserName(name);
+      }
 
 
    @Test
@@ -38,15 +37,13 @@ public class CorrectAuthorizationTests extends BaseTest {
 
       String testLoginEmail = "auth_test@auth.test";
       String testPassword = "12345";
+      String name = "authtest";
 
       app.navigation().openAuthorizationPopUp();
       app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitPopUpLoginData();
-      app.header().openPersonalMenu();
-      app.personalMenu().gotoProfile();
-
-      app.userProfile().checkProfileEmail(testLoginEmail);
-   }
+      app.header().checkUserName(name);
+      }
 
 
 }

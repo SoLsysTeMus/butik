@@ -18,9 +18,11 @@ public class RegistrationHelper extends BaseHelper {
 
    public void submitPopUpRegistrationData() {
       click(By.xpath("//*[@id=\"authPopup\"]/div[2]/div[2]/div/div[2]/form/button"));
+      waitLoader();
    }
 
    public void submitRegistrationData() {
       click(By.xpath("/html/body/div[2]/div[1]/div/div/div[2]/form/button"));
+      waitLoader();
    }
 }

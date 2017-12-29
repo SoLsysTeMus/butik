@@ -20,11 +20,14 @@ public class AuthorizationHelper extends BaseHelper {
 
    public void submitPopUpLoginData() {
       click(By.xpath("//div[@id='authPopup']/div[2]/div/div/form/button"));
+      waitLoader();
    }
 
    public void submitLoginData() {
       click(By.xpath("/html/body/div[2]/div[1]/div/div[1]/form/button"));
+      waitLoader();
    }
+
 
 
 }
