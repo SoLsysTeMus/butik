@@ -1,7 +1,6 @@
 package appmanager.helpers;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.ex.ElementNotFound;
 import model.ProductData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;

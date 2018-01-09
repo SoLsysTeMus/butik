@@ -21,6 +21,7 @@ public class ApplicationManager {
    private CheckoutHelper checkoutHelper;
    private FooterHelper footerHelper;
    private PageHelper pageHelper;
+   private BannerHelper bannerHelper;
 
    public static String getBaseUrl() {
       return baseUrl;
@@ -52,6 +53,7 @@ public class ApplicationManager {
       checkoutHelper = new CheckoutHelper();
       footerHelper = new FooterHelper();
       pageHelper = new PageHelper();
+      bannerHelper = new BannerHelper();
    }
 
    public NavigationHelper navigation() {
@@ -100,6 +102,10 @@ public class ApplicationManager {
 
    public PageHelper page() {
       return pageHelper;
+   }
+
+   public BannerHelper banner() {
+      return bannerHelper;
    }
 }
 

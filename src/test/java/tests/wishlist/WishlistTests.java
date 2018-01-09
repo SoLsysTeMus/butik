@@ -8,7 +8,6 @@ import tests.BaseTest;
 
 import static appmanager.ApplicationManager.baseUrl;
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
-import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 

@@ -82,6 +82,6 @@ public class StaticPagesTests extends BaseTest {
    @Test
    public void testCheckOpenInstashopPage() {
       app.footer().gotoStaticPage("Instashop");
-      //p.page().pageContainsText(By.cssSelector(".fotoshmoto-heading"), "instashop");
+      app.page().pageContainsText(By.cssSelector(".fotoshmoto-heading"), "instashop");
    }
 }

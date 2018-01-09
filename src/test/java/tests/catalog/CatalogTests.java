@@ -1,6 +1,5 @@
 package tests.catalog;
 
-import appmanager.ApplicationManager;
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.By;
 import org.testng.Assert;

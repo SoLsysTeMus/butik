@@ -40,7 +40,6 @@ public class ProductCardTests extends BaseTest {
       Assert.assertEquals(app.checkout().getItemsInTheCartList().size(), 1);
    }
 
-
    @Test
    public void testAddItemWithOutSizesToAuthCart() {
       String testLoginEmail = "auth_test@auth.test";
@@ -59,8 +58,6 @@ public class ProductCardTests extends BaseTest {
 
       app.checkout().removeAllProducts();
       Assert.assertEquals(app.checkout().cartIsEmpty(), true);
-
-
    }
 
    @Test

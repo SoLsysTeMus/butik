@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
-import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 public class CorrectAuthorizationTests extends BaseTest {
