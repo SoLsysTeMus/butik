@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Features;
 import ru.yandex.qatools.allure.annotations.Severity;
+import ru.yandex.qatools.allure.annotations.Title;
 import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
@@ -25,7 +26,7 @@ public class CatalogTests extends BaseTest {
    }
 
    @Severity(SeverityLevel.BLOCKER)
-   @Features("Количество товаров в категории > 0")
+   @Title("Количество товаров в категории > 0")
    @Test
    public void testCatalogItemCountAboveZero() {
       app.navigation().openUrl(baseUrl);

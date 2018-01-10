@@ -23,7 +23,7 @@ public class BaseTest {
       Configuration.timeout = 5000;
 
       app.init();
-      //open(baseUrl);
+      open(baseUrl);
    }
 
    @AfterMethod
