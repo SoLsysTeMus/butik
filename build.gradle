@@ -27,7 +27,7 @@ dependencies{
     compile 'com.codeborne:selenide:4.9'
     compile 'ru.yandex.qatools.allure:allure-core:1.5.4'
     agent "org.aspectj:aspectjweaver:${aspectjVersion}"
-    testCompile "ru.yandex.qatools.allure:allure-testng-adaptor:${allureVersion}"
+    compile "ru.yandex.qatools.allure:allure-testng-adaptor:${allureVersion}"
 
 }
 
@@ -38,6 +38,9 @@ test.doFirst {
 test {
     maxParallelForks = Runtime.runtime.availableProcessors()
     useTestNG()
+//            {
+//        suites "src/test/resources/testng.xml"
+//    }
 }
 
 tasks.withType(Test).all { testTask ->

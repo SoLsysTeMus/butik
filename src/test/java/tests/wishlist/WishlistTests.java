@@ -4,13 +4,14 @@ import com.codeborne.selenide.Configuration;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import ru.yandex.qatools.allure.annotations.Features;
 import tests.BaseTest;
 
 import static appmanager.ApplicationManager.baseUrl;
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
-
+@Features("WishList")
 public class WishlistTests extends BaseTest {
 
    @BeforeMethod
@@ -29,10 +30,10 @@ public class WishlistTests extends BaseTest {
       app.navigation().openAuthorizationPopUp();
       app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitPopUpLoginData();
-      app.header().gotoWishlist();
+      app.navigation().openWishlistPage();
 
       Assert.assertNotEquals(app.header().getWishlistItemscount(), 0);
-      }
+   }
 
    @Test
    public void testAddtoWishlistCounterIncrementFromProductCard() {
@@ -47,10 +48,10 @@ public class WishlistTests extends BaseTest {
       app.authorization().submitPopUpLoginData();
       itemsCount = app.header().getWishlistItemscount();
       app.productCard().addToWishlist();
-      app.header().gotoWishlist();
+      app.navigation().openWishlistPage();
 
       Assert.assertEquals(app.header().getWishlistItemscount(), ++itemsCount);
-      }
+   }
 
    @Test
    public void testDeleteWishlistCounterDecrementFromProductCard() {
@@ -64,11 +65,11 @@ public class WishlistTests extends BaseTest {
       app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitPopUpLoginData();
       itemsCount = app.header().getWishlistItemscount();
-      app.productCard().removeFromlist();
-      app.header().gotoWishlist();
+      app.productCard().removeFromList();
+      app.navigation().openWishlistPage();
 
       Assert.assertEquals(app.header().getWishlistItemscount(), --itemsCount);
-      }
+   }
 
    @Test
    public void testWishlistDeleteItemFromCheckout() {
@@ -84,11 +85,10 @@ public class WishlistTests extends BaseTest {
       itemsCount = app.header().getWishlistItemscount();
       app.productCard().addToWishlist();
       app.productCard().addToCart();
-      app.navigation().gotoCheckout();
+      app.navigation().openCheckoutPage();
       app.checkout().deleteItemFromWishlist();
       app.checkout().removeAllProducts();
-      app.navigation().openUrl(baseUrl);
-      app.header().gotoWishlist();
+      app.navigation().openWishlistPage();
 
       Assert.assertEquals(app.header().getWishlistItemscount(), itemsCount);
    }
@@ -107,8 +107,8 @@ public class WishlistTests extends BaseTest {
       itemsCount = app.header().getWishlistItemscount();
       app.productCard().addToWishlist();
       app.productCard().addToCart();
-      app.navigation().gotoCheckout();
-      app.checkout().selectCityForDilivery("Москва");
+      app.navigation().openCheckoutPage();
+      app.checkout().selectCityForDelivery("Москва");
       app.checkout().selectDeliveryService("Butik самовывоз");
       app.checkout().submitOrder();
       app.navigation().openUrl(baseUrl);

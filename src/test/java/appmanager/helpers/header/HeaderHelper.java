@@ -3,7 +3,6 @@ package appmanager.helpers.header;
 import appmanager.helpers.BaseHelper;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -24,7 +23,7 @@ public class HeaderHelper extends BaseHelper {
       return Integer.parseInt(getTextForElement(By.xpath("//header/div[2]/div[5]/div[3]/a/span")));
    }
 
-   public void checkUserName(String name){
+   public void checkUserName(String name) {
       $(By.xpath("//header/div[2]/div[5]/div[4]/div/div[1]/span")).shouldBe(Condition.text(name));
    }
 
@@ -62,5 +61,13 @@ public class HeaderHelper extends BaseHelper {
 
    public void checkCartIsEmpty() {
       $(By.xpath("//div[contains(text(),'В корзину ничего не добавлено')]")).shouldBe(Condition.visible);
+   }
+
+   public void fillSearchField(String text) {
+      $(By.xpath("//input[contains(@placeholder,'Что вы ищете?')]")).shouldBe(Condition.visible).setValue(text);
+   }
+
+   public void pressSearchButton() {
+      $(By.xpath("//div[contains(@data-bind,'sendQuery')]")).shouldBe(Condition.visible).click();
    }
 }

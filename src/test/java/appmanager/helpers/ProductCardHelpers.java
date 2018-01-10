@@ -1,5 +1,8 @@
 package appmanager.helpers;
 
+import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.ex.ElementNotFound;
+import model.ProductData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -14,7 +17,7 @@ public class ProductCardHelpers extends BaseHelper {
       click(By.xpath("//button[contains(@data-bind,'toggleWishlist')]"));
    }
 
-   public void removeFromlist() {
+   public void removeFromList() {
       click(By.xpath("//button[contains(@data-bind,'toggleWishlist')]"));
    }
 
@@ -49,5 +52,35 @@ public class ProductCardHelpers extends BaseHelper {
    public void selectSize(int i) {
       List sizes = getProductRusSizes();
       $(By.xpath(String.format(".//div[contains(@data-bind,'rus_size') and contains(text(),'%s')]", sizes.get(i)))).click();
+   }
+
+   public ProductData getProductData() {
+
+      return new ProductData()
+              .withBrandName(getTextForElement(By.xpath("//a[contains(@class, 'product-description__brand')]")))
+              .withName(getTextForElement(By.xpath("//div[contains(@class,'hidden-xs')]//div[contains(@class, 'product-description__name')]")))
+              .withPrice(Integer.valueOf(getTextForElement(By.cssSelector(".i-rub.i-xs-b")).replaceAll("\\D", "")))
+              .withLabel(getLabelForProduct())
+              .withSku(getSKUFromDescription());
+   }
+
+   public String getLabelForProduct() {
+      Configuration.timeout = 1000;
+      String label;
+      try {
+         label = getTextForElement(By.xpath("//div[contains(@class,'product-description__slider-wrap')]//div[contains(@class, 'sticker sticker-discount')]"));
+      } catch (ElementNotFound e) {
+         label = null;
+      }
+      return label;
+   }
+
+   public String getSKUFromDescription() {
+      String sku;
+      String description = getTextForElement(By.cssSelector(".product-description__params-info"));
+
+      int index = description.indexOf("Артикул:");
+      sku = description.substring(index).replace("Артикул:", "").trim();
+      return sku;
    }
 }

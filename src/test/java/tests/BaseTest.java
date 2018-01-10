@@ -17,6 +17,8 @@ public class BaseTest {
       String baseUrl = "https://stage.butik.ru/";
       Configuration.browser = "chrome";
       Configuration.browserSize = "1920x1080";
+      Configuration.captureJavascriptErrors = true;
+      Configuration.headless = false;
       Configuration.baseUrl = baseUrl;
       Configuration.timeout = 5000;
 

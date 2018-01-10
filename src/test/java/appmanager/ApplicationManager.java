@@ -22,20 +22,20 @@ public class ApplicationManager {
    private FooterHelper footerHelper;
    private PageHelper pageHelper;
    private BannerHelper bannerHelper;
+   private SearchHelper searchHelper;
 
    public static String getBaseUrl() {
       return baseUrl;
    }
 
    public void init() {
-//
+
 //      if (useSelenoid) {
 //         initSelenoidDriver();
 //      } else {
 //         initLocalDriver();
 //      }
-//      wd.manage().window().setSize(new Dimension(1920, 1080));
-//      wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS)
+
       initHelpers();
    }
 
@@ -54,6 +54,7 @@ public class ApplicationManager {
       footerHelper = new FooterHelper();
       pageHelper = new PageHelper();
       bannerHelper = new BannerHelper();
+      searchHelper = new SearchHelper();
    }
 
    public NavigationHelper navigation() {
@@ -106,6 +107,10 @@ public class ApplicationManager {
 
    public BannerHelper banner() {
       return bannerHelper;
+   }
+
+   public SearchHelper search() {
+      return searchHelper;
    }
 }
 

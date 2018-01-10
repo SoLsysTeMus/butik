@@ -23,7 +23,7 @@ public class NavigationHelper extends BaseHelper {
       open(getBaseUrl() + "register");
    }
 
-   public void gotoRegistrationPopUpForm() {
+   public void openRegistrationPopUpForm() {
       click(By.xpath("//*[@id=\"authPopup\"]/div[2]/div[1]/div[2]/span"));
    }
 
@@ -31,11 +31,15 @@ public class NavigationHelper extends BaseHelper {
       open(url);
    }
 
-   public void gotoCheckout() {
+   public void openCheckoutPage() {
       open(getBaseUrl() + "checkout");
    }
 
-   public void logoutBylink(){
+   public void logoutBylink() {
       openUrl(getBaseUrl() + "logout");
+   }
+
+   public void openWishlistPage() {
+      openUrl(getBaseUrl() + "wishlist");
    }
 }

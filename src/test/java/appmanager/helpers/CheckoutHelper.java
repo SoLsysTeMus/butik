@@ -77,7 +77,7 @@ public class CheckoutHelper extends BaseHelper {
       return size;
    }
 
-   public void selectCityForDilivery(String city) {
+   public void selectCityForDelivery(String city) {
       waitLoader();
       $(By.id("citySuggester")).setValue(city);
       $(By.xpath(String.format("//b[contains(text(),'%s')]", city))).click();
@@ -95,7 +95,7 @@ public class CheckoutHelper extends BaseHelper {
 
    }
 
-   public boolean isSuccesOrder() {
+   public boolean isSuccessOrder() {
       System.out.println("Заказ № " + getTextForElement(By.xpath("//span[contains(@data-bind,'orderNumber')]")));
       return $(By.xpath("//div[contains(@class,'hidden-xs') and text() = 'продолжить покупки']")).isDisplayed();
    }

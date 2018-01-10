@@ -2,8 +2,10 @@ package tests.staticPages;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+import ru.yandex.qatools.allure.annotations.Features;
 import tests.BaseTest;
 
+@Features("Static Page")
 public class StaticPagesTests extends BaseTest {
 
 

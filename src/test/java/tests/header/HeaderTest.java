@@ -1,8 +1,6 @@
 package tests.header;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -12,7 +10,7 @@ import tests.BaseTest;
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
-public class HeaderTest extends BaseTest{
+public class HeaderTest extends BaseTest {
 
    @BeforeMethod
    public void cleanUpSession() {
@@ -22,22 +20,22 @@ public class HeaderTest extends BaseTest{
    }
 
    @Test
-   public void testWomenSexSelectedOnGenderBanner(){
+   public void testWomenSexSelectedOnGenderBanner() {
 
       app.banner().selectSexOnGenderBanner("ЖЕНЩИНАМ");
 
-      Assert.assertEquals(app.header().getActiveGender(),"Женщинам");
+      Assert.assertEquals(app.header().getActiveGender(), "Женщинам");
    }
 
    @Test
-   public void testMenSexSelectedOnGenderBanner(){
+   public void testMenSexSelectedOnGenderBanner() {
       app.banner().selectSexOnGenderBanner("МУЖЧИНАМ");
 
-      Assert.assertEquals(app.header().getActiveGender(),"Мужчинам");
+      Assert.assertEquals(app.header().getActiveGender(), "Мужчинам");
    }
 
    @Test
-   public void testLinkToAboutPage(){
+   public void testLinkToAboutPage() {
       app.header().gotoAboutPage();
 
       app.page().pageContainsText(By.cssSelector(".static-about-title"), "универмаг и интернет-магазин");
@@ -45,7 +43,7 @@ public class HeaderTest extends BaseTest{
    }
 
    @Test
-   public void testOpenSearchForm(){
+   public void testOpenSearchForm() {
       app.header().openSearchForm();
 
       app.header().checkSearchFieldIsVisible();
@@ -54,7 +52,7 @@ public class HeaderTest extends BaseTest{
    }
 
    @Test
-   public void testPopUpWithEmptyCart(){
+   public void testPopUpWithEmptyCart() {
       app.header().openPopUpCart();
       app.header().checkCartIsEmpty();
    }

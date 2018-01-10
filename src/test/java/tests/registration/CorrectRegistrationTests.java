@@ -3,11 +3,13 @@ package tests.registration;
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import ru.yandex.qatools.allure.annotations.Features;
 import tests.BaseTest;
 
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
+@Features("Регистрация")
 public class CorrectRegistrationTests extends BaseTest {
 
    @BeforeMethod
@@ -27,7 +29,7 @@ public class CorrectRegistrationTests extends BaseTest {
 
       System.out.println(randomEmail);
       app.navigation().openAuthorizationPopUp();
-      app.navigation().gotoRegistrationPopUpForm();
+      app.navigation().openRegistrationPopUpForm();
       app.registration().fillPopUpRegistrationForm(name, randomEmail, password);
       app.registration().submitPopUpRegistrationData();
       app.header().checkUserName(name);
