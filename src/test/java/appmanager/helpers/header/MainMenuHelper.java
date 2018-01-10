@@ -2,13 +2,8 @@ package appmanager.helpers.header;
 
 import appmanager.helpers.BaseHelper;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class MainMenuHelper extends BaseHelper {
-
-   public MainMenuHelper(WebDriver wd) {
-      super(wd);
-   }
 
    public void gotoCategory(By category) {
       click(category);

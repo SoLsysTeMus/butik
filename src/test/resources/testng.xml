@@ -1,0 +1,22 @@
+<suite name="Regression" parallel="tests" thread-count="4" >
+    <test name="Authorization" >
+        <classes>
+            <class name="tests.authorization.CorrectAuthorizationTests" />
+        </classes>
+    </test>
+    <test name="Search" >
+        <classes>
+            <class name="tests.search.SearchTests" />
+        </classes>
+    </test>
+    <test name="WishList" >
+        <classes>
+            <class name="tests.wishlist.WishlistTests" />
+        </classes>
+    </test>
+    <test name="Static Pages" >
+        <classes>
+            <class name="tests.staticPages.StaticPagesTests" />
+        </classes>
+    </test>
+</suite>

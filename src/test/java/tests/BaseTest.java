@@ -1,8 +1,11 @@
 package tests;
 
 import appmanager.ApplicationManager;
+import com.codeborne.selenide.Configuration;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import static com.codeborne.selenide.Selenide.open;
 
 public class BaseTest {
 
@@ -10,14 +13,21 @@ public class BaseTest {
 
    @BeforeMethod
    public void setUp() {
-      app.init();
 
+      String baseUrl = "https://butik.ru/";
+      //Configuration.browser = "chrome";
+      Configuration.browserSize = "1920x1080";
+      Configuration.captureJavascriptErrors = true;
+      Configuration.headless = false;
+      Configuration.baseUrl = baseUrl;
+      Configuration.timeout = 5000;
+
+      app.init();
+      open(baseUrl);
    }
 
    @AfterMethod
-   public void tearDown() {
-      app.stop();
+   public void teardown() {
+
    }
-
-
 }

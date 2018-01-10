@@ -1,19 +1,17 @@
 package appmanager.helpers;
 
+import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+
+import static com.codeborne.selenide.Selenide.$;
 
 
 public class AuthorizationHelper extends BaseHelper {
 
-   public AuthorizationHelper(WebDriver wd) {
-      super(wd);
-   }
 
    public void fillPopUpAuthorizationForm(String login, String password) {
-      waitLoadingElement(By.id("js-login-email"), 5);
-      type(By.id("js-login-email"), login);
-      type(By.xpath("//input[@type='password']"), password);
+      $(By.id("js-login-email")).setValue(login).click();
+      $(By.xpath("//input[@type='password']")).setValue(password).click();
    }
 
    public void fillAuthorizationForm(String login, String password) {
@@ -23,10 +21,13 @@ public class AuthorizationHelper extends BaseHelper {
 
    public void submitPopUpLoginData() {
       click(By.xpath("//div[@id='authPopup']/div[2]/div/div/form/button"));
+      waitLoader();
+      $(By.xpath("//div[contains(@class,'p-x-sm_0-5 p-x-lg_1 dib hidden-xs')]//a[contains(@href,'wishlist')]")).shouldBe(Condition.visible);
    }
 
    public void submitLoginData() {
       click(By.xpath("/html/body/div[2]/div[1]/div/div[1]/form/button"));
+      waitLoader();
    }
 
 
