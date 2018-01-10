@@ -4,6 +4,9 @@ import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Features;
+import ru.yandex.qatools.allure.annotations.Severity;
+import ru.yandex.qatools.allure.annotations.Title;
+import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
@@ -19,7 +22,8 @@ public class CorrectRegistrationTests extends BaseTest {
       app.navigation().openUrl(Configuration.baseUrl);
    }
 
-
+   @Title("Регистрация пользователя через Pop-up")
+   @Severity(SeverityLevel.CRITICAL)
    @Test
    public void testRegistrationWithValidDataPopUp() {
 
@@ -35,6 +39,8 @@ public class CorrectRegistrationTests extends BaseTest {
       app.header().checkUserName(name);
    }
 
+   @Title("Регистрация пользователя через страницу /register")
+   @Severity(SeverityLevel.CRITICAL)
    @Test
    public void testRegistrationWithValidData() {
 

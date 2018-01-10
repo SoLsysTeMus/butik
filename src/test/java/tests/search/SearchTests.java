@@ -4,7 +4,9 @@ import model.ProductData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Features;
+import ru.yandex.qatools.allure.annotations.Severity;
 import ru.yandex.qatools.allure.annotations.Title;
+import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
@@ -13,6 +15,7 @@ import static com.codeborne.selenide.Configuration.baseUrl;
 public class SearchTests extends BaseTest {
 
    @Title("Поиск товара по названию")
+   @Severity(SeverityLevel.CRITICAL)
    @Test
    public void searchByName() {
       app.navigation().openUrl(baseUrl);
@@ -24,6 +27,7 @@ public class SearchTests extends BaseTest {
    }
 
    @Title("Поиск товара по неполному SKU")
+   @Severity(SeverityLevel.CRITICAL)
    @Test
    public void searchByPartOfSKU() {
       app.navigation().openUrl(baseUrl);
@@ -35,6 +39,7 @@ public class SearchTests extends BaseTest {
    }
 
    @Title("Поиск товара по SKU")
+   @Severity(SeverityLevel.CRITICAL)
    @Test
    public void searchBySku() {
       app.navigation().openUrl(baseUrl);
@@ -46,7 +51,8 @@ public class SearchTests extends BaseTest {
       Assert.assertEquals(product.getSku(), "Mobil black");
    }
 
-   @Title("Поиск товара по SKU включающий спецсимвол")
+   @Title("Поиск товара по SKU включающего спецсимвол")
+   @Severity(SeverityLevel.CRITICAL)
    @Test
    public void searchBySkuWithSpecialChar() {
       app.navigation().openUrl(baseUrl);
@@ -59,6 +65,7 @@ public class SearchTests extends BaseTest {
    }
 
    @Title("Поиск товара по Brand name включающего спецсимвол")
+   @Severity(SeverityLevel.CRITICAL)
    @Test
    public void searchByBrandNameWithSpecialChar() {
       app.navigation().openUrl(baseUrl);

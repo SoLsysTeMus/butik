@@ -16,7 +16,7 @@ import static appmanager.ApplicationManager.baseUrl;
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
-@Description("Checkout")
+@Features("Checkout")
 public class CheckoutTests extends BaseTest {
 
    @BeforeMethod
