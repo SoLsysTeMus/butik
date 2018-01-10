@@ -3,7 +3,6 @@ package tests.authorization;
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.Description;
 import ru.yandex.qatools.allure.annotations.Features;
 import ru.yandex.qatools.allure.annotations.Severity;
 import ru.yandex.qatools.allure.annotations.Title;
@@ -12,6 +11,7 @@ import tests.BaseTest;
 
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
+
 @Features("Авторизация")
 public class CorrectAuthorizationTests extends BaseTest {
 

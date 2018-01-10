@@ -14,8 +14,8 @@ public class BaseTest {
    @BeforeMethod
    public void setUp() {
 
-      String baseUrl = "https://stage.butik.ru/";
-      Configuration.browser = "chrome";
+      String baseUrl = "https://butik.ru/";
+      //Configuration.browser = "chrome";
       Configuration.browserSize = "1920x1080";
       Configuration.captureJavascriptErrors = true;
       Configuration.headless = false;
@@ -23,7 +23,7 @@ public class BaseTest {
       Configuration.timeout = 5000;
 
       app.init();
-      open(baseUrl);
+      //open(baseUrl);
    }
 
    @AfterMethod

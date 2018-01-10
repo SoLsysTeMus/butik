@@ -23,9 +23,9 @@ sourceSets {
 
 
 dependencies{
-    compile 'org.testng:testng:6.11'
-    compile 'com.codeborne:selenide:4.9'
-    compile 'ru.yandex.qatools.allure:allure-core:1.5.4'
+    compile "org.testng:testng:${testNGVerison}"
+    compile "com.codeborne:selenide:${selenideVersion}"
+    compile "ru.yandex.qatools.allure:allure-core:${allureCore}"
     agent "org.aspectj:aspectjweaver:${aspectjVersion}"
     compile "ru.yandex.qatools.allure:allure-testng-adaptor:${allureVersion}"
 
@@ -35,14 +35,14 @@ test.doFirst {
     jvmArgs "-javaagent:${configurations.agent.singleFile}"
 }
 
-test {
-    maxParallelForks = Runtime.runtime.availableProcessors()
-    useTestNG()
-//            {
-//        suites "src/test/resources/testng.xml"
-//    }
-}
 
+test {
+    //maxParallelForks = Runtime.runtime.availableProcessors()
+    useTestNG()
+           // {
+           //suites "src/test/resources/testng.xml"
+           //}
+}
 tasks.withType(Test).all { testTask ->
     testTask.systemProperties['file.encoding'] = 'UTF-8'
     testTask.systemProperties['selenide.browser'] = System.getProperty('browser', "browser")
