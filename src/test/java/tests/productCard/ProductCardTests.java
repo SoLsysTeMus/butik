@@ -53,7 +53,7 @@ public class ProductCardTests extends BaseTest {
    @Severity(SeverityLevel.CRITICAL)
    @Test
    public void testAddItemWithOutSizesToAuthCart() {
-      String testLoginEmail = "auth_test@auth.test";
+      String testLoginEmail = "auth_test2@auth.test";
       String testPassword = "12345";
 
       app.navigation().openAuthorizationPopUp();

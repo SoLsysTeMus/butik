@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.Description;
 import ru.yandex.qatools.allure.annotations.Features;
 import ru.yandex.qatools.allure.annotations.Severity;
 import ru.yandex.qatools.allure.annotations.Title;
@@ -26,7 +25,7 @@ public class CheckoutTests extends BaseTest {
       app.navigation().openUrl(Configuration.baseUrl);
    }
 
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(SeverityLevel.BLOCKER)
    @Title("Заказ на сохранённый адрес")
    @Test
    public void testOrderByAuthUserWithSavedAddress() {
@@ -44,7 +43,7 @@ public class CheckoutTests extends BaseTest {
       Assert.assertEquals(app.checkout().isSuccessOrder(), true);
    }
 
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(SeverityLevel.BLOCKER)
    @Title("Заказ на новый адрес для клиента с сохранённым адресом")
    @Test
    public void testOrderByAuthUserWithSavedAddressWithNewAddress() {
@@ -69,7 +68,7 @@ public class CheckoutTests extends BaseTest {
       Assert.assertEquals(app.checkout().isSuccessOrder(), true);
    }
 
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(SeverityLevel.BLOCKER)
    @Title("Заказ с доставкой в регионы для неавторизованного пользователя")
    @Test
    public void testOrderByNotAuthUserWithRegionalDelivery() {
@@ -91,7 +90,7 @@ public class CheckoutTests extends BaseTest {
       Assert.assertEquals(app.checkout().isSuccessOrder(), true);
    }
 
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(SeverityLevel.BLOCKER)
    @Title("Заказ с доставкой в ПВЗ для неавторизованного пользователя")
    @Test
    public void testOrderByNotAuthUserWithPickPointService() {

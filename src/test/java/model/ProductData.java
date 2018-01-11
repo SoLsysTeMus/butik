@@ -17,12 +17,12 @@ public class ProductData {
    }
 
    public ProductData withName(String name) {
-      this.name = name;
+      this.name = name.toLowerCase();
       return this;
    }
 
    public ProductData withBrandName(String brandName) {
-      this.brandName = brandName;
+      this.brandName = brandName.toLowerCase();
       return this;
    }
 
@@ -74,6 +74,18 @@ public class ProductData {
 
    public Integer getPriceMultiplyCount() {
       return priceMultiplyCount;
+   }
+
+   public Integer getQuantity() {
+      return quantity;
+   }
+
+   public Integer getPrice() {
+      return price;
+   }
+
+   public String getRusSize() {
+      return rusSize;
    }
 
    @Override

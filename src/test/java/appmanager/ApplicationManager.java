@@ -23,6 +23,7 @@ public class ApplicationManager {
    private PageHelper pageHelper;
    private BannerHelper bannerHelper;
    private SearchHelper searchHelper;
+   private WishListHelper wishListHelper;
 
    public static String getBaseUrl() {
       return baseUrl;
@@ -55,6 +56,7 @@ public class ApplicationManager {
       pageHelper = new PageHelper();
       bannerHelper = new BannerHelper();
       searchHelper = new SearchHelper();
+      wishListHelper = new WishListHelper();
    }
 
    public NavigationHelper navigation() {
@@ -111,6 +113,10 @@ public class ApplicationManager {
 
    public SearchHelper search() {
       return searchHelper;
+   }
+
+   public WishListHelper wishList() {
+      return wishListHelper;
    }
 }
 

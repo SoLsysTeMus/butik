@@ -71,4 +71,20 @@ public class HeaderTest extends BaseTest {
       app.header().openPopUpCart();
       app.header().checkCartIsEmpty();
    }
+
+   @Title("Отображение кол-ва товаров в wishlist")
+   @Severity(SeverityLevel.CRITICAL)
+   @Test
+   public void testWishListCounterVisibleInHeader() {
+
+      String testLoginEmail = "testwishlist@testwishlist.ru";
+      String testPassword = "12345";
+
+      app.navigation().openAuthorizationPopUp();
+      app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
+      app.authorization().submitPopUpLoginData();
+      app.navigation().openWishlistPage();
+
+      Assert.assertNotEquals(app.header().getWishlistItemscount(), 0);
+   }
 }

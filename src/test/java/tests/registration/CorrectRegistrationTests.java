@@ -24,7 +24,7 @@ public class CorrectRegistrationTests extends BaseTest {
 
    @Title("Регистрация пользователя через Pop-up")
    @Severity(SeverityLevel.CRITICAL)
-   @Test
+   @Test //(enabled = false)
    public void testRegistrationWithValidDataPopUp() {
 
       String name = "Test";
@@ -41,7 +41,7 @@ public class CorrectRegistrationTests extends BaseTest {
 
    @Title("Регистрация пользователя через страницу /register")
    @Severity(SeverityLevel.CRITICAL)
-   @Test
+   @Test //(enabled = false)
    public void testRegistrationWithValidData() {
 
       String name = "Test";

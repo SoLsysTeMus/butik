@@ -1,6 +1,7 @@
 package appmanager.helpers;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import model.ProductData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -11,10 +12,11 @@ import java.util.List;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
+import static tests.BaseTest.baseTimeout;
 
 public class CheckoutHelper extends BaseHelper {
 
-   public void deleteItemFromWishlist() {
+   public void deleteItemFromWishList() {
       click(By.xpath("//button[contains(@class,'heart')]"));
    }
 
@@ -68,10 +70,13 @@ public class CheckoutHelper extends BaseHelper {
 
    public String getSelectedSizeForProduct(WebElement product) {
       String size;
+      Configuration.timeout = 2500;
       try {
          size = product.findElement(By.xpath(".//div[contains(@class,'nowrp')]//span[contains(@data-bind,'text: ')]")).getText();
       } catch (NoSuchElementException e) {
          size = "б/р";
+      } finally {
+         Configuration.timeout = baseTimeout;
       }
 
       return size;

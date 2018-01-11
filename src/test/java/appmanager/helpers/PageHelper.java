@@ -13,6 +13,6 @@ public class PageHelper extends BaseHelper {
    }
 
    public void locatorContainsLink(By locator, String url) {
-      $(locator).shouldHave(attribute("href", url));
+      $(locator).shouldBe(attribute("href", url));
    }
 }

@@ -1,22 +1,22 @@
-<suite name="Regression" parallel="tests" thread-count="4" >
-    <test name="Authorization" >
+<suite name="Regression" parallel="tests" thread-count="4">
+    <test name="Authorization">
         <classes>
-            <class name="tests.authorization.CorrectAuthorizationTests" />
+            <class name="tests.authorization.CorrectAuthorizationTests"/>
         </classes>
     </test>
-    <test name="Search" >
+    <test name="Search">
         <classes>
-            <class name="tests.search.SearchTests" />
+            <class name="tests.search.SearchTests"/>
         </classes>
     </test>
-    <test name="WishList" >
+    <test name="WishList">
         <classes>
-            <class name="tests.wishlist.WishlistTests" />
+            <class name="tests.wishlist.WishListTests"/>
         </classes>
     </test>
-    <test name="Static Pages" >
+    <test name="Static Pages">
         <classes>
-            <class name="tests.staticPages.StaticPagesTests" />
+            <class name="tests.staticPages.StaticPagesTests"/>
         </classes>
     </test>
 </suite>
