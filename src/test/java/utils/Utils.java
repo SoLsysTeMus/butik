@@ -6,12 +6,13 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class Utils {
+
    public static Properties loadPropertiesFromConfig(String path) {
       InputStream input = null;
-      Properties temp = new Properties();
+      Properties properties = new Properties();
       try {
          input = new FileInputStream(path);
-         temp.load(input);
+         properties.load(input);
       } catch (IOException ex) {
          ex.printStackTrace();
       } finally {
@@ -23,6 +24,6 @@ public class Utils {
             }
          }
       }
-      return temp;
+      return properties;
    }
 }
