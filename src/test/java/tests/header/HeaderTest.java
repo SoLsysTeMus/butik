@@ -24,6 +24,7 @@ public class HeaderTest extends BaseTest {
       app.navigation().openUrl(Configuration.baseUrl);
    }
 
+
    @Title("Выбран женский пол на разводящей")
    @Severity(SeverityLevel.NORMAL)
    @Test
@@ -42,6 +43,7 @@ public class HeaderTest extends BaseTest {
 
       Assert.assertEquals(app.header().getActiveGender(), "Мужчинам");
    }
+
 
    @Title("Индикация ссылки \"О универмаге\" на странице /about")
    @Severity(SeverityLevel.NORMAL)

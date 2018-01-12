@@ -30,13 +30,6 @@ public class ApplicationManager {
    }
 
    public void init() {
-
-//      if (useSelenoid) {
-//         initSelenoidDriver();
-//      } else {
-//         initLocalDriver();
-//      }
-
       initHelpers();
    }
 
