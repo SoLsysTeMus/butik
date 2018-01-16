@@ -67,6 +67,7 @@ public class CheckoutHelper extends BaseHelper {
       }
    }
 
+   @Step("Проверка на отсутствие товаров в корзине")
    public boolean cartIsEmpty() {
       return $(By.xpath("//div[contains(text(),'В корзину ничего не добавлено')]")).shouldBe(Condition.visible).isDisplayed();
    }
@@ -85,17 +86,21 @@ public class CheckoutHelper extends BaseHelper {
       return size;
    }
 
+   @Step("Выбор города доставки")
    public void selectCityForDelivery(String city) {
       waitLoader();
       $(By.id("citySuggester")).setValue(city);
+      sleep(500);
       $(By.xpath(String.format("//b[contains(text(),'%s')]", city))).click();
 
    }
 
+   @Step("Выбор способа доставки")
    public void selectDeliveryService(String service) {
       $(By.xpath(String.format("//span[contains(text(),'%s')]", service))).click();
    }
 
+   @Step("Нажатие кнопки \"Отправить заказ\"")
    public void submitOrder() {
       waitLoader();
       $(By.xpath("//div[contains(@data-bind,'click: sendOrder')]")).click();
@@ -103,11 +108,13 @@ public class CheckoutHelper extends BaseHelper {
 
    }
 
+   @Step("Заказ успешно сохранён в базе")
    public boolean isSuccessOrder() {
       System.out.println("Заказ № " + getTextForElement(By.xpath("//span[contains(@data-bind,'orderNumber')]")));
       return $(By.xpath("//div[contains(@class,'hidden-xs') and text() = 'продолжить покупки']")).isDisplayed();
    }
 
+   @Step("Выбор добавления нового адреса")
    public void addNewAddress() {
       waitLoader();
       click(By.xpath("//span[contains(@data-bind,'html: selectedItem()')]"));
@@ -115,13 +122,19 @@ public class CheckoutHelper extends BaseHelper {
       waitLoader();
    }
 
+   @Step("Заполнение адреса")
    public void fillAddressForm(String street, String house, String flat) {
       waitLoader();
       type(By.id("streetSuggester"), street);
+      sleep(500);
       click(By.xpath(String.format("//b[contains(text(),'%s')]", street)));
       type(By.id("houseSuggester"), house);
+      sleep(500);
+      click(By.xpath(String.format("//b[contains(text(),'%s')]", house)));
+      type(By.name("flat"), flat);
    }
 
+   @Step("Заполнение данных покупателя")
    public void fillBuyerFrom(String testName, String phone, String testEmail) {
       type(By.name("name"), testName);
       type(By.name("phone"), phone);

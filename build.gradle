@@ -28,7 +28,7 @@ dependencies{
     compile "ru.yandex.qatools.allure:allure-core:${allureCore}"
     agent "org.aspectj:aspectjweaver:${aspectjVersion}"
     compile "ru.yandex.qatools.allure:allure-testng-adaptor:${allureVersion}"
-
+    compile "ch.qos.logback:logback-classic:${logbackVersion}"
 }
 
 test.doFirst {

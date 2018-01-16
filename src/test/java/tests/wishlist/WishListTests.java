@@ -12,16 +12,12 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
 import static appmanager.ApplicationManager.baseUrl;
-import static com.codeborne.selenide.Selenide.clearBrowserCookies;
-import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 @Features("WishList")
 public class WishListTests extends BaseTest {
 
    @BeforeMethod
    public void cleanUpSession() {
-      clearBrowserCookies();
-      clearBrowserCache();
       app.navigation().openUrl(Configuration.baseUrl);
    }
 
@@ -157,7 +153,7 @@ public class WishListTests extends BaseTest {
 
    @Title("Удаление товара из Избранного со страницы /wishlist")
    @Severity(SeverityLevel.CRITICAL)
-   @Test()
+   @Test
    public void testDeleteWishListItemFromWishListPage() {
 
       String testLoginEmail = "testwishlist@testwishlist.ru";
@@ -176,5 +172,4 @@ public class WishListTests extends BaseTest {
 
       Assert.assertNotEquals(productInWishListBefore.getBrandName(), productInWishListAfter.getBrandName());
    }
-
 }

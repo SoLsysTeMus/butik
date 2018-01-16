@@ -12,16 +12,12 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
 import static appmanager.ApplicationManager.baseUrl;
-import static com.codeborne.selenide.Selenide.clearBrowserCookies;
-import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 @Features("Checkout")
 public class CheckoutTests extends BaseTest {
 
    @BeforeMethod
    public void cleanUpSession() {
-      clearBrowserCookies();
-      clearBrowserCache();
       app.navigation().openUrl(Configuration.baseUrl);
    }
 
@@ -62,7 +58,7 @@ public class CheckoutTests extends BaseTest {
       app.checkout().addNewAddress();
       app.checkout().selectCityForDelivery("Москва");
       app.checkout().selectDeliveryService("Butik доставка");
-      app.checkout().fillAddressForm("Смоленская наб", "44", "1");
+      app.checkout().fillAddressForm("Смоленская наб", "д 44", "1");
       app.checkout().submitOrder();
 
       Assert.assertEquals(app.checkout().isSuccessOrder(), true);

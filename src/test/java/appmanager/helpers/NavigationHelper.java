@@ -13,6 +13,7 @@ public class NavigationHelper extends BaseHelper {
    public void openAuthorizationPopUp() {
       click(By.xpath("//div[contains(@class,'user-block fr nowrp')]//div[contains(@class,'dropmenu-root')]"));
       $(By.id("authPopup")).shouldBe(Condition.visible);
+      $(".button.authorization__button.m-login").shouldBe(Condition.visible);
    }
 
    public void openLoginPage() {

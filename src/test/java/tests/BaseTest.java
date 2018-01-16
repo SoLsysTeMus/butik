@@ -2,6 +2,8 @@ package tests;
 
 import appmanager.ApplicationManager;
 import com.codeborne.selenide.Configuration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -9,9 +11,11 @@ import org.testng.annotations.Listeners;
 import utils.AllureListeners;
 import utils.AllureUtils;
 
+import java.lang.reflect.Method;
 import java.util.Properties;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
 import static utils.Utils.loadPropertiesFromConfig;
 
@@ -20,6 +24,7 @@ public class BaseTest {
 
    public static long baseTimeout;
    protected final ApplicationManager app = new ApplicationManager();
+   Logger logger = LoggerFactory.getLogger(BaseTest.class);
 
    @BeforeMethod
    public void setUp() {
@@ -31,6 +36,11 @@ public class BaseTest {
       app.init();
 
       open(baseUrl);
+   }
+
+   @BeforeMethod
+   public void logTestStart(Method m) {
+      logger.info("Start test " + m.getName());
    }
 
    private void setConfig(Properties systemProperties, Properties testProperties) {
@@ -53,7 +63,12 @@ public class BaseTest {
 
    @AfterMethod
    public void teardown() {
+      close();
+   }
 
+   @AfterMethod(alwaysRun = true)
+   public void logTestStop(Method m) {
+      logger.info("Stop test " + m.getName());
    }
 
    @AfterSuite
