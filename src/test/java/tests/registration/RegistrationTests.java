@@ -9,22 +9,17 @@ import ru.yandex.qatools.allure.annotations.Title;
 import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
-import static com.codeborne.selenide.Selenide.clearBrowserCookies;
-import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
-
 @Features("Регистрация")
-public class CorrectRegistrationTests extends BaseTest {
+public class RegistrationTests extends BaseTest {
 
    @BeforeMethod
    public void cleanUpSession() {
-      clearBrowserCookies();
-      clearBrowserCache();
       app.navigation().openUrl(Configuration.baseUrl);
    }
 
    @Title("Регистрация пользователя через Pop-up")
    @Severity(SeverityLevel.CRITICAL)
-   @Test
+   @Test //(enabled = false)
    public void testRegistrationWithValidDataPopUp() {
 
       String name = "Test";
@@ -41,7 +36,7 @@ public class CorrectRegistrationTests extends BaseTest {
 
    @Title("Регистрация пользователя через страницу /register")
    @Severity(SeverityLevel.CRITICAL)
-   @Test
+   @Test //(enabled = false)
    public void testRegistrationWithValidData() {
 
       String name = "Test";

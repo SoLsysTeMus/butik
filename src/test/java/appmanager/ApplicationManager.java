@@ -6,9 +6,6 @@ import appmanager.helpers.header.MainMenuHelper;
 
 public class ApplicationManager {
 
-   public static String baseUrl = "https://stage.butik.ru/";
-
-
    private NavigationHelper navigationHelper;
    private RegistrationHelper registrationHelper;
    private AuthorizationHelper authorizationHelper;
@@ -23,22 +20,11 @@ public class ApplicationManager {
    private PageHelper pageHelper;
    private BannerHelper bannerHelper;
    private SearchHelper searchHelper;
-
-   public static String getBaseUrl() {
-      return baseUrl;
-   }
+   private WishListHelper wishListHelper;
 
    public void init() {
-
-//      if (useSelenoid) {
-//         initSelenoidDriver();
-//      } else {
-//         initLocalDriver();
-//      }
-
       initHelpers();
    }
-
 
    private void initHelpers() {
       navigationHelper = new NavigationHelper();
@@ -55,6 +41,7 @@ public class ApplicationManager {
       pageHelper = new PageHelper();
       bannerHelper = new BannerHelper();
       searchHelper = new SearchHelper();
+      wishListHelper = new WishListHelper();
    }
 
    public NavigationHelper navigation() {
@@ -111,6 +98,10 @@ public class ApplicationManager {
 
    public SearchHelper search() {
       return searchHelper;
+   }
+
+   public WishListHelper wishList() {
+      return wishListHelper;
    }
 }
 

@@ -1,32 +1,26 @@
 package tests.checkout;
 
-import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.Description;
 import ru.yandex.qatools.allure.annotations.Features;
 import ru.yandex.qatools.allure.annotations.Severity;
 import ru.yandex.qatools.allure.annotations.Title;
 import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
-import static appmanager.ApplicationManager.baseUrl;
-import static com.codeborne.selenide.Selenide.clearBrowserCookies;
-import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
+import static com.codeborne.selenide.Configuration.baseUrl;
 
 @Features("Checkout")
 public class CheckoutTests extends BaseTest {
 
    @BeforeMethod
    public void cleanUpSession() {
-      clearBrowserCookies();
-      clearBrowserCache();
-      app.navigation().openUrl(Configuration.baseUrl);
+      app.navigation().openUrl(baseUrl);
    }
 
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(SeverityLevel.BLOCKER)
    @Title("Заказ на сохранённый адрес")
    @Test
    public void testOrderByAuthUserWithSavedAddress() {
@@ -44,7 +38,7 @@ public class CheckoutTests extends BaseTest {
       Assert.assertEquals(app.checkout().isSuccessOrder(), true);
    }
 
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(SeverityLevel.BLOCKER)
    @Title("Заказ на новый адрес для клиента с сохранённым адресом")
    @Test
    public void testOrderByAuthUserWithSavedAddressWithNewAddress() {
@@ -63,13 +57,13 @@ public class CheckoutTests extends BaseTest {
       app.checkout().addNewAddress();
       app.checkout().selectCityForDelivery("Москва");
       app.checkout().selectDeliveryService("Butik доставка");
-      app.checkout().fillAddressForm("Смоленская наб", "44", "1");
+      app.checkout().fillAddressForm("Смоленская наб", "д 44", "1");
       app.checkout().submitOrder();
 
       Assert.assertEquals(app.checkout().isSuccessOrder(), true);
    }
 
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(SeverityLevel.BLOCKER)
    @Title("Заказ с доставкой в регионы для неавторизованного пользователя")
    @Test
    public void testOrderByNotAuthUserWithRegionalDelivery() {
@@ -91,7 +85,7 @@ public class CheckoutTests extends BaseTest {
       Assert.assertEquals(app.checkout().isSuccessOrder(), true);
    }
 
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(SeverityLevel.BLOCKER)
    @Title("Заказ с доставкой в ПВЗ для неавторизованного пользователя")
    @Test
    public void testOrderByNotAuthUserWithPickPointService() {

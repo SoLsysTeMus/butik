@@ -28,7 +28,7 @@ dependencies{
     compile "ru.yandex.qatools.allure:allure-core:${allureCore}"
     agent "org.aspectj:aspectjweaver:${aspectjVersion}"
     compile "ru.yandex.qatools.allure:allure-testng-adaptor:${allureVersion}"
-
+    compile "ch.qos.logback:logback-classic:${logbackVersion}"
 }
 
 test.doFirst {
@@ -45,7 +45,9 @@ test {
 }
 tasks.withType(Test).all { testTask ->
     testTask.systemProperties['file.encoding'] = 'UTF-8'
-    testTask.systemProperties['selenide.browser'] = System.getProperty('browser', "browser")
+    println (System.getProperty('browser', "browser"))
+    testTask.systemProperties['gradle'] = true
+    testTask.systemProperties['selenide.browser'] = System.getProperty('browser', "chrome")
     testTask.testLogging.showStandardStreams = false
     testTask.outputs.upToDateWhen { false }
 }

@@ -1,20 +1,24 @@
 package appmanager.helpers;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import model.ProductData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
+import static tests.BaseTest.baseTimeout;
 
 public class CheckoutHelper extends BaseHelper {
 
-   public void deleteItemFromWishlist() {
+   @Step("Удаление товара из WishList")
+   public void deleteItemFromWishList() {
       click(By.xpath("//button[contains(@class,'heart')]"));
    }
 
@@ -49,11 +53,12 @@ public class CheckoutHelper extends BaseHelper {
       return products;
    }
 
-   public List<WebElement> getAllItemsFromCart() {
+   private List<WebElement> getAllItemsFromCart() {
       WebElement table = $(By.xpath("//div[contains(@data-bind,'foreach: items')]"));
       return table.findElements(By.xpath("//div[contains(@class,'cart__item')]"));
    }
 
+   @Step("Удаление всех товаров из корзины")
    public void removeAllProducts() {
       int counter = getItemsInTheCartList().size();
       for (int i = 0; i < counter; i++) {
@@ -62,32 +67,40 @@ public class CheckoutHelper extends BaseHelper {
       }
    }
 
+   @Step("Проверка на отсутствие товаров в корзине")
    public boolean cartIsEmpty() {
       return $(By.xpath("//div[contains(text(),'В корзину ничего не добавлено')]")).shouldBe(Condition.visible).isDisplayed();
    }
 
-   public String getSelectedSizeForProduct(WebElement product) {
+   private String getSelectedSizeForProduct(WebElement product) {
       String size;
+      Configuration.timeout = 2500;
       try {
          size = product.findElement(By.xpath(".//div[contains(@class,'nowrp')]//span[contains(@data-bind,'text: ')]")).getText();
       } catch (NoSuchElementException e) {
          size = "б/р";
+      } finally {
+         Configuration.timeout = baseTimeout;
       }
 
       return size;
    }
 
+   @Step("Выбор города доставки")
    public void selectCityForDelivery(String city) {
       waitLoader();
       $(By.id("citySuggester")).setValue(city);
+      sleep(500);
       $(By.xpath(String.format("//b[contains(text(),'%s')]", city))).click();
 
    }
 
+   @Step("Выбор способа доставки")
    public void selectDeliveryService(String service) {
       $(By.xpath(String.format("//span[contains(text(),'%s')]", service))).click();
    }
 
+   @Step("Нажатие кнопки \"Отправить заказ\"")
    public void submitOrder() {
       waitLoader();
       $(By.xpath("//div[contains(@data-bind,'click: sendOrder')]")).click();
@@ -95,11 +108,13 @@ public class CheckoutHelper extends BaseHelper {
 
    }
 
+   @Step("Заказ успешно сохранён в базе")
    public boolean isSuccessOrder() {
       System.out.println("Заказ № " + getTextForElement(By.xpath("//span[contains(@data-bind,'orderNumber')]")));
       return $(By.xpath("//div[contains(@class,'hidden-xs') and text() = 'продолжить покупки']")).isDisplayed();
    }
 
+   @Step("Выбор добавления нового адреса")
    public void addNewAddress() {
       waitLoader();
       click(By.xpath("//span[contains(@data-bind,'html: selectedItem()')]"));
@@ -107,19 +122,26 @@ public class CheckoutHelper extends BaseHelper {
       waitLoader();
    }
 
+   @Step("Заполнение адреса")
    public void fillAddressForm(String street, String house, String flat) {
       waitLoader();
       type(By.id("streetSuggester"), street);
+      sleep(500);
       click(By.xpath(String.format("//b[contains(text(),'%s')]", street)));
       type(By.id("houseSuggester"), house);
+      sleep(500);
+      click(By.xpath(String.format("//b[contains(text(),'%s')]", house)));
+      type(By.name("flat"), flat);
    }
 
+   @Step("Заполнение данных покупателя")
    public void fillBuyerFrom(String testName, String phone, String testEmail) {
       type(By.name("name"), testName);
       type(By.name("phone"), phone);
       type(By.name("email"), testEmail);
    }
 
+   @Step("Открытие карты ПВЗ")
    public void openDeliveryPointMap() {
       waitLoader();
       sleep(1000);
@@ -127,7 +149,7 @@ public class CheckoutHelper extends BaseHelper {
       $(By.xpath("//div[contains(@class,'arcticmodal-container')]//ymaps[contains(@class,'ymaps-2-1-59-places-pane')]")).should(Condition.visible);
    }
 
-
+   @Step("Выбор пункта выдачи на карте ПВЗ")
    public void selectDeliveryPoint(String subway, String street, By point) {
 
       if (subway != null) {
@@ -155,6 +177,7 @@ public class CheckoutHelper extends BaseHelper {
       click(By.xpath(paymentMethod));
    }
 
+   @Step("Заполнение комментария к заказу")
    public void fillCommentaryForm(String commentText) {
       click(By.xpath("//span[contains(@data-bind,'OrderDescription')]"));
       type(By.id("order-description"), commentText);

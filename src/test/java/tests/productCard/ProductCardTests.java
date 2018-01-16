@@ -1,6 +1,5 @@
 package tests.productCard;
 
-import com.codeborne.selenide.Configuration;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -10,7 +9,7 @@ import ru.yandex.qatools.allure.annotations.Title;
 import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
-import static appmanager.ApplicationManager.baseUrl;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
@@ -21,7 +20,7 @@ public class ProductCardTests extends BaseTest {
    public void cleanUpSession() {
       clearBrowserCookies();
       clearBrowserCache();
-      app.navigation().openUrl(Configuration.baseUrl);
+      app.navigation().openUrl(baseUrl);
    }
 
    @Title("Добавление б/р товара в корзину для неавторизованного пользователя")
@@ -53,7 +52,7 @@ public class ProductCardTests extends BaseTest {
    @Severity(SeverityLevel.CRITICAL)
    @Test
    public void testAddItemWithOutSizesToAuthCart() {
-      String testLoginEmail = "auth_test@auth.test";
+      String testLoginEmail = "auth_test2@auth.test";
       String testPassword = "12345";
 
       app.navigation().openAuthorizationPopUp();

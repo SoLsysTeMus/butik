@@ -12,16 +12,12 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Selenide.clearBrowserCookies;
-import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 @Features("Каталог")
 public class CatalogTests extends BaseTest {
 
    @BeforeMethod
    public void cleanUpSession() {
-      clearBrowserCookies();
-      clearBrowserCache();
       app.navigation().openUrl(Configuration.baseUrl);
    }
 
