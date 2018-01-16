@@ -1,88 +1,117 @@
 package tests.staticPages;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+import ru.yandex.qatools.allure.annotations.Features;
+import ru.yandex.qatools.allure.annotations.Severity;
+import ru.yandex.qatools.allure.annotations.Title;
+import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
-public class StaticPagesTests extends BaseTest{
+@Features("Статические страницы")
+public class StaticPagesTests extends BaseTest {
 
-
+   @Title("Доступность страницы \"Универмаг\"")
+   @Severity(SeverityLevel.NORMAL)
    @Test
-   public void testCheckOpenAboutPage(){
+   public void testCheckOpenAboutPage() {
       app.footer().gotoStaticPage("Универмаг");
-      Assert.assertEquals(app.page().pageContainsText(By.cssSelector(".static-about-title"), "универмаг и интернет-магазин"), true);
+      app.page().pageContainsText(By.cssSelector(".static-about-title"), "универмаг и интернет-магазин");
    }
 
+   @Title("Доступность страницы \"Контакты\"")
+   @Severity(SeverityLevel.NORMAL)
    @Test
-   public void testCheckOpenContactPage(){
+   public void testCheckOpenContactPage() {
       app.footer().gotoStaticPage("Контакты");
-      Assert.assertEquals(app.page().pageContainsText(By.cssSelector(".contacts__title"), "контакты"), true);
+      app.page().pageContainsText(By.cssSelector(".contacts__title"), "контакты");
    }
 
+   @Title("Доступность страницы \"Доставка\"")
+   @Severity(SeverityLevel.NORMAL)
    @Test
-   public void testCheckOpenDeliveryPage(){
+   public void testCheckOpenDeliveryPage() {
       app.footer().gotoStaticPage("Доставка");
-      Assert.assertEquals(app.page().pageContainsText(By.cssSelector(".delivery__title"), "доставка"), true);
+      app.page().pageContainsText(By.cssSelector(".delivery__title"), "доставка");
    }
 
+   @Title("Доступность страницы \"Возврат\"")
+   @Severity(SeverityLevel.NORMAL)
    @Test
-   public void testCheckOpenRefundPage(){
+   public void testCheckOpenRefundPage() {
       app.footer().gotoStaticPage("Возврат");
-      Assert.assertEquals(app.page().pageContainsText(By.cssSelector(".return__title"), "возврат"), true);
+      app.page().pageContainsText(By.cssSelector(".return__title"), "возврат");
    }
 
+   @Title("Доступность страницы \"Текущие акции\"")
+   @Severity(SeverityLevel.NORMAL)
    @Test
-   public void testCheckOpenPromoInformationPage(){
+   public void testCheckOpenPromoInformationPage() {
       app.footer().gotoStaticPage("Текущие акции");
-      Assert.assertEquals(app.page().pageContainsText(By.cssSelector(".stock__title"), "акции"), true);
+      app.page().pageContainsText(By.cssSelector(".stock__title"), "акции");
    }
 
+   @Title("Доступность страницы \"Клубная система\"")
+   @Severity(SeverityLevel.NORMAL)
    @Test
-   public void testCheckOpenClubCardPage(){
+   public void testCheckOpenClubCardPage() {
       app.footer().gotoStaticPage("Клубная система");
-      Assert.assertEquals(app.page().pageContainsText(By.cssSelector(".clubcard__title"), "клубная карта"), true);
+      app.page().pageContainsText(By.cssSelector(".clubcard__title"), "клубная карта");
    }
 
+   @Title("Доступность страницы \"Сертификаты\"")
+   @Severity(SeverityLevel.NORMAL)
    @Test
-   public void testCheckOpenCertificatesPage(){
+   public void testCheckOpenCertificatesPage() {
       app.footer().gotoStaticPage("Сертификаты");
-      Assert.assertEquals(app.page().pageContainsText(By.cssSelector(".certificates__title"), "сертификат"), true);
+      app.page().pageContainsText(By.cssSelector(".certificates__title"), "сертификат");
    }
 
+   @Title("Доступность страницы \"Таблица размеров\"")
+   @Severity(SeverityLevel.NORMAL)
    @Test
-   public void testCheckOpenSizesTablePage(){
+   public void testCheckOpenSizesTablePage() {
       app.footer().gotoStaticPage("Таблица размеров");
-      Assert.assertEquals(app.page().pageContainsText(By.cssSelector(".main-title"), "таблица размеров"), true);
+      app.page().pageContainsText(By.cssSelector(".main-title"), "таблица размеров");
    }
 
+   @Title("Доступность страницы \"Полезная информация\"")
+   @Severity(SeverityLevel.NORMAL)
    @Test
-   public void testCheckOpenHelpfulInfoPage(){
+   public void testCheckOpenHelpfulInfoPage() {
       app.footer().gotoStaticPage("Полезная информация");
-      Assert.assertEquals(app.page().pageContainsText(By.xpath("//h3[contains(text(),'Полезная информация')]"), "полезная информация"), true);
+      app.page().pageContainsText(By.xpath("//h3[contains(text(),'Полезная информация')]"), "полезная информация");
    }
 
+   @Title("Доступность страницы \"Задать вопрос\"")
+   @Severity(SeverityLevel.NORMAL)
    @Test
-   public void testCheckOpenFeedbackPage(){
+   public void testCheckOpenFeedbackPage() {
       app.footer().gotoStaticPage("Задать вопрос");
-      Assert.assertEquals(app.page().pageContainsText(By.cssSelector(".feedback__title"), "задать вопрос или оставить отзыв"), true);
+      app.page().pageContainsText(By.cssSelector(".feedback__title"), "задать вопрос или оставить отзыв");
    }
 
+   @Title("Доступность страницы \"Отзывы на Яндекс\"")
+   @Severity(SeverityLevel.NORMAL)
    @Test
-   public void testCheckOpenReviewsOnYandexPage(){
+   public void testCheckOpenReviewsOnYandexPage() {
       app.footer().gotoStaticPage("Отзывы на");
-      Assert.assertEquals(app.page().getLinkForLocator(By.xpath("//a[contains(text(),'Отзывы на')]")), "https://market.yandex.ru/shop/1818/reviews");
+      app.page().locatorContainsLink(By.xpath("//a[contains(text(),'Отзывы на')]"), "https://market.yandex.ru/shop/1818/reviews");
    }
 
+   @Title("Доступность страницы \"Оферта\"")
+   @Severity(SeverityLevel.NORMAL)
    @Test
-   public void testCheckOpenOfferPage(){
+   public void testCheckOpenOfferPage() {
       app.footer().gotoStaticPage("Оферта");
-      Assert.assertEquals(app.page().pageContainsText(By.cssSelector(".offer__title"), "оферта"), true);
+      app.page().pageContainsText(By.cssSelector(".offer__title"), "оферта");
    }
 
+   @Title("Доступность страницы \"Instashop\"")
+   @Severity(SeverityLevel.NORMAL)
    @Test
-   public void testCheckOpenInstashopPage(){
+   public void testCheckOpenInstashopPage() {
       app.footer().gotoStaticPage("Instashop");
-      Assert.assertEquals(app.page().pageContainsText(By.cssSelector(".fotoshmoto-heading"), "instashop"), true);
+      app.page().pageContainsText(By.cssSelector(".fotoshmoto-heading"), "instashop");
    }
 }

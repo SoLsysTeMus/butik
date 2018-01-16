@@ -2,13 +2,26 @@ package tests.checkout;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import ru.yandex.qatools.allure.annotations.Features;
+import ru.yandex.qatools.allure.annotations.Severity;
+import ru.yandex.qatools.allure.annotations.Title;
+import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
-import static appmanager.ApplicationManager.baseUrl;
+import static com.codeborne.selenide.Configuration.baseUrl;
 
+@Features("Checkout")
 public class CheckoutTests extends BaseTest {
 
+   @BeforeMethod
+   public void cleanUpSession() {
+      app.navigation().openUrl(baseUrl);
+   }
+
+   @Severity(SeverityLevel.BLOCKER)
+   @Title("Заказ на сохранённый адрес")
    @Test
    public void testOrderByAuthUserWithSavedAddress() {
       String testLoginEmail = "checkoutaddress@test.ru";
@@ -22,9 +35,11 @@ public class CheckoutTests extends BaseTest {
       app.productCard().pressCheckoutButtonOnPopUp();
       app.checkout().submitOrder();
 
-      Assert.assertEquals(app.checkout().isSuccesOrder(), true);
+      Assert.assertEquals(app.checkout().isSuccessOrder(), true);
    }
 
+   @Severity(SeverityLevel.BLOCKER)
+   @Title("Заказ на новый адрес для клиента с сохранённым адресом")
    @Test
    public void testOrderByAuthUserWithSavedAddressWithNewAddress() {
       String testLoginEmail = "checkoutaddress@test.ru";
@@ -40,14 +55,16 @@ public class CheckoutTests extends BaseTest {
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
       app.checkout().addNewAddress();
-      app.checkout().selectCityForDilivery("Москва");
+      app.checkout().selectCityForDelivery("Москва");
       app.checkout().selectDeliveryService("Butik доставка");
-      app.checkout().fillAddressForm("Смоленская наб", "44", "1");
+      app.checkout().fillAddressForm("Смоленская наб", "д 44", "1");
       app.checkout().submitOrder();
 
-      Assert.assertEquals(app.checkout().isSuccesOrder(), true);
+      Assert.assertEquals(app.checkout().isSuccessOrder(), true);
    }
 
+   @Severity(SeverityLevel.BLOCKER)
+   @Title("Заказ с доставкой в регионы для неавторизованного пользователя")
    @Test
    public void testOrderByNotAuthUserWithRegionalDelivery() {
       String testName = "test";
@@ -59,15 +76,17 @@ public class CheckoutTests extends BaseTest {
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
       app.checkout().fillBuyerFrom(testName, phone, testEmail);
-      app.checkout().selectCityForDilivery("Уфа");
+      app.checkout().selectCityForDelivery("Уфа");
       app.checkout().selectDeliveryService("DPD курьерская доставка");
       app.checkout().fillAddressForm("Смоленская", "34", "1");
       app.checkout().fillCommentaryForm(commentText);
       app.checkout().submitOrder();
 
-      Assert.assertEquals(app.checkout().isSuccesOrder(), true);
+      Assert.assertEquals(app.checkout().isSuccessOrder(), true);
    }
 
+   @Severity(SeverityLevel.BLOCKER)
+   @Title("Заказ с доставкой в ПВЗ для неавторизованного пользователя")
    @Test
    public void testOrderByNotAuthUserWithPickPointService() {
       String testName = "test";
@@ -81,13 +100,13 @@ public class CheckoutTests extends BaseTest {
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
       app.checkout().fillBuyerFrom(testName, phone, testEmail);
-      app.checkout().selectCityForDilivery("Москва");
+      app.checkout().selectCityForDelivery("Москва");
       app.checkout().selectDeliveryService("Доставка до пункта выдачи");
       app.checkout().openDeliveryPointMap();
       app.checkout().selectDeliveryPoint(null, "Хабаровская", By.cssSelector("ymaps.ymaps-2-1-59-events-pane.ymaps-2-1-59-user-selection-none"));
       app.checkout().submitOrder();
 
-      Assert.assertEquals(app.checkout().isSuccesOrder(), true);
+      Assert.assertEquals(app.checkout().isSuccessOrder(), true);
    }
 
 }

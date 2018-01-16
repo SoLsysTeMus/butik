@@ -1,19 +1,24 @@
 package appmanager.helpers;
 
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import model.ProductData;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
+import static tests.BaseTest.baseTimeout;
 
 public class CheckoutHelper extends BaseHelper {
 
-   public CheckoutHelper(WebDriver wd) {
-      super(wd);
-   }
-
-   public void deleteItemFromWishlist() {
+   @Step("Удаление товара из WishList")
+   public void deleteItemFromWishList() {
       click(By.xpath("//button[contains(@class,'heart')]"));
    }
 
@@ -48,133 +53,131 @@ public class CheckoutHelper extends BaseHelper {
       return products;
    }
 
-   public List<WebElement> getAllItemsFromCart() {
-      WebElement table = wd.findElement(By.xpath("//div[contains(@data-bind,'foreach: items')]"));
+   private List<WebElement> getAllItemsFromCart() {
+      WebElement table = $(By.xpath("//div[contains(@data-bind,'foreach: items')]"));
       return table.findElements(By.xpath("//div[contains(@class,'cart__item')]"));
    }
 
+   @Step("Удаление всех товаров из корзины")
    public void removeAllProducts() {
       int counter = getItemsInTheCartList().size();
       for (int i = 0; i < counter; i++) {
-         waitLoadingElement(By.xpath("//p[contains(@class,'hidden-xs')]//span[contains(@data-bind,'removeProduct')]"), 5);
-         wd.findElement(By.xpath("//p[contains(@class,'hidden-xs')]//span[contains(@data-bind,'removeProduct')]")).click();
-         waitForElementInvisible(By.xpath("//div[contains(@data-bind,\"showLoader\")]"), 5);
+         $(By.xpath("//p[contains(@class,'hidden-xs')]//span[contains(@data-bind,'removeProduct')]")).click();
+         waitLoader();
       }
    }
 
+   @Step("Проверка на отсутствие товаров в корзине")
    public boolean cartIsEmpty() {
-      return wd.findElement(By.xpath("//div[contains(text(),'В корзину ничего не добавлено')]")).isDisplayed();
+      return $(By.xpath("//div[contains(text(),'В корзину ничего не добавлено')]")).shouldBe(Condition.visible).isDisplayed();
    }
 
-   public String getSelectedSizeForProduct(WebElement product) {
+   private String getSelectedSizeForProduct(WebElement product) {
       String size;
+      Configuration.timeout = 2500;
       try {
-         wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
          size = product.findElement(By.xpath(".//div[contains(@class,'nowrp')]//span[contains(@data-bind,'text: ')]")).getText();
       } catch (NoSuchElementException e) {
          size = "б/р";
       } finally {
-         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+         Configuration.timeout = baseTimeout;
       }
 
       return size;
    }
 
-   public void selectCityForDilivery(String city) {
-      type(By.id("citySuggester"), city);
-      waitForElementInvisible(By.xpath("//div[contains(@data-bind,\"showLoader\")]"), 5);
-      waitLoadingElement(By.xpath(String.format("//b[contains(text(),'%s')]", city)), 5);
-      try {
-         wd.findElement(By.xpath(String.format("//b[contains(text(),'%s')]", city))).click();
-      } catch (StaleElementReferenceException e) {
-         wd.findElement(By.xpath(String.format("//b[contains(text(),'%s')]", city))).click();
-      }
-      waitForElementInvisible(By.xpath("//div[contains(@data-bind,\"showLoader\")]"), 5);
+   @Step("Выбор города доставки")
+   public void selectCityForDelivery(String city) {
+      waitLoader();
+      $(By.id("citySuggester")).setValue(city);
+      sleep(500);
+      $(By.xpath(String.format("//b[contains(text(),'%s')]", city))).click();
 
    }
 
+   @Step("Выбор способа доставки")
    public void selectDeliveryService(String service) {
-      waitLoadingElement(By.xpath(String.format("//span[contains(text(),'%s')]", service)), 5);
-      wd.findElement(By.xpath(String.format("//span[contains(text(),'%s')]", service))).click();
+      $(By.xpath(String.format("//span[contains(text(),'%s')]", service))).click();
    }
 
+   @Step("Нажатие кнопки \"Отправить заказ\"")
    public void submitOrder() {
-      waitForElementInvisible(By.xpath("//div[contains(@data-bind,\"showLoader\")]"), 5);
-      waitLoadingElement(By.xpath("//div[contains(@data-bind,'click: sendOrder')]"), 5);
-      wd.findElement(By.xpath("//div[contains(@data-bind,'click: sendOrder')]")).click();
-      waitForElementInvisible(By.xpath("//div[contains(@data-bind,\"showLoader\")]"), 10);
+      waitLoader();
+      $(By.xpath("//div[contains(@data-bind,'click: sendOrder')]")).click();
+      waitLoader();
+
    }
 
-   public boolean isSuccesOrder() {
-      waitLoadingElement(By.xpath("//div[contains(@class,'hidden-xs') and text() = 'продолжить покупки']"), 5);
-      System.out.println("Заказ № " + wd.findElement(By.xpath("//span[contains(@data-bind,'orderNumber')]")).getText());
-      return wd.findElement(By.xpath("//div[contains(@class,'hidden-xs') and text() = 'продолжить покупки']")).isDisplayed();
+   @Step("Заказ успешно сохранён в базе")
+   public boolean isSuccessOrder() {
+      System.out.println("Заказ № " + getTextForElement(By.xpath("//span[contains(@data-bind,'orderNumber')]")));
+      return $(By.xpath("//div[contains(@class,'hidden-xs') and text() = 'продолжить покупки']")).isDisplayed();
    }
 
+   @Step("Выбор добавления нового адреса")
    public void addNewAddress() {
-      wd.findElement(By.xpath("//span[contains(@data-bind,'html: selectedItem()')]")).click();
-      wd.findElement(By.xpath("//li[contains(@data-bind,'newAddressItem')]")).click();
-      waitForElementInvisible(By.xpath("//div[contains(@data-bind,\"showLoader\")]"), 5);
+      waitLoader();
+      click(By.xpath("//span[contains(@data-bind,'html: selectedItem()')]"));
+      click(By.xpath("//li[contains(@data-bind,'newAddressItem')]"));
+      waitLoader();
    }
 
+   @Step("Заполнение адреса")
    public void fillAddressForm(String street, String house, String flat) {
+      waitLoader();
       type(By.id("streetSuggester"), street);
-      waitLoadingElement(By.xpath(String.format("//b[contains(text(),'%s')]", street)), 7);
+      sleep(500);
       click(By.xpath(String.format("//b[contains(text(),'%s')]", street)));
-      waitLoadingElement(By.id("houseSuggester"), 7);
       type(By.id("houseSuggester"), house);
+      sleep(500);
+      click(By.xpath(String.format("//b[contains(text(),'%s')]", house)));
+      type(By.name("flat"), flat);
    }
 
+   @Step("Заполнение данных покупателя")
    public void fillBuyerFrom(String testName, String phone, String testEmail) {
       type(By.name("name"), testName);
       type(By.name("phone"), phone);
       type(By.name("email"), testEmail);
    }
 
+   @Step("Открытие карты ПВЗ")
    public void openDeliveryPointMap() {
-      try {
-         wd.findElement(By.xpath("//span[contains(@class,'hidden-xs') and text() = 'Выбрать']")).click();
-         waitLoadingElement(By.xpath("//td[contains(@class,'arcticmodal-container_i2')]"), 5);
-         waitLoadingElement(By.xpath("//ymaps[contains(@class,'places-pane')]"), 5);
-      } catch (TimeoutException e) {
-         System.out.println("Failed to load maps point");
-      }
-      waitLoadingElement(By.cssSelector("div.arcticmodal-container"), 5);
+      waitLoader();
+      sleep(1000);
+      $(By.xpath("//span[contains(@class,'hidden-xs') and text() = 'Выбрать']")).click();
+      $(By.xpath("//div[contains(@class,'arcticmodal-container')]//ymaps[contains(@class,'ymaps-2-1-59-places-pane')]")).should(Condition.visible);
    }
 
+   @Step("Выбор пункта выдачи на карте ПВЗ")
    public void selectDeliveryPoint(String subway, String street, By point) {
-      waitLoadingElement(By.xpath("//ymaps[contains(@class,'places-pane')]"), 5);
-      waitLoadingElement(By.cssSelector("div.arcticmodal-container"), 5);
-      waitLoadingElement(By.id("map"), 5);
 
       if (subway != null) {
-         waitLoadingElement(By.id("subwaySuggester"), 5);
          type(By.id("subwaySuggester"), subway);
-         waitLoadingElement(By.xpath(String.format("//b[contains(text(),'%s')]", subway)), 5);
+         sleep(500);
          click(By.xpath(String.format("//b[contains(text(),'%s')]", subway)));
       }
       if (street != null) {
-         waitLoadingElement(By.id("addressSuggester"), 5);
          type(By.id("addressSuggester"), street);
-         waitLoadingElement(By.xpath(String.format("//b[contains(text(),'%s')]", street)), 5);
+         sleep(500);
          click(By.xpath(String.format("//b[contains(text(),'%s')]", street)));
       }
-      waitLoadingElement(By.cssSelector("div.arcticmodal-container"), 5);
-      moveTo(By.cssSelector("div.arcticmodal-container"));
+      sleep(500);
+      $(point).shouldBe(Condition.visible);
+      $(point).hover();
       moveTo(point);
-      waitLoadingElement(point, 5);
-      click(point);
-      moveTo(By.xpath("//div[@id='map']//button[.='Выбрать']"));
-      click(By.xpath("//div[@id='map']//button[.='Выбрать']"));
-      waitForElementInvisible(By.cssSelector("div.arcticmodal-container"), 5);
+      $(point).click();
 
+
+      $(By.xpath("//div[@id='map']//button[.='Выбрать']")).hover().click();
+      $(By.xpath("//div[contains(@class,'arcticmodal-container')]")).shouldNotBe(Condition.visible);
    }
 
    public void selectPaymentMethod(String paymentMethod) {
-      waitLoadingElement(By.xpath(String.format("//div[contains(text(),'%s')]", paymentMethod)), 5);
       click(By.xpath(paymentMethod));
    }
 
+   @Step("Заполнение комментария к заказу")
    public void fillCommentaryForm(String commentText) {
       click(By.xpath("//span[contains(@data-bind,'OrderDescription')]"));
       type(By.id("order-description"), commentText);
