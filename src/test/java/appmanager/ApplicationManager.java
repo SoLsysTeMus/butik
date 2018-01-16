@@ -6,9 +6,6 @@ import appmanager.helpers.header.MainMenuHelper;
 
 public class ApplicationManager {
 
-   public static String baseUrl = "https://stage.butik.ru/";
-
-
    private NavigationHelper navigationHelper;
    private RegistrationHelper registrationHelper;
    private AuthorizationHelper authorizationHelper;
@@ -25,14 +22,9 @@ public class ApplicationManager {
    private SearchHelper searchHelper;
    private WishListHelper wishListHelper;
 
-   public static String getBaseUrl() {
-      return baseUrl;
-   }
-
    public void init() {
       initHelpers();
    }
-
 
    private void initHelpers() {
       navigationHelper = new NavigationHelper();

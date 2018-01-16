@@ -18,8 +18,8 @@ public class ValidationAuthorizationTest extends BaseTest {
       app.navigation().openAuthorizationPopUp();
       app.authorization().clickPopUpLoginButton();
 
-      Assert.assertEquals(app.authorization().errorIsDisplayed("Введите е-mail или номер телефона"), true);
-      Assert.assertEquals(app.authorization().errorIsDisplayed("Введите пароль"), true);
+      Assert.assertEquals(app.authorization().errorIsDisplayedOnPopUpForm("Введите е-mail или номер телефона"), true);
+      Assert.assertEquals(app.authorization().errorIsDisplayedOnPopUpForm("Введите пароль"), true);
    }
 
    @Test
@@ -30,8 +30,8 @@ public class ValidationAuthorizationTest extends BaseTest {
       app.authorization().fillPasswordPopUpField("12345");
       app.authorization().clickPopUpLoginButton();
 
-      Assert.assertEquals(app.authorization().errorIsDisplayed("Введите е-mail или номер телефона"), true);
-      Assert.assertEquals(app.authorization().errorIsDisplayed("Введите пароль"), false);
+      Assert.assertEquals(app.authorization().errorIsDisplayedOnPopUpForm("Введите е-mail или номер телефона"), true);
+      Assert.assertEquals(app.authorization().errorIsDisplayedOnPopUpForm("Введите пароль"), false);
 
    }
 
@@ -43,8 +43,8 @@ public class ValidationAuthorizationTest extends BaseTest {
       app.authorization().fillLoginPopUpField("test@test.ru");
       app.authorization().clickPopUpLoginButton();
 
-      Assert.assertEquals(app.authorization().errorIsDisplayed("Введите е-mail или номер телефона"), false);
-      Assert.assertEquals(app.authorization().errorIsDisplayed("Введите пароль"), true);
+      Assert.assertEquals(app.authorization().errorIsDisplayedOnPopUpForm("Введите е-mail или номер телефона"), false);
+      Assert.assertEquals(app.authorization().errorIsDisplayedOnPopUpForm("Введите пароль"), true);
    }
 
    @Test
@@ -55,8 +55,8 @@ public class ValidationAuthorizationTest extends BaseTest {
       app.authorization().fillPopUpAuthorizationForm("test2@test2.ru", "12345");
       app.authorization().clickPopUpLoginButton();
 
-      Assert.assertEquals(app.authorization().errorIsDisplayed("Имя пользователя и пароль не совпадают."), true);
-      Assert.assertEquals(app.authorization().errorIsDisplayed("Введите пароль"), false);
+      Assert.assertEquals(app.authorization().errorIsDisplayedOnPopUpForm("Имя пользователя и пароль не совпадают."), true);
+      Assert.assertEquals(app.authorization().errorIsDisplayedOnPopUpForm("Введите пароль"), false);
    }
 
    @Test
@@ -70,8 +70,8 @@ public class ValidationAuthorizationTest extends BaseTest {
       app.authorization().clickPopUpLoginButton();
       app.authorization().clickPopUpLoginButton();
 
-      Assert.assertEquals(app.authorization().errorIsDisplayed("Превышено допустимое количество ввода ошибочных данных. Повторите вход позже."), true);
-      Assert.assertEquals(app.authorization().errorIsDisplayed("Введите пароль"), false);
+      Assert.assertEquals(app.authorization().errorIsDisplayedOnPopUpForm("Превышено допустимое количество ввода ошибочных данных. Повторите вход позже."), true);
+      Assert.assertEquals(app.authorization().errorIsDisplayedOnPopUpForm("Введите пароль"), false);
    }
 
 }

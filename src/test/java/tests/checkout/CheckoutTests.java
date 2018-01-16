@@ -1,6 +1,5 @@
 package tests.checkout;
 
-import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -11,14 +10,14 @@ import ru.yandex.qatools.allure.annotations.Title;
 import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
-import static appmanager.ApplicationManager.baseUrl;
+import static com.codeborne.selenide.Configuration.baseUrl;
 
 @Features("Checkout")
 public class CheckoutTests extends BaseTest {
 
    @BeforeMethod
    public void cleanUpSession() {
-      app.navigation().openUrl(Configuration.baseUrl);
+      app.navigation().openUrl(baseUrl);
    }
 
    @Severity(SeverityLevel.BLOCKER)

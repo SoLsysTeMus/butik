@@ -4,7 +4,7 @@ package appmanager.helpers;
 import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;
 
-import static appmanager.ApplicationManager.getBaseUrl;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -17,11 +17,11 @@ public class NavigationHelper extends BaseHelper {
    }
 
    public void openLoginPage() {
-      open(getBaseUrl() + "login");
+      open(baseUrl + "login");
    }
 
    public void openRegistrationPage() {
-      open(getBaseUrl() + "register");
+      open(baseUrl + "register");
    }
 
    public void openRegistrationPopUpForm() {
@@ -33,14 +33,14 @@ public class NavigationHelper extends BaseHelper {
    }
 
    public void openCheckoutPage() {
-      open(getBaseUrl() + "checkout");
+      open(baseUrl + "checkout");
    }
 
    public void logoutBylink() {
-      openUrl(getBaseUrl() + "logout");
+      openUrl(baseUrl + "logout");
    }
 
    public void openWishlistPage() {
-      openUrl(getBaseUrl() + "wishlist");
+      openUrl(baseUrl + "wishlist");
    }
 }
