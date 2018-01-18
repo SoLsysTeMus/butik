@@ -19,14 +19,14 @@ public class RegistrationTests extends BaseTest {
 
    @Title("Регистрация пользователя через Pop-up")
    @Severity(SeverityLevel.CRITICAL)
-   @Test //(enabled = false)
+   @Test
    public void testRegistrationWithValidDataPopUp() {
 
       String name = "Test";
       String randomEmail = "test" + (int) (Math.random() * 20000) + "@test" + (int) (Math.random() * 20000) + ".ru";
       String password = "12345";
 
-      System.out.println(randomEmail);
+      logger.info("Generated email for testRegistrationWithValidDataPopUp = " + randomEmail);
       app.navigation().openAuthorizationPopUp();
       app.navigation().openRegistrationPopUpForm();
       app.registration().fillPopUpRegistrationForm(name, randomEmail, password);
@@ -36,14 +36,14 @@ public class RegistrationTests extends BaseTest {
 
    @Title("Регистрация пользователя через страницу /register")
    @Severity(SeverityLevel.CRITICAL)
-   @Test //(enabled = false)
+   @Test
    public void testRegistrationWithValidData() {
 
       String name = "Test";
       String randomEmail = "test" + (int) (Math.random() * 20000) + "@test" + (int) (Math.random() * 20000) + ".ru";
       String password = "12345";
 
-      System.out.println(randomEmail);
+      logger.info("Generated email for testRegistrationWithValidData = " + randomEmail);
       app.navigation().openRegistrationPage();
       app.registration().fillRegistrationForm(name, randomEmail, password);
       app.registration().submitRegistrationData();

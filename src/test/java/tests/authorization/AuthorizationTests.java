@@ -32,12 +32,12 @@ public class AuthorizationTests extends BaseTest {
    @Test
    public void testCorrectAuthorization() {
 
-      String testLoginEmail = "auth_test@auth.test";
-      String testPassword = "12345";
-      String name = "authtest";
+      String login = testDataProperties.getProperty("authDataLogin");
+      String password = testDataProperties.getProperty("authDataPassword");
+      String name = testDataProperties.getProperty("authDataName");
 
       app.navigation().openLoginPage();
-      app.authorization().fillAuthorizationForm(testLoginEmail, testPassword);
+      app.authorization().fillAuthorizationForm(login, password);
       app.authorization().submitLoginData();
       app.header().checkUserName(name);
    }
@@ -47,12 +47,12 @@ public class AuthorizationTests extends BaseTest {
    @Test
    public void testCorrectAuthorizationPopUp() {
 
-      String testLoginEmail = "auth_test@auth.test";
-      String testPassword = "12345";
-      String name = "authtest";
+      String login = testDataProperties.getProperty("authDataLogin");
+      String password = testDataProperties.getProperty("authDataPassword");
+      String name = testDataProperties.getProperty("authDataName");
 
       app.navigation().openAuthorizationPopUp();
-      app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
+      app.authorization().fillPopUpAuthorizationForm(login, password);
       app.authorization().submitPopUpLoginData();
       app.header().checkUserName(name);
    }
@@ -63,12 +63,12 @@ public class AuthorizationTests extends BaseTest {
    @Test
    public void testCorrectAuthorizationByPhone() {
 
-      String testLoginEmail = "9645388080";
-      String testPassword = "12345";
-      String name = "test";
+      String login = testDataProperties.getProperty("authPhoneDataLogin");
+      String password = testDataProperties.getProperty("authPhoneDataPassword");
+      String name = testDataProperties.getProperty("authPhoneDataName");
 
       app.navigation().openLoginPage();
-      app.authorization().fillAuthorizationForm(testLoginEmail, testPassword);
+      app.authorization().fillAuthorizationForm(login, password);
       app.authorization().submitLoginData();
       app.header().checkUserName(name);
    }
@@ -78,12 +78,12 @@ public class AuthorizationTests extends BaseTest {
    @Test
    public void testCorrectAuthorizationPopUpByPhone() {
 
-      String testLoginEmail = "9645388080";
-      String testPassword = "12345";
-      String name = "test";
+      String login = testDataProperties.getProperty("authPhoneDataLogin");
+      String password = testDataProperties.getProperty("authPhoneDataPassword");
+      String name = testDataProperties.getProperty("authPhoneDataName");
 
       app.navigation().openAuthorizationPopUp();
-      app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
+      app.authorization().fillPopUpAuthorizationForm(login, password);
       app.authorization().submitPopUpLoginData();
       app.header().checkUserName(name);
    }

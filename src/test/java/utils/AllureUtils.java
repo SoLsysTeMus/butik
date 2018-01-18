@@ -20,16 +20,6 @@ public class AllureUtils {
       }
    }
 
-   public static void createPropertiesFile() {
-
-      try (PrintWriter writer = new PrintWriter(new FileWriter("build/allure-results/prop.properties"))) {
-         Properties p = System.getProperties();
-         p.list(writer);
-      } catch (IOException e) {
-         System.out.println("IO problem when writing allure properties file");
-      }
-   }
-
    @Attachment(value = "Screenshot", type = "image/png")
    static byte[] failScreenshot() throws IOException {
       File screenshot = Screenshots.takeScreenShotAsFile();

@@ -34,7 +34,7 @@ public class WishListTests extends BaseTest {
       app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitPopUpLoginData();
       app.productCard().addToWishlist();
-      app.navigation().openWishlistPage();
+      app.navigation().openWishListPage();
       ProductData productInWishList = app.wishList().getProductDataForItems(0);
 
       Assert.assertEquals(productInCard.getBrandName(), productInWishList.getBrandName());
@@ -54,7 +54,7 @@ public class WishListTests extends BaseTest {
       app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitPopUpLoginData();
       app.productCard().addToWishlist();
-      app.navigation().openWishlistPage();
+      app.navigation().openWishListPage();
       ProductData productInWishList = app.wishList().getProductDataForItems(0);
 
       Assert.assertEquals(productInCard.getBrandName(), productInWishList.getBrandName());
@@ -75,7 +75,7 @@ public class WishListTests extends BaseTest {
       app.authorization().submitPopUpLoginData();
       ProductData productInCard = app.productCard().getProductData();
       app.productCard().removeFromList();
-      app.navigation().openWishlistPage();
+      app.navigation().openWishListPage();
       ProductData productInWishList = app.wishList().getProductDataForItems(0);
 
       Assert.assertNotEquals(productInCard.getBrandName(), productInWishList.getBrandName());
@@ -95,7 +95,7 @@ public class WishListTests extends BaseTest {
       app.authorization().submitPopUpLoginData();
       ProductData productInCard = app.productCard().getProductData();
       app.productCard().removeFromList();
-      app.navigation().openWishlistPage();
+      app.navigation().openWishListPage();
       ProductData productInWishList = app.wishList().getProductDataForItems(0);
 
       Assert.assertNotEquals(productInCard.getBrandName(), productInWishList.getBrandName());
@@ -120,7 +120,7 @@ public class WishListTests extends BaseTest {
       app.navigation().openCheckoutPage();
       app.checkout().deleteItemFromWishList();
       app.checkout().removeAllProducts();
-      app.navigation().openWishlistPage();
+      app.navigation().openWishListPage();
 
       Assert.assertEquals(app.header().getWishlistItemscount(), itemsCount);
    }
@@ -163,7 +163,7 @@ public class WishListTests extends BaseTest {
       app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitPopUpLoginData();
       app.productCard().addToWishlist();
-      app.navigation().openWishlistPage();
+      app.navigation().openWishListPage();
       ProductData productInWishListBefore = app.wishList().getProductDataForItems(0);
       app.wishList().removeItem(0);
       ProductData productInWishListAfter = app.wishList().getProductDataForItems(0);

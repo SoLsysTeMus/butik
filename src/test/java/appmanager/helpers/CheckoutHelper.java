@@ -14,6 +14,7 @@ import java.util.List;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 import static tests.BaseTest.baseTimeout;
+import static tests.BaseTest.logger;
 
 public class CheckoutHelper extends BaseHelper {
 
@@ -110,7 +111,7 @@ public class CheckoutHelper extends BaseHelper {
 
    @Step("Заказ успешно сохранён в базе")
    public boolean isSuccessOrder() {
-      System.out.println("Заказ № " + getTextForElement(By.xpath("//span[contains(@data-bind,'orderNumber')]")));
+      logger.info("Заказ № " + getTextForElement(By.xpath("//span[contains(@data-bind,'orderNumber')]")));
       return $(By.xpath("//div[contains(@class,'hidden-xs') and text() = 'продолжить покупки']")).isDisplayed();
    }
 

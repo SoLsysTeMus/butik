@@ -8,15 +8,15 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
 @Features("Валидация полей в Личном кабинете - Задать вопрос")
-public class SendQuestionValidation extends BaseTest{
+public class SendQuestionValidation extends BaseTest {
 
    @Test
    @Title("Проверка валидации поля Имя")
    @Severity(SeverityLevel.MINOR)
-   public void testValidateName(){
+   public void testValidateName() {
 
-      String login = "personaltest@test.ru";
-      String password = "12345";
+      String login = testDataProperties.getProperty("personalDataLogin");
+      String password = testDataProperties.getProperty("personalDataPassword");
 
       app.navigation().openLoginPage();
       app.authorization().fillAuthorizationForm(login, password);
@@ -36,10 +36,10 @@ public class SendQuestionValidation extends BaseTest{
    @Test
    @Title("Проверка валидации поля Email")
    @Severity(SeverityLevel.NORMAL)
-   public void testValidateEmail(){
+   public void testValidateEmail() {
 
-      String login = "personaltest@test.ru";
-      String password = "12345";
+      String login = testDataProperties.getProperty("personalDataLogin");
+      String password = testDataProperties.getProperty("personalDataPassword");
 
       app.navigation().openLoginPage();
       app.authorization().fillAuthorizationForm(login, password);
@@ -125,10 +125,10 @@ public class SendQuestionValidation extends BaseTest{
    @Test
    @Title("Проверка валидации поля Текст вопроса")
    @Severity(SeverityLevel.MINOR)
-   public void testValidateQuestionName(){
+   public void testValidateQuestionName() {
 
-      String login = "personaltest@test.ru";
-      String password = "12345";
+      String login = testDataProperties.getProperty("personalDataLogin");
+      String password = testDataProperties.getProperty("personalDataPassword");
 
       app.navigation().openLoginPage();
       app.authorization().fillAuthorizationForm(login, password);
@@ -144,10 +144,10 @@ public class SendQuestionValidation extends BaseTest{
    @Test
    @Title("Проверка валидации поля Текст вопроса")
    @Severity(SeverityLevel.MINOR)
-   public void testValidateQuestionType(){
+   public void testValidateQuestionType() {
 
-      String login = "personaltest@test.ru";
-      String password = "12345";
+      String login = testDataProperties.getProperty("personalDataLogin");
+      String password = testDataProperties.getProperty("personalDataPassword");
 
       app.navigation().openLoginPage();
       app.authorization().fillAuthorizationForm(login, password);

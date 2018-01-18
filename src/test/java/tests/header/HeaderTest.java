@@ -101,7 +101,7 @@ public class HeaderTest extends BaseTest {
       app.navigation().openAuthorizationPopUp();
       app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitPopUpLoginData();
-      app.navigation().openWishlistPage();
+      app.navigation().openWishListPage();
 
       Assert.assertNotEquals(app.header().getWishlistItemscount(), 0);
    }

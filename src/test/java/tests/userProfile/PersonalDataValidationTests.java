@@ -13,10 +13,10 @@ public class PersonalDataValidationTests extends BaseTest {
    @Test
    @Title("Проверка валидации поля Фамилия")
    @Severity(SeverityLevel.NORMAL)
-   public void testValidateSurname(){
+   public void testValidateSurname() {
 
-      String login = "personaltest@test.ru";
-      String password = "12345";
+      String login = testDataProperties.getProperty("personalDataLogin");
+      String password = testDataProperties.getProperty("personalDataPassword");
 
       app.navigation().openLoginPage();
       app.authorization().fillAuthorizationForm(login, password);
@@ -37,10 +37,10 @@ public class PersonalDataValidationTests extends BaseTest {
    @Test
    @Title("Проверка валидации поля Имя")
    @Severity(SeverityLevel.NORMAL)
-   public void testValidateName(){
+   public void testValidateName() {
 
-      String login = "personaltest@test.ru";
-      String password = "12345";
+      String login = testDataProperties.getProperty("personalDataLogin");
+      String password = testDataProperties.getProperty("personalDataPassword");
 
       app.navigation().openLoginPage();
       app.authorization().fillAuthorizationForm(login, password);
@@ -60,10 +60,10 @@ public class PersonalDataValidationTests extends BaseTest {
    @Test
    @Title("Проверка валидации поля Отчество")
    @Severity(SeverityLevel.NORMAL)
-   public void testValidatePatronymic(){
+   public void testValidatePatronymic() {
 
-      String login = "personaltest@test.ru";
-      String password = "12345";
+      String login = testDataProperties.getProperty("personalDataLogin");
+      String password = testDataProperties.getProperty("personalDataPassword");
 
       app.navigation().openLoginPage();
       app.authorization().fillAuthorizationForm(login, password);
@@ -83,10 +83,10 @@ public class PersonalDataValidationTests extends BaseTest {
    @Test
    @Title("Проверка валидации поля Email")
    @Severity(SeverityLevel.NORMAL)
-   public void testValidateEmail(){
+   public void testValidateEmail() {
 
-      String login = "personaltest@test.ru";
-      String password = "12345";
+      String login = testDataProperties.getProperty("personalDataLogin");
+      String password = testDataProperties.getProperty("personalDataPassword");
 
       app.navigation().openLoginPage();
       app.authorization().fillAuthorizationForm(login, password);
@@ -172,10 +172,10 @@ public class PersonalDataValidationTests extends BaseTest {
    @Test
    @Title("Проверка валидации поля Телефон")
    @Severity(SeverityLevel.NORMAL)
-   public void testValidatePhone(){
+   public void testValidatePhone() {
 
-      String login = "personaltest@test.ru";
-      String password = "12345";
+      String login = testDataProperties.getProperty("personalDataLogin");
+      String password = testDataProperties.getProperty("personalDataPassword");
 
       app.navigation().openLoginPage();
       app.authorization().fillAuthorizationForm(login, password);
@@ -195,10 +195,10 @@ public class PersonalDataValidationTests extends BaseTest {
    @Test
    @Title("Проверка валидации поля Дата Рождения")
    @Severity(SeverityLevel.NORMAL)
-   public void testValidateDob(){
+   public void testValidateDob() {
 
-      String login = "personaltest@test.ru";
-      String password = "12345";
+      String login = testDataProperties.getProperty("personalDataLogin");
+      String password = testDataProperties.getProperty("personalDataPassword");
 
       app.navigation().openLoginPage();
       app.authorization().fillAuthorizationForm(login, password);
@@ -239,10 +239,10 @@ public class PersonalDataValidationTests extends BaseTest {
    @Test
    @Title("Проверка валидации формы - Сменить пароль")
    @Severity(SeverityLevel.NORMAL)
-   public void testValidatePassword(){
+   public void testValidatePassword() {
 
-      String login = "personaltest@test.ru";
-      String password = "12345";
+      String login = testDataProperties.getProperty("personalDataLogin");
+      String password = testDataProperties.getProperty("personalDataPassword");
 
       app.navigation().openLoginPage();
       app.authorization().fillAuthorizationForm(login, password);

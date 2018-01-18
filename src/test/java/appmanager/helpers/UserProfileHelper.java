@@ -3,9 +3,7 @@ package appmanager.helpers;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.impl.CollectionElement;
 import org.openqa.selenium.By;
-import org.testng.Assert;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -39,27 +37,27 @@ public class UserProfileHelper extends BaseHelper {
       $(By.name("dob")).setValue(dob);
    }
 
-   public void cheangeSex(String sex){
+   public void cheangeSex(String sex) {
       $(".content__block").$$x(".//label[@class='cln-xs_6 dib inp-r-label']").filterBy(Condition.matchText(sex)).first().click();
    }
 
-   public void fillOldPassword(String password){
+   public void fillOldPassword(String password) {
       $(By.name("old_password")).setValue(password);
    }
 
-   public void fillNewPassword(String password){
+   public void fillNewPassword(String password) {
       $(By.name("new_password")).setValue(password);
    }
 
-   public void fillNewPasswordRepeat(String password){
+   public void fillNewPasswordRepeat(String password) {
       $(By.name("new_password_repeat")).setValue(password);
    }
 
-   public void errorIsDisplayedForField(String field, String error){
-      $x(String.format("//input[@name='%s']//following-sibling::span//span",field)).shouldHave(Condition.text(error));
+   public void errorIsDisplayedForField(String field, String error) {
+      $x(String.format("//input[@name='%s']//following-sibling::span//span", field)).shouldHave(Condition.text(error));
    }
 
-   public void pressSaveButton(){
+   public void pressSaveButton() {
       $x("//button[@type='submit']").click();
    }
 
@@ -81,20 +79,20 @@ public class UserProfileHelper extends BaseHelper {
       $x("//button[@type='submit']").click();
    }
 
-   public void fillCity(String city){
+   public void fillCity(String city) {
       $(By.name("city")).setValue(city);
    }
 
-   public void selectTypeQuestion(String value){
+   public void selectTypeQuestion(String value) {
       $x("//select[@name='type']").click();
       $x("//select[@name='type']").$$(By.tagName("option")).filterBy(Condition.text(value)).first().click();
    }
 
-   public void questionErrorIsDisplayed(String errorText){
+   public void questionErrorIsDisplayed(String errorText) {
       $$(".profile__errors").filterBy(Condition.text(errorText)).shouldHaveSize(1);
    }
 
-   public void fillQuestionText(String text){
+   public void fillQuestionText(String text) {
       $(By.name("question")).setValue(text);
    }
 }
