@@ -7,12 +7,12 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class HeaderHelper extends BaseHelper {
 
    public void openPersonalMenu() {
-      $(By.xpath("//header/div[2]/div[5]/div[4]/div/div[1]/span")).waitUntil(Condition.visible, 7);
-      moveTo(By.xpath("//header/div[2]/div[5]/div[4]/div/div[1]/span"));
+      $("div.user-block.fr.nowrp span.user__name").shouldBe(Condition.visible).hover();
    }
 
    public void gotoWishlist() {

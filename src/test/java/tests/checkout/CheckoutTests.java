@@ -76,9 +76,9 @@ public class CheckoutTests extends BaseTest {
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
       app.checkout().fillBuyerFrom(testName, phone, testEmail);
-      app.checkout().selectCityForDelivery("Уфа");
+      app.checkout().selectCityForDelivery("Анапа");
       app.checkout().selectDeliveryService("DPD курьерская доставка");
-      app.checkout().fillAddressForm("Смоленская", "34", "1");
+      app.checkout().fillAddressForm("ул Первомайская", "4", "1");
       app.checkout().fillCommentaryForm(commentText);
       app.checkout().submitOrder();
 
@@ -103,7 +103,7 @@ public class CheckoutTests extends BaseTest {
       app.checkout().selectCityForDelivery("Москва");
       app.checkout().selectDeliveryService("Доставка до пункта выдачи");
       app.checkout().openDeliveryPointMap();
-      app.checkout().selectDeliveryPoint(null, "Хабаровская", By.cssSelector("ymaps.ymaps-2-1-59-events-pane.ymaps-2-1-59-user-selection-none"));
+      app.checkout().selectDeliveryPoint(null, "Хабаровская", By.cssSelector("ymaps.ymaps-2-1-60-events-pane.ymaps-2-1-60-user-selection-none"));
       app.checkout().submitOrder();
 
       Assert.assertEquals(app.checkout().isSuccessOrder(), true);

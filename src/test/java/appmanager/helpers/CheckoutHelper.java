@@ -90,9 +90,9 @@ public class CheckoutHelper extends BaseHelper {
    public void selectCityForDelivery(String city) {
       waitLoader();
       $(By.id("citySuggester")).setValue(city);
-      sleep(500);
-      $(By.xpath(String.format("//b[contains(text(),'%s')]", city))).click();
-
+      sleep(2000);
+      $(By.id("citySuggester")).pressEnter();
+      waitLoader();
    }
 
    @Step("Выбор способа доставки")
@@ -126,11 +126,11 @@ public class CheckoutHelper extends BaseHelper {
    public void fillAddressForm(String street, String house, String flat) {
       waitLoader();
       type(By.id("streetSuggester"), street);
-      sleep(500);
-      click(By.xpath(String.format("//b[contains(text(),'%s')]", street)));
+      sleep(1000);
+      $(By.id("streetSuggester")).pressEnter();
       type(By.id("houseSuggester"), house);
-      sleep(500);
-      click(By.xpath(String.format("//b[contains(text(),'%s')]", house)));
+      sleep(1000);
+      $(By.id("houseSuggester")).pressEnter();
       type(By.name("flat"), flat);
    }
 
@@ -146,7 +146,7 @@ public class CheckoutHelper extends BaseHelper {
       waitLoader();
       sleep(1000);
       $(By.xpath("//span[contains(@class,'hidden-xs') and text() = 'Выбрать']")).click();
-      $(By.xpath("//div[contains(@class,'arcticmodal-container')]//ymaps[contains(@class,'ymaps-2-1-59-places-pane')]")).should(Condition.visible);
+      $(By.xpath("//div[contains(@class,'arcticmodal-container')]//ymaps[contains(@class,'ymaps-2-1-60-places-pane')]")).should(Condition.visible);
    }
 
    @Step("Выбор пункта выдачи на карте ПВЗ")

@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.actions;
+import static tests.BaseTest.baseTimeout;
 
 public class BaseHelper {
 
@@ -30,9 +31,9 @@ public class BaseHelper {
    }
 
    public void waitLoader() {
-      Configuration.timeout = 7000;
+      Configuration.timeout = 8000;
       $(By.xpath("//div[contains(@data-bind,\"showLoader\")]")).shouldNotBe(Condition.visible);
-      Configuration.timeout = 4000;
+      Configuration.timeout = baseTimeout;
    }
 }
 

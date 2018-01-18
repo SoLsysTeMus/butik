@@ -70,7 +70,7 @@ public class ValidationAuthorizationTest extends BaseTest {
       app.authorization().clickPopUpLoginButton();
       app.authorization().clickPopUpLoginButton();
 
-      Assert.assertEquals(app.authorization().errorIsDisplayedOnPopUpForm("Превышено допустимое количество ввода ошибочных данных. Повторите вход позже."), true);
+      Assert.assertEquals(app.authorization().errorIsDisplayedOnPopUpForm("Слишком много попыток входа. Повторите вход позже."), true);
       Assert.assertEquals(app.authorization().errorIsDisplayedOnPopUpForm("Введите пароль"), false);
    }
 

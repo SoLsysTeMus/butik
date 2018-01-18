@@ -15,6 +15,7 @@ import java.lang.reflect.Method;
 import java.util.Properties;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static com.codeborne.selenide.Configuration.timeout;
 import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
 import static utils.Utils.loadPropertiesFromConfig;
