@@ -29,6 +29,7 @@ dependencies{
     agent "org.aspectj:aspectjweaver:${aspectjVersion}"
     compile "ru.yandex.qatools.allure:allure-testng-adaptor:${allureVersion}"
     compile "ch.qos.logback:logback-classic:${logbackVersion}"
+    compile group: 'com.automation-remarks', name: 'video-recorder-testng', version: '1.+'
 }
 
 test.doFirst {
@@ -45,7 +46,6 @@ test {
 }
 tasks.withType(Test).all { testTask ->
     testTask.systemProperties['file.encoding'] = 'UTF-8'
-    println (System.getProperty('browser', "browser"))
     testTask.systemProperties['gradle'] = true
     testTask.systemProperties['selenide.browser'] = System.getProperty('browser', "chrome")
     testTask.testLogging.showStandardStreams = false

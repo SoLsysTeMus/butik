@@ -6,6 +6,7 @@ import com.codeborne.selenide.ex.ElementNotFound;
 import model.ProductData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ import static tests.BaseTest.baseTimeout;
 
 public class ProductCardHelpers extends BaseHelper {
 
+   @Step("Добавление товара в WishList из карточки товара")
    public void addToWishlist() {
       if (!$x("//button[contains(@class, 'm-wished')]").is(Condition.visible)) {
          click(By.xpath("//button[contains(@data-bind,'toggleWishlist')]"));
@@ -23,6 +25,7 @@ public class ProductCardHelpers extends BaseHelper {
       }
    }
 
+   @Step("Удаление товара в WishList из карточки товара")
    public void removeFromList() {
       if ($x("//button[contains(@class, 'm-wished')]").is(Condition.visible)) {
          click(By.xpath("//button[contains(@data-bind,'toggleWishlist')]"));
@@ -30,10 +33,12 @@ public class ProductCardHelpers extends BaseHelper {
       }
    }
 
+   @Step("Удаление товара в корзину из карточки товара")
    public void addToCart() {
       click(By.xpath("//button[contains(@data-bind,'addToCart')]"));
    }
 
+   @Step("Нажатие кнопки \"Оформить заказ\" на PopUp")
    public void pressCheckoutButtonOnPopUp() {
       click(By.xpath("//a[contains(text(),'Оформить заказ')]"));
    }
@@ -58,6 +63,7 @@ public class ProductCardHelpers extends BaseHelper {
       return table.findElements(By.xpath("//div[contains(@class,'custom-select__row clear-cln')]"));
    }
 
+   @Step("Выбор размера в картчоке товара")
    public void selectSize(int i) {
       List sizes = getProductRusSizes();
       $(By.xpath(String.format(".//div[contains(@data-bind,'rus_size') and contains(text(),'%s')]", sizes.get(i)))).click();

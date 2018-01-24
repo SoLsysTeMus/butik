@@ -5,8 +5,10 @@ import com.codeborne.selenide.Screenshots;
 import com.google.common.io.Files;
 import ru.yandex.qatools.allure.annotations.Attachment;
 
-import java.io.*;
-import java.util.Properties;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class AllureUtils {
 

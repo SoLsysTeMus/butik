@@ -66,7 +66,7 @@ public class UserProfileHelper extends BaseHelper {
       collection.filterBy(Condition.visible).filterBy(Condition.text(message)).shouldHave(CollectionCondition.size(1));
    }
 
-   public void noDisplayedSystemMessage(String message) {
+   public void isNoDisplayedSystemMessage(String message) {
       ElementsCollection collection = $x("//div[@class='profile__form-messages']").$$x(".//div[contains(@class, 'profile__')]");
       collection.filterBy(Condition.visible).filterBy(Condition.text(message)).shouldHave(CollectionCondition.size(0));
    }
@@ -88,7 +88,7 @@ public class UserProfileHelper extends BaseHelper {
       $x("//select[@name='type']").$$(By.tagName("option")).filterBy(Condition.text(value)).first().click();
    }
 
-   public void questionErrorIsDisplayed(String errorText) {
+   public void isIsDisplayedQuestionError(String errorText) {
       $$(".profile__errors").filterBy(Condition.text(errorText)).shouldHaveSize(1);
    }
 

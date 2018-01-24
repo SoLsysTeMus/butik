@@ -1,12 +1,14 @@
 package appmanager.helpers;
 
 import org.openqa.selenium.By;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class RegistrationHelper extends BaseHelper {
 
+   @Step("Заполнение полей Имя, email и пароль на форме PopUp")
    public void fillPopUpRegistrationForm(String name, String email, String password) {
       fillPopUpRegistrationEmailField(email);
       fillPopUpRegistrationNameField(name);
@@ -31,17 +33,20 @@ public class RegistrationHelper extends BaseHelper {
       sleep(100);
    }
 
+   @Step("Заполнение полей Имя, email и пароль на странице /register")
    public void fillRegistrationForm(String name, String randomEmail, String password) {
       type(By.xpath("//*[@id=\"js-registration-name\"]"), name);
       type(By.xpath("/html/body/div[2]/div[1]/div/div/div[2]/form/div[2]/input"), randomEmail);
       type(By.xpath("/html/body/div[2]/div[1]/div/div/div[2]/form/div[5]/input"), password);
    }
 
+   @Step("Нажатие на кнопку \"Регистрация\" на форме PopUp ")
    public void submitPopUpRegistrationData() {
       click(By.xpath("//*[@id=\"authPopup\"]/div[2]/div[2]/div/div[2]/form/button"));
       waitLoader();
    }
 
+   @Step("Нажатие на кнопку \"Регистрация\" на странице /register")
    public void submitRegistrationData() {
       click(By.xpath("/html/body/div[2]/div[1]/div/div/div[2]/form/button"));
       waitLoader();

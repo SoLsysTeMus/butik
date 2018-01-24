@@ -1,9 +1,11 @@
 package appmanager.helpers;
 
 import org.openqa.selenium.By;
+import ru.yandex.qatools.allure.annotations.Step;
 
 public class CatalogHelper extends BaseHelper {
 
+   @Step("Количество товаров в категории")
    public int getProductsCountInCategory() {
       waitLoader();
       return Integer.parseInt(getTextForElement(By.xpath("//span[contains(text(),'товар')]")).replaceAll("\\D", ""));

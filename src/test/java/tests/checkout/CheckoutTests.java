@@ -24,29 +24,29 @@ public class CheckoutTests extends BaseTest {
    @Title("Заказ на сохранённый адрес")
    @Test
    public void testOrderByAuthUserWithSavedAddress() {
-      String testLoginEmail = "checkoutaddress@test.ru";
-      String testPassword = "12345";
+      String login = testDataProperties.getProperty("checkoutLogin");
+      String password = testDataProperties.getProperty("checkoutPassword");
 
       app.navigation().openAuthorizationPopUp();
-      app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
+      app.authorization().fillPopUpAuthorizationForm(login, password);
       app.authorization().submitPopUpLoginData();
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-gubka/");
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
       app.checkout().submitOrder();
 
-      Assert.assertEquals(app.checkout().isSuccessOrder(), true);
+      Assert.assertTrue(app.checkout().isSuccessOrder());
    }
 
    @Severity(SeverityLevel.BLOCKER)
    @Title("Заказ на новый адрес для клиента с сохранённым адресом")
    @Test
    public void testOrderByAuthUserWithSavedAddressWithNewAddress() {
-      String testLoginEmail = "checkoutaddress@test.ru";
-      String testPassword = "12345";
+      String login = testDataProperties.getProperty("checkoutLogin");
+      String password = testDataProperties.getProperty("checkoutPassword");
 
       app.navigation().openAuthorizationPopUp();
-      app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
+      app.authorization().fillPopUpAuthorizationForm(login, password);
       app.authorization().submitPopUpLoginData();
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-gubka/");
       app.productCard().addToCart();
@@ -60,38 +60,37 @@ public class CheckoutTests extends BaseTest {
       app.checkout().fillAddressForm("Смоленская наб", "д 44", "1");
       app.checkout().submitOrder();
 
-      Assert.assertEquals(app.checkout().isSuccessOrder(), true);
+      Assert.assertTrue(app.checkout().isSuccessOrder());
    }
 
    @Severity(SeverityLevel.BLOCKER)
    @Title("Заказ с доставкой в регионы для неавторизованного пользователя")
    @Test
    public void testOrderByNotAuthUserWithRegionalDelivery() {
-      String testName = "test";
-      String testEmail = "checkoutaddress@test.ru";
-      String phone = "+7(964)538-80-80";
-      String commentText = "Test Order Commentary";
+      String name = testDataProperties.getProperty("checkoutName");
+      String email = testDataProperties.getProperty("checkoutLogin");
+      String phone = testDataProperties.getProperty("checkoutPhone");
 
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-gubka/");
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
-      app.checkout().fillBuyerFrom(testName, phone, testEmail);
+      app.checkout().fillBuyerFrom(name, phone, email);
       app.checkout().selectCityForDelivery("Анапа");
       app.checkout().selectDeliveryService("DPD курьерская доставка");
       app.checkout().fillAddressForm("ул Первомайская", "4", "1");
-      app.checkout().fillCommentaryForm(commentText);
+      app.checkout().fillCommentaryForm("Test Order Commentary");
       app.checkout().submitOrder();
 
-      Assert.assertEquals(app.checkout().isSuccessOrder(), true);
+      Assert.assertTrue(app.checkout().isSuccessOrder());
    }
 
    @Severity(SeverityLevel.BLOCKER)
    @Title("Заказ с доставкой в ПВЗ для неавторизованного пользователя")
    @Test
    public void testOrderByNotAuthUserWithPickPointService() {
-      String testName = "test";
-      String testEmail = "checkoutaddress@test.ru";
-      String phone = "+7(964)538-80-80";
+      String name = testDataProperties.getProperty("checkoutName");
+      String email = testDataProperties.getProperty("checkoutLogin");
+      String phone = testDataProperties.getProperty("checkoutPhone");
 
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-gubka/");
       app.productCard().addToCart();
@@ -99,14 +98,14 @@ public class CheckoutTests extends BaseTest {
       app.productCard().selectSize(1);
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
-      app.checkout().fillBuyerFrom(testName, phone, testEmail);
+      app.checkout().fillBuyerFrom(name, phone, email);
       app.checkout().selectCityForDelivery("Москва");
       app.checkout().selectDeliveryService("Доставка до пункта выдачи");
       app.checkout().openDeliveryPointMap();
       app.checkout().selectDeliveryPoint(null, "Хабаровская", By.cssSelector("ymaps.ymaps-2-1-60-events-pane.ymaps-2-1-60-user-selection-none"));
       app.checkout().submitOrder();
 
-      Assert.assertEquals(app.checkout().isSuccessOrder(), true);
+      Assert.assertTrue(app.checkout().isSuccessOrder());
    }
 
 }

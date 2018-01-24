@@ -23,7 +23,7 @@ public class CheckoutHelper extends BaseHelper {
       click(By.xpath("//button[contains(@class,'heart')]"));
    }
 
-   public List getItemsInTheCartList() {
+   public List getCartItemsCount() {
 
       List<ProductData> products = new ArrayList<>();
 
@@ -61,7 +61,7 @@ public class CheckoutHelper extends BaseHelper {
 
    @Step("Удаление всех товаров из корзины")
    public void removeAllProducts() {
-      int counter = getItemsInTheCartList().size();
+      int counter = getCartItemsCount().size();
       for (int i = 0; i < counter; i++) {
          $(By.xpath("//p[contains(@class,'hidden-xs')]//span[contains(@data-bind,'removeProduct')]")).click();
          waitLoader();
@@ -69,7 +69,7 @@ public class CheckoutHelper extends BaseHelper {
    }
 
    @Step("Проверка на отсутствие товаров в корзине")
-   public boolean cartIsEmpty() {
+   public boolean isCartEmpty() {
       return $(By.xpath("//div[contains(text(),'В корзину ничего не добавлено')]")).shouldBe(Condition.visible).isDisplayed();
    }
 

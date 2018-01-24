@@ -1,13 +1,13 @@
 package appmanager.helpers;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.ex.ElementNotFound;
 import model.ProductData;
 
-import static com.codeborne.selenide.Selenide.$$;
-import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Selenide.*;
 import static tests.BaseTest.baseTimeout;
 
 public class WishListHelper extends BaseHelper {
@@ -63,5 +63,9 @@ public class WishListHelper extends BaseHelper {
       SelenideElement element = products.get(i);
       element.$x(".//span[contains(@class, 'wishlist__like')]").click();
       sleep(2000);
+   }
+
+   public boolean isContainsProductWithUrl(String productUrl) {
+      return $x(String.format("//a[contains(@href,'%s')]", productUrl)).is(Condition.visible);
    }
 }

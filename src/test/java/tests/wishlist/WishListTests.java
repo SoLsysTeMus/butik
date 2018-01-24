@@ -1,7 +1,5 @@
 package tests.wishlist;
 
-import model.ProductData;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Features;
@@ -11,6 +9,8 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
 @Features("WishList")
 public class WishListTests extends BaseTest {
@@ -24,40 +24,36 @@ public class WishListTests extends BaseTest {
    @Severity(SeverityLevel.CRITICAL)
    @Test
    public void testAddToWishListItemWithoutSizeFromProductCard() {
+      String testLoginEmail = testDataProperties.getProperty("wishListLogin");
+      String testPassword = testDataProperties.getProperty("wishListPassword");
+      String productUrl = "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-black-gubka/";
 
-      String testLoginEmail = "testwishlist@testwishlist.ru";
-      String testPassword = "12345";
-
-      app.navigation().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-black-gubka/");
-      ProductData productInCard = app.productCard().getProductData();
+      app.navigation().openUrl(baseUrl + productUrl);
       app.navigation().openAuthorizationPopUp();
       app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitPopUpLoginData();
       app.productCard().addToWishlist();
       app.navigation().openWishListPage();
-      ProductData productInWishList = app.wishList().getProductDataForItems(0);
 
-      Assert.assertEquals(productInCard.getBrandName(), productInWishList.getBrandName());
+      assertTrue(app.wishList().isContainsProductWithUrl(productUrl));
    }
 
    @Title("Добавление размерного товара в wishlist из Карточки товара")
    @Severity(SeverityLevel.CRITICAL)
    @Test
    public void testAddToWishListItemWithSizeFromProductCard() {
+      String testLoginEmail = testDataProperties.getProperty("wishListLogin");
+      String testPassword = testDataProperties.getProperty("wishListPassword");
+      String productUrl = "products/muzhchinam-obuv-botinki-nizkie-nobrand-92213-black-botinki/";
 
-      String testLoginEmail = "testwishlist@testwishlist.ru";
-      String testPassword = "12345";
-
-      app.navigation().openUrl(baseUrl + "products/muzhchinam-obuv-botinki-nizkie-nobrand-92213-black-botinki/");
-      ProductData productInCard = app.productCard().getProductData();
+      app.navigation().openUrl(baseUrl + productUrl);
       app.navigation().openAuthorizationPopUp();
       app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitPopUpLoginData();
       app.productCard().addToWishlist();
       app.navigation().openWishListPage();
-      ProductData productInWishList = app.wishList().getProductDataForItems(0);
 
-      Assert.assertEquals(productInCard.getBrandName(), productInWishList.getBrandName());
+      assertTrue(app.wishList().isContainsProductWithUrl(productUrl));
    }
 
 
@@ -65,56 +61,50 @@ public class WishListTests extends BaseTest {
    @Severity(SeverityLevel.CRITICAL)
    @Test(dependsOnMethods = {"testAddToWishListItemWithoutSizeFromProductCard"})
    public void testDeleteWishListItemWithoutSizeFromProductCard() {
+      String testLoginEmail = testDataProperties.getProperty("wishListLogin");
+      String testPassword = testDataProperties.getProperty("wishListPassword");
+      String productUrl = "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-black-gubka/";
 
-      String testLoginEmail = "testwishlist@testwishlist.ru";
-      String testPassword = "12345";
-
-      app.navigation().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-black-gubka/");
+      app.navigation().openUrl(baseUrl + productUrl);
       app.navigation().openAuthorizationPopUp();
       app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitPopUpLoginData();
-      ProductData productInCard = app.productCard().getProductData();
       app.productCard().removeFromList();
       app.navigation().openWishListPage();
-      ProductData productInWishList = app.wishList().getProductDataForItems(0);
 
-      Assert.assertNotEquals(productInCard.getBrandName(), productInWishList.getBrandName());
+      assertFalse(app.wishList().isContainsProductWithUrl(productUrl));
    }
 
    @Title("Удаление размерного товара в wishlist из Карточки товара")
    @Severity(SeverityLevel.CRITICAL)
    @Test(dependsOnMethods = {"testAddToWishListItemWithSizeFromProductCard"})
    public void testDeleteWishListItemWithSizeFromProductCard() {
+      String testLoginEmail = testDataProperties.getProperty("wishListLogin");
+      String testPassword = testDataProperties.getProperty("wishListPassword");
+      String productUrl = "products/muzhchinam-obuv-botinki-nizkie-nobrand-92213-black-botinki/";
 
-      String testLoginEmail = "testwishlist@testwishlist.ru";
-      String testPassword = "12345";
-
-      app.navigation().openUrl(baseUrl + "products/muzhchinam-obuv-botinki-nizkie-nobrand-92213-black-botinki/");
+      app.navigation().openUrl(baseUrl + productUrl);
       app.navigation().openAuthorizationPopUp();
       app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitPopUpLoginData();
-      ProductData productInCard = app.productCard().getProductData();
       app.productCard().removeFromList();
       app.navigation().openWishListPage();
-      ProductData productInWishList = app.wishList().getProductDataForItems(0);
 
-      Assert.assertNotEquals(productInCard.getBrandName(), productInWishList.getBrandName());
+      assertFalse(app.wishList().isContainsProductWithUrl(productUrl));
    }
 
    @Title("Удаление товара в wishlist со страницы /checkout")
    @Severity(SeverityLevel.CRITICAL)
    @Test
    public void testWishListDeleteItemFromCheckout() {
+      String testLoginEmail = testDataProperties.getProperty("wishListLogin");
+      String testPassword = testDataProperties.getProperty("wishListPassword");
+      String productUrl = "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-gubka/";
 
-      String testLoginEmail = "testwishlist@testwishlist.ru";
-      String testPassword = "12345";
-      Integer itemsCount;
-
-      app.navigation().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-gubka/");
+      app.navigation().openUrl(baseUrl + productUrl);
       app.navigation().openAuthorizationPopUp();
       app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitPopUpLoginData();
-      itemsCount = app.header().getWishlistItemscount();
       app.productCard().addToWishlist();
       app.productCard().addToCart();
       app.navigation().openCheckoutPage();
@@ -122,7 +112,7 @@ public class WishListTests extends BaseTest {
       app.checkout().removeAllProducts();
       app.navigation().openWishListPage();
 
-      Assert.assertEquals(app.header().getWishlistItemscount(), itemsCount);
+      assertFalse(app.wishList().isContainsProductWithUrl(productUrl));
    }
 
    @Title("Удаление товара в wishlist при оформлении заказа")
@@ -132,22 +122,21 @@ public class WishListTests extends BaseTest {
 
       String testLoginEmail = "testwishlist@testwishlist.ru";
       String testPassword = "12345";
-      Integer itemsCount;
+      String productUrl = "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-gubka/";
 
-      app.navigation().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-gubka/");
+      app.navigation().openUrl(baseUrl + productUrl);
       app.navigation().openAuthorizationPopUp();
       app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitPopUpLoginData();
-      itemsCount = app.header().getWishlistItemscount();
       app.productCard().addToWishlist();
       app.productCard().addToCart();
       app.navigation().openCheckoutPage();
       app.checkout().selectCityForDelivery("Москва");
       app.checkout().selectDeliveryService("Butik самовывоз");
       app.checkout().submitOrder();
-      app.navigation().openUrl(baseUrl);
+      app.navigation().openWishListPage();
 
-      Assert.assertEquals(app.header().getWishlistItemscount(), itemsCount);
+      assertFalse(app.wishList().isContainsProductWithUrl(productUrl));
    }
 
    @Title("Удаление товара из Избранного со страницы /wishlist")
@@ -157,18 +146,16 @@ public class WishListTests extends BaseTest {
 
       String testLoginEmail = "testwishlist@testwishlist.ru";
       String testPassword = "12345";
+      String productUrl = "products/zhenshchinam-sumki-sumki-srednie-coach-11854-dkpbu-sumka/";
 
-      app.navigation().openUrl(baseUrl + "products/zhenshchinam-sumki-sumki-srednie-coach-11854-dkpbu-sumka/");
+      app.navigation().openUrl(baseUrl + productUrl);
       app.navigation().openAuthorizationPopUp();
       app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
       app.authorization().submitPopUpLoginData();
       app.productCard().addToWishlist();
       app.navigation().openWishListPage();
-      ProductData productInWishListBefore = app.wishList().getProductDataForItems(0);
       app.wishList().removeItem(0);
-      ProductData productInWishListAfter = app.wishList().getProductDataForItems(0);
 
-
-      Assert.assertNotEquals(productInWishListBefore.getBrandName(), productInWishListAfter.getBrandName());
+      assertFalse(app.wishList().isContainsProductWithUrl(productUrl));
    }
 }

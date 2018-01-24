@@ -12,6 +12,7 @@ import tests.BaseTest;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
+import static org.testng.Assert.assertTrue;
 
 @Features("Карточка товара")
 public class ProductCardTests extends BaseTest {
@@ -33,7 +34,7 @@ public class ProductCardTests extends BaseTest {
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
 
-      Assert.assertEquals(app.checkout().getItemsInTheCartList().size(), 2);
+      Assert.assertEquals(app.checkout().getCartItemsCount().size(), 2);
    }
 
    @Title("Добавление размерного товара в корзину для неавторизованного пользователя")
@@ -45,7 +46,7 @@ public class ProductCardTests extends BaseTest {
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
 
-      Assert.assertEquals(app.checkout().getItemsInTheCartList().size(), 1);
+      Assert.assertEquals(app.checkout().getCartItemsCount().size(), 1);
    }
 
    @Title("Добавление б/р товара в корзину для авторизованного пользователя")
@@ -64,10 +65,10 @@ public class ProductCardTests extends BaseTest {
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
 
-      Assert.assertEquals(app.checkout().getItemsInTheCartList().size(), 2);
+      Assert.assertEquals(app.checkout().getCartItemsCount().size(), 2);
 
       app.checkout().removeAllProducts();
-      Assert.assertEquals(app.checkout().cartIsEmpty(), true);
+      assertTrue(app.checkout().isCartEmpty());
    }
 
    @Title("Добавление размерного товара в корзину для авторизованного пользователя")
@@ -85,9 +86,9 @@ public class ProductCardTests extends BaseTest {
       app.productCard().addToCart();
       app.productCard().pressCheckoutButtonOnPopUp();
 
-      Assert.assertEquals(app.checkout().getItemsInTheCartList().size(), 1);
+      Assert.assertEquals(app.checkout().getCartItemsCount().size(), 1);
       app.checkout().removeAllProducts();
 
-      Assert.assertEquals(app.checkout().cartIsEmpty(), true);
+      Assert.assertTrue(app.checkout().isCartEmpty());
    }
 }
