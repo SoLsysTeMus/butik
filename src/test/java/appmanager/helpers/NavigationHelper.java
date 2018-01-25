@@ -1,6 +1,5 @@
 package appmanager.helpers;
 
-
 import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;
 import ru.yandex.qatools.allure.annotations.Step;
@@ -15,6 +14,7 @@ public class NavigationHelper extends BaseHelper {
       $x("//div[contains(@class,'user-block fr nowrp')]//div[contains(@class,'dropmenu-root')]").click();
       $(By.id("authPopup")).shouldBe(Condition.visible);
       $(".button.authorization__button.m-login").shouldBe(Condition.visible);
+      sleep(500);
    }
 
    @Step("Открытие стрианцы /login")

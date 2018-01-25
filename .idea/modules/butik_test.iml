@@ -14,12 +14,12 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="butik_main" />
     <orderEntry type="library" name="Gradle: org.testng:testng:6.13.1" level="project" />
-    <orderEntry type="library" name="Gradle: com.codeborne:selenide:4.10" level="project" />
+    <orderEntry type="library" name="Gradle: com.codeborne:selenide:4.10.01" level="project" />
     <orderEntry type="library" name="Gradle: ru.yandex.qatools.allure:allure-testng-adaptor:1.5.4" level="project" />
     <orderEntry type="library" name="Gradle: ch.qos.logback:logback-classic:1.2.3" level="project" />
     <orderEntry type="library" name="Gradle: com.automation-remarks:video-recorder-testng:1.7" level="project" />
     <orderEntry type="library" name="Gradle: com.beust:jcommander:1.72" level="project" />
-    <orderEntry type="library" name="Gradle: io.github.bonigarcia:webdrivermanager:2.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.github.bonigarcia:webdrivermanager:2.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpcore:4.4.8" level="project" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-java:3.8.1" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.2" level="project" />

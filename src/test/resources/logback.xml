@@ -8,7 +8,7 @@
         <layout>
             <Pattern>%-4r [%thread] %-5level C:%X{client} N:%X{number} - %msg%n</Pattern>
         </layout>
-        <file>logs/testRun-${bySecond}.log</file>
+        <file>build/test-logs/testRun-${bySecond}.log</file>
         <append>true</append>
         <!-- set immediateFlush to false for much higher logging throughput -->
         <immediateFlush>true</immediateFlush>

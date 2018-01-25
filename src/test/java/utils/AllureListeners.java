@@ -23,7 +23,7 @@ public class AllureListeners implements ITestListener {
 
    @Override
    public void onTestFailure(ITestResult result) {
-      logger.error("FAIL    test - " + result.getName());
+      logger.error("FAIL    test - " + result.getName() + " - " + result.getThrowable().getMessage());
       try {
          failScreenshot();
       } catch (IOException e) {
