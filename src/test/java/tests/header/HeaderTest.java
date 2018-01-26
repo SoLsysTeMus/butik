@@ -15,6 +15,7 @@ import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 import static org.testng.Assert.assertNotEquals;
 import static org.testng.Assert.assertTrue;
+import static ru.yandex.qatools.allure.model.SeverityLevel.*;
 
 @Features("Хедер")
 public class HeaderTest extends BaseTest {
@@ -26,7 +27,7 @@ public class HeaderTest extends BaseTest {
 
 
    @Title("Выбран женский пол на разводящей")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testWomenSexSelectedOnGenderBanner() {
       app.banner().selectSexOnGenderBanner("ЖЕНЩИНАМ");
@@ -35,7 +36,7 @@ public class HeaderTest extends BaseTest {
    }
 
    @Title("Выбран мужской пол на разводящей")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testMenSexSelectedOnGenderBanner() {
       app.banner().selectSexOnGenderBanner("МУЖЧИНАМ");
@@ -45,7 +46,7 @@ public class HeaderTest extends BaseTest {
 
 
    @Title("Отображение logo в хедере")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void testLogoIsVisible() {
       app.navigation().openUrl(baseUrl);
@@ -54,7 +55,7 @@ public class HeaderTest extends BaseTest {
    }
 
    @Title("Отображение картинок для баннера на разводящей")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void testImagesIsVisibleOnGenderBanner() {
       app.navigation().openUrl(baseUrl);
@@ -64,7 +65,7 @@ public class HeaderTest extends BaseTest {
    }
 
    @Title("Индикация ссылки \"О универмаге\" на странице /about")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testLinkToAboutPage() {
       app.header().gotoAboutPage();
@@ -74,7 +75,7 @@ public class HeaderTest extends BaseTest {
    }
 
    @Title("Открытие формы поиска и отображение элементов")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testOpenSearchForm() {
       app.header().openSearchForm();
@@ -85,7 +86,7 @@ public class HeaderTest extends BaseTest {
    }
 
    @Title("Pop-up для пустой корзины")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testPopUpWithEmptyCart() {
       app.header().openPopUpCart();
@@ -93,7 +94,7 @@ public class HeaderTest extends BaseTest {
    }
 
    @Title("Отображение кол-ва товаров в wishlist")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void testWishListCounterVisibleInHeader() {
 

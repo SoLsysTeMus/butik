@@ -7,12 +7,14 @@ import ru.yandex.qatools.allure.annotations.Title;
 import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
+import static ru.yandex.qatools.allure.model.SeverityLevel.*;
+
 @Features("Валидация полей в Личном кабинете - Задать вопрос")
 public class SendQuestionValidation extends BaseTest {
 
    @Test
    @Title("Проверка валидации поля Имя")
-   @Severity(SeverityLevel.MINOR)
+   @Severity(MINOR)
    public void testValidateName() {
 
       String login = testDataProperties.getProperty("personalDataLogin");
@@ -35,7 +37,7 @@ public class SendQuestionValidation extends BaseTest {
 
    @Test
    @Title("Проверка валидации поля Email")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    public void testValidateEmail() {
 
       String login = testDataProperties.getProperty("personalDataLogin");
@@ -124,7 +126,7 @@ public class SendQuestionValidation extends BaseTest {
 
    @Test
    @Title("Проверка валидации поля Текст вопроса")
-   @Severity(SeverityLevel.MINOR)
+   @Severity(MINOR)
    public void testValidateQuestionName() {
 
       String login = testDataProperties.getProperty("personalDataLogin");
@@ -143,7 +145,7 @@ public class SendQuestionValidation extends BaseTest {
 
    @Test
    @Title("Проверка валидации поля Текст вопроса")
-   @Severity(SeverityLevel.MINOR)
+   @Severity(MINOR)
    public void testValidateQuestionType() {
 
       String login = testDataProperties.getProperty("personalDataLogin");

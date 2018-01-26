@@ -11,6 +11,7 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static ru.yandex.qatools.allure.model.SeverityLevel.*;
 
 @Features("Checkout")
 public class CheckoutTests extends BaseTest {
@@ -20,7 +21,7 @@ public class CheckoutTests extends BaseTest {
       app.navigation().openUrl(baseUrl);
    }
 
-   @Severity(SeverityLevel.BLOCKER)
+   @Severity(BLOCKER)
    @Title("Заказ на сохранённый адрес")
    @Test
    public void testOrderByAuthUserWithSavedAddress() {
@@ -38,7 +39,7 @@ public class CheckoutTests extends BaseTest {
       Assert.assertTrue(app.checkout().isSuccessOrder());
    }
 
-   @Severity(SeverityLevel.BLOCKER)
+   @Severity(BLOCKER)
    @Title("Заказ на новый адрес для клиента с сохранённым адресом")
    @Test
    public void testOrderByAuthUserWithSavedAddressWithNewAddress() {
@@ -63,7 +64,7 @@ public class CheckoutTests extends BaseTest {
       Assert.assertTrue(app.checkout().isSuccessOrder());
    }
 
-   @Severity(SeverityLevel.BLOCKER)
+   @Severity(BLOCKER)
    @Title("Заказ с доставкой в регионы для неавторизованного пользователя")
    @Test
    public void testOrderByNotAuthUserWithRegionalDelivery() {
@@ -84,7 +85,7 @@ public class CheckoutTests extends BaseTest {
       Assert.assertTrue(app.checkout().isSuccessOrder());
    }
 
-   @Severity(SeverityLevel.BLOCKER)
+   @Severity(BLOCKER)
    @Title("Заказ с доставкой в ПВЗ для неавторизованного пользователя")
    @Test
    public void testOrderByNotAuthUserWithPickPointService() {

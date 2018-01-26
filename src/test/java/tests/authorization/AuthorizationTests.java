@@ -10,6 +10,7 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static ru.yandex.qatools.allure.model.SeverityLevel.*;
 
 @Features("Авторизация")
 public class AuthorizationTests extends BaseTest {
@@ -19,7 +20,7 @@ public class AuthorizationTests extends BaseTest {
       app.navigation().openUrl(baseUrl);
    }
 
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Title("Проверка отображения элементов формы")
    @Test
    public void testAuthorizationPopUpElementIsVisible() {
@@ -28,7 +29,7 @@ public class AuthorizationTests extends BaseTest {
       Assert.assertTrue(app.authorization().isAllPopUpElementsDisplayed());
    }
 
-   @Severity(SeverityLevel.MINOR)
+   @Severity(MINOR)
    @Title("Авторизация через страницу /login")
    @Test
    public void testCorrectAuthorization() {
@@ -43,7 +44,7 @@ public class AuthorizationTests extends BaseTest {
       app.header().checkUserName(name);
    }
 
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Title("Авторизация через Pop-Up")
    @Test
    public void testCorrectAuthorizationPopUp() {
@@ -59,7 +60,7 @@ public class AuthorizationTests extends BaseTest {
    }
 
 
-   @Severity(SeverityLevel.MINOR)
+   @Severity(MINOR)
    @Title("Авторизация через страницу /login используя номер телефона")
    @Test
    public void testCorrectAuthorizationByPhone() {
@@ -74,7 +75,7 @@ public class AuthorizationTests extends BaseTest {
       app.header().checkUserName(name);
    }
 
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Title("Авторизация через Pop-Up используя номер телефона")
    @Test
    public void testCorrectAuthorizationPopUpByPhone() {

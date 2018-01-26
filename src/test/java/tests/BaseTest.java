@@ -39,8 +39,6 @@ public class BaseTest {
    @BeforeMethod
    public void setUp() {
       setConfig(systemProperties, testProperties);
-      app.init();
-
       open(baseUrl);
    }
 
@@ -60,7 +58,6 @@ public class BaseTest {
       Configuration.screenshots = Boolean.parseBoolean(testProperties.getProperty("screenshots"));
       Configuration.timeout = baseTimeout;
    }
-
 
    @AfterMethod
    public void teardown() {

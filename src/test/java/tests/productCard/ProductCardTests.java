@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 import static org.testng.Assert.assertTrue;
+import static ru.yandex.qatools.allure.model.SeverityLevel.*;
 
 @Features("Карточка товара")
 public class ProductCardTests extends BaseTest {
@@ -25,7 +26,7 @@ public class ProductCardTests extends BaseTest {
    }
 
    @Title("Добавление б/р товара в корзину для неавторизованного пользователя")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void testAddItemWithOutSizesToNotAuthCart() {
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-colorit-tube-gold-krem/");
@@ -38,7 +39,7 @@ public class ProductCardTests extends BaseTest {
    }
 
    @Title("Добавление размерного товара в корзину для неавторизованного пользователя")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void testAddItemWithSizesToNotAuthCart() {
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-odezhda-dzhinsy-skinni-alcott-5t2952dw649-grey-dzhinsy/");
@@ -50,7 +51,7 @@ public class ProductCardTests extends BaseTest {
    }
 
    @Title("Добавление б/р товара в корзину для авторизованного пользователя")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void testAddItemWithOutSizesToAuthCart() {
       String login = testDataProperties.getProperty("authDataLogin");
@@ -72,7 +73,7 @@ public class ProductCardTests extends BaseTest {
    }
 
    @Title("Добавление размерного товара в корзину для авторизованного пользователя")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test(dependsOnMethods = "testAddItemWithOutSizesToAuthCart")
    public void testAddItemWithSizesToAuthCart() {
       String login = testDataProperties.getProperty("authDataLogin");

@@ -7,12 +7,14 @@ import ru.yandex.qatools.allure.annotations.Title;
 import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
+import static ru.yandex.qatools.allure.model.SeverityLevel.*;
+
 @Features("Валидация полей в Личном кабинете - Мои данные")
 public class PersonalDataValidationTests extends BaseTest {
 
    @Test
    @Title("Проверка валидации поля Фамилия")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    public void testValidateSurname() {
 
       String login = testDataProperties.getProperty("personalDataLogin");
@@ -36,7 +38,7 @@ public class PersonalDataValidationTests extends BaseTest {
 
    @Test
    @Title("Проверка валидации поля Имя")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    public void testValidateName() {
 
       String login = testDataProperties.getProperty("personalDataLogin");
@@ -59,7 +61,7 @@ public class PersonalDataValidationTests extends BaseTest {
 
    @Test
    @Title("Проверка валидации поля Отчество")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    public void testValidatePatronymic() {
 
       String login = testDataProperties.getProperty("personalDataLogin");
@@ -82,7 +84,7 @@ public class PersonalDataValidationTests extends BaseTest {
 
    @Test
    @Title("Проверка валидации поля Email")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    public void testValidateEmail() {
 
       String login = testDataProperties.getProperty("personalDataLogin");
@@ -171,7 +173,7 @@ public class PersonalDataValidationTests extends BaseTest {
 
    @Test
    @Title("Проверка валидации поля Телефон")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    public void testValidatePhone() {
 
       String login = testDataProperties.getProperty("personalDataLogin");
@@ -194,7 +196,7 @@ public class PersonalDataValidationTests extends BaseTest {
 
    @Test
    @Title("Проверка валидации поля Дата Рождения")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    public void testValidateDob() {
 
       String login = testDataProperties.getProperty("personalDataLogin");
@@ -238,7 +240,7 @@ public class PersonalDataValidationTests extends BaseTest {
 
    @Test
    @Title("Проверка валидации формы - Сменить пароль")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    public void testValidatePassword() {
 
       String login = testDataProperties.getProperty("personalDataLogin");

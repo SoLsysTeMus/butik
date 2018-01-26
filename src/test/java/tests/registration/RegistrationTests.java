@@ -6,10 +6,9 @@ import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Features;
 import ru.yandex.qatools.allure.annotations.Severity;
 import ru.yandex.qatools.allure.annotations.Title;
-import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
-import java.util.Date;
+import static ru.yandex.qatools.allure.model.SeverityLevel.*;
 
 @Features("Регистрация")
 public class RegistrationTests extends BaseTest {
@@ -20,7 +19,7 @@ public class RegistrationTests extends BaseTest {
    }
 
    @Title("Регистрация пользователя через Pop-up")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void testRegistrationWithValidDataPopUp() {
       long now = System.currentTimeMillis();
@@ -37,7 +36,7 @@ public class RegistrationTests extends BaseTest {
    }
 
    @Title("Регистрация пользователя через страницу /register")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void testRegistrationWithValidData() {
       long now = System.currentTimeMillis();
