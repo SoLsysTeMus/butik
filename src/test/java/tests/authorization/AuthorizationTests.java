@@ -1,5 +1,6 @@
 package tests.authorization;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Features;
@@ -24,7 +25,7 @@ public class AuthorizationTests extends BaseTest {
    public void testAuthorizationPopUpElementIsVisible() {
       app.navigation().openAuthorizationPopUp();
 
-      app.authorization().checkAllPopUpElementsIsDisplayed();
+      Assert.assertTrue(app.authorization().isAllPopUpElementsDisplayed());
    }
 
    @Severity(SeverityLevel.MINOR)

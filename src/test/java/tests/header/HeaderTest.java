@@ -13,6 +13,8 @@ import tests.BaseTest;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
+import static org.testng.Assert.assertNotEquals;
+import static org.testng.Assert.assertTrue;
 
 @Features("Хедер")
 public class HeaderTest extends BaseTest {
@@ -48,7 +50,7 @@ public class HeaderTest extends BaseTest {
    public void testLogoIsVisible() {
       app.navigation().openUrl(baseUrl);
 
-      Assert.assertEquals($x("//header//a//img").isImage(), true);
+      assertTrue($x("//header//a//img").isImage());
    }
 
    @Title("Отображение картинок для баннера на разводящей")
@@ -57,8 +59,8 @@ public class HeaderTest extends BaseTest {
    public void testImagesIsVisibleOnGenderBanner() {
       app.navigation().openUrl(baseUrl);
 
-      Assert.assertEquals($$x("//a[@class='b-frame']//img[@class='b-pic hidden-xs']").get(0).isImage(), true);
-      Assert.assertEquals($$x("//a[@class='b-frame']//img[@class='b-pic hidden-xs']").get(1).isImage(), true);
+      assertTrue($$x("//a[@class='b-frame']//img[@class='b-pic hidden-xs']").get(0).isImage());
+      assertTrue($$x("//a[@class='b-frame']//img[@class='b-pic hidden-xs']").get(1).isImage());
    }
 
    @Title("Индикация ссылки \"О универмаге\" на странице /about")
@@ -68,7 +70,7 @@ public class HeaderTest extends BaseTest {
       app.header().gotoAboutPage();
 
       app.page().pageContainsText(By.cssSelector(".static-about-title"), "универмаг и интернет-магазин");
-      app.header().checkAboutLinkIsActive();
+      assertTrue(app.header().isAboutLinkActive());
    }
 
    @Title("Открытие формы поиска и отображение элементов")
@@ -77,9 +79,9 @@ public class HeaderTest extends BaseTest {
    public void testOpenSearchForm() {
       app.header().openSearchForm();
 
-      app.header().checkSearchFieldIsVisible();
-      app.header().checkSearchButtonIsVisible();
-      app.header().checkHintsIsVisible();
+      assertTrue(app.header().isSearchFieldVisible());
+      assertTrue(app.header().isSearchButtonVisible());
+      assertNotEquals(app.header().getHintsCount(), 0);
    }
 
    @Title("Pop-up для пустой корзины")
@@ -103,6 +105,6 @@ public class HeaderTest extends BaseTest {
       app.authorization().submitPopUpLoginData();
       app.navigation().openWishListPage();
 
-      Assert.assertNotEquals(app.header().getWishlistItemscount(), 0);
+      assertNotEquals(app.header().getWishlistItemscount(), 0);
    }
 }

@@ -59,7 +59,7 @@ public class AuthorizationHelper extends BaseHelper {
    }
 
    @Step("Проверка отображаения всех эелементов на форме Авторизации")
-   public void checkAllPopUpElementsIsDisplayed() {
+   public boolean isAllPopUpElementsDisplayed() {
       $(".popup__title").shouldBe(Condition.visible).shouldBe(Condition.text("Вход"));
       $x("//div[@class='authorization m-login']//ul[@class='authorization__social-networks']").shouldBe(Condition.visible);
       $(By.id("js-login-email")).shouldBe(Condition.visible).shouldHave(Condition.attribute("placeholder", "E-mail или номер телефона"));
@@ -68,6 +68,7 @@ public class AuthorizationHelper extends BaseHelper {
       $(".button.authorization__button.m-login").shouldBe(Condition.visible).shouldHave(Condition.text("Войти"));
       $x("//div[@class='authorization__login']//div[@class='m-t-xs_1']").shouldBe(Condition.visible);
       $x("//span[@data-bind='click: register']").shouldBe(Condition.visible);
+      return true;
    }
 
    @Step("Отображения ошибки на форме PopUp")

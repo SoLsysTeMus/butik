@@ -53,11 +53,11 @@ public class ProductCardTests extends BaseTest {
    @Severity(SeverityLevel.CRITICAL)
    @Test
    public void testAddItemWithOutSizesToAuthCart() {
-      String testLoginEmail = "auth_test2@auth.test";
-      String testPassword = "12345";
+      String login = testDataProperties.getProperty("authDataLogin");
+      String password = testDataProperties.getProperty("authDataPassword");
 
       app.navigation().openAuthorizationPopUp();
-      app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
+      app.authorization().fillPopUpAuthorizationForm(login, password);
       app.authorization().submitPopUpLoginData();
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-colorit-tube-gold-krem/");
       app.productCard().addToCart();
@@ -73,13 +73,13 @@ public class ProductCardTests extends BaseTest {
 
    @Title("Добавление размерного товара в корзину для авторизованного пользователя")
    @Severity(SeverityLevel.CRITICAL)
-   @Test
+   @Test(dependsOnMethods = "testAddItemWithOutSizesToAuthCart")
    public void testAddItemWithSizesToAuthCart() {
-      String testLoginEmail = "auth_test@auth.test";
-      String testPassword = "12345";
+      String login = testDataProperties.getProperty("authDataLogin");
+      String password = testDataProperties.getProperty("authDataPassword");
 
       app.navigation().openAuthorizationPopUp();
-      app.authorization().fillPopUpAuthorizationForm(testLoginEmail, testPassword);
+      app.authorization().fillPopUpAuthorizationForm(login, password);
       app.authorization().submitPopUpLoginData();
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-odezhda-dzhinsy-skinni-alcott-5t2952dw649-grey-dzhinsy/");
       app.productCard().selectSize(1);
