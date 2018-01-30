@@ -1,7 +1,6 @@
 package appmanager.helpers.header;
 
 import appmanager.helpers.BaseHelper;
-import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;
 
@@ -42,20 +41,20 @@ public class HeaderHelper extends BaseHelper {
       $(".header__search").click();
    }
 
-   public void checkSearchFieldIsVisible() {
-      $(By.xpath("//input[contains(@placeholder,'Что вы ищете?')]")).shouldBe(Condition.visible);
+   public boolean isSearchFieldVisible() {
+      return $(By.xpath("//input[contains(@placeholder,'Что вы ищете?')]")).is(Condition.visible);
    }
 
-   public void checkAboutLinkIsActive() {
-      $(By.xpath("//div[contains(@class,'hidden-xs')]//a[contains(@class,'store  active')]")).shouldBe(Condition.visible);
+   public boolean isAboutLinkActive() {
+      return $(By.xpath("//div[contains(@class,'hidden-xs')]//a[contains(@class,'store  active')]")).is(Condition.visible);
    }
 
-   public void checkSearchButtonIsVisible() {
-      $(By.xpath("//div[contains(@data-bind,'sendQuery')]")).shouldBe(Condition.visible);
+   public boolean isSearchButtonVisible() {
+      return $(By.xpath("//div[contains(@data-bind,'sendQuery')]")).is(Condition.visible);
    }
 
-   public void checkHintsIsVisible() {
-      $$(By.xpath("//div[contains(@class,'hints')]//li")).shouldBe(CollectionCondition.sizeGreaterThan(0));
+   public int getHintsCount() {
+      return $$(By.xpath("//div[contains(@class,'hints')]//li")).size();
    }
 
    public void checkCartIsEmpty() {

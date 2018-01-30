@@ -12,6 +12,7 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static ru.yandex.qatools.allure.model.SeverityLevel.*;
 
 @Features("Каталог")
 public class CatalogTests extends BaseTest {
@@ -21,7 +22,7 @@ public class CatalogTests extends BaseTest {
       app.navigation().openUrl(Configuration.baseUrl);
    }
 
-   @Severity(SeverityLevel.BLOCKER)
+   @Severity(BLOCKER)
    @Title("Количество товаров в категории > 0")
    @Test
    public void testCatalogItemCountAboveZero() {

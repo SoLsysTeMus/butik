@@ -39,8 +39,6 @@ public class BaseTest {
    @BeforeMethod
    public void setUp() {
       setConfig(systemProperties, testProperties);
-      app.init();
-
       open(baseUrl);
    }
 
@@ -48,8 +46,6 @@ public class BaseTest {
 
       if (!systemProperties.containsKey("gradle")) {
          Configuration.browser = "chrome";
-      } else if (Configuration.browser.equals("opera")) {
-         Configuration.browserBinary = "/usr/bin/opera-beta";
       }
 
       baseUrl = testProperties.getProperty("baseUrl");
@@ -60,7 +56,6 @@ public class BaseTest {
       Configuration.screenshots = Boolean.parseBoolean(testProperties.getProperty("screenshots"));
       Configuration.timeout = baseTimeout;
    }
-
 
    @AfterMethod
    public void teardown() {

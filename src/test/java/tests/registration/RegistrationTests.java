@@ -6,8 +6,9 @@ import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Features;
 import ru.yandex.qatools.allure.annotations.Severity;
 import ru.yandex.qatools.allure.annotations.Title;
-import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
+
+import static ru.yandex.qatools.allure.model.SeverityLevel.*;
 
 @Features("Регистрация")
 public class RegistrationTests extends BaseTest {
@@ -18,12 +19,12 @@ public class RegistrationTests extends BaseTest {
    }
 
    @Title("Регистрация пользователя через Pop-up")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void testRegistrationWithValidDataPopUp() {
-
+      long now = System.currentTimeMillis();
       String name = "Test";
-      String randomEmail = "test" + (int) (Math.random() * 20000) + "@test" + (int) (Math.random() * 20000) + ".ru";
+      String randomEmail = "autoTest" + now + "@autoTest" + now + ".ru";
       String password = "12345";
 
       logger.info("Generated email for testRegistrationWithValidDataPopUp = " + randomEmail);
@@ -35,12 +36,12 @@ public class RegistrationTests extends BaseTest {
    }
 
    @Title("Регистрация пользователя через страницу /register")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void testRegistrationWithValidData() {
-
+      long now = System.currentTimeMillis();
       String name = "Test";
-      String randomEmail = "test" + (int) (Math.random() * 20000) + "@test" + (int) (Math.random() * 20000) + ".ru";
+      String randomEmail = "autoTest" + now + "@autoTest" + now + ".ru";
       String password = "12345";
 
       logger.info("Generated email for testRegistrationWithValidData = " + randomEmail);

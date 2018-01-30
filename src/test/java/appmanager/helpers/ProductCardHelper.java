@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 import static tests.BaseTest.baseTimeout;
 
-public class ProductCardHelpers extends BaseHelper {
+public class ProductCardHelper extends BaseHelper {
 
    @Step("Добавление товара в WishList из карточки товара")
    public void addToWishlist() {

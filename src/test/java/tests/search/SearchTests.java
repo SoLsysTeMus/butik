@@ -10,12 +10,13 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static ru.yandex.qatools.allure.model.SeverityLevel.*;
 
 @Features("Поиск")
 public class SearchTests extends BaseTest {
 
    @Title("Поиск товара по названию")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void searchByName() {
       app.navigation().openUrl(baseUrl);
@@ -27,7 +28,7 @@ public class SearchTests extends BaseTest {
    }
 
    @Title("Поиск товара по неполному SKU")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void searchByPartOfSKU() {
       app.navigation().openUrl(baseUrl);
@@ -39,7 +40,7 @@ public class SearchTests extends BaseTest {
    }
 
    @Title("Поиск товара по SKU")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void searchBySku() {
       app.navigation().openUrl(baseUrl);
@@ -52,7 +53,7 @@ public class SearchTests extends BaseTest {
    }
 
    @Title("Поиск товара по SKU включающего спецсимвол")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void searchBySkuWithSpecialChar() {
       app.navigation().openUrl(baseUrl);
@@ -65,7 +66,7 @@ public class SearchTests extends BaseTest {
    }
 
    @Title("Поиск товара по Brand name включающего спецсимвол")
-   @Severity(SeverityLevel.CRITICAL)
+   @Severity(CRITICAL)
    @Test
    public void searchByBrandNameWithSpecialChar() {
       app.navigation().openUrl(baseUrl);

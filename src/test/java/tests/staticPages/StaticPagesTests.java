@@ -8,11 +8,13 @@ import ru.yandex.qatools.allure.annotations.Title;
 import ru.yandex.qatools.allure.model.SeverityLevel;
 import tests.BaseTest;
 
+import static ru.yandex.qatools.allure.model.SeverityLevel.*;
+
 @Features("Статические страницы")
 public class StaticPagesTests extends BaseTest {
 
    @Title("Доступность страницы \"Универмаг\"")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testCheckOpenAboutPage() {
       app.footer().gotoStaticPage("Универмаг");
@@ -20,7 +22,7 @@ public class StaticPagesTests extends BaseTest {
    }
 
    @Title("Доступность страницы \"Контакты\"")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testCheckOpenContactPage() {
       app.footer().gotoStaticPage("Контакты");
@@ -28,7 +30,7 @@ public class StaticPagesTests extends BaseTest {
    }
 
    @Title("Доступность страницы \"Доставка\"")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testCheckOpenDeliveryPage() {
       app.footer().gotoStaticPage("Доставка");
@@ -36,7 +38,7 @@ public class StaticPagesTests extends BaseTest {
    }
 
    @Title("Доступность страницы \"Возврат\"")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testCheckOpenRefundPage() {
       app.footer().gotoStaticPage("Возврат");
@@ -44,7 +46,7 @@ public class StaticPagesTests extends BaseTest {
    }
 
    @Title("Доступность страницы \"Текущие акции\"")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testCheckOpenPromoInformationPage() {
       app.footer().gotoStaticPage("Текущие акции");
@@ -52,7 +54,7 @@ public class StaticPagesTests extends BaseTest {
    }
 
    @Title("Доступность страницы \"Клубная система\"")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testCheckOpenClubCardPage() {
       app.footer().gotoStaticPage("Клубная система");
@@ -60,7 +62,7 @@ public class StaticPagesTests extends BaseTest {
    }
 
    @Title("Доступность страницы \"Сертификаты\"")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testCheckOpenCertificatesPage() {
       app.footer().gotoStaticPage("Сертификаты");
@@ -68,7 +70,7 @@ public class StaticPagesTests extends BaseTest {
    }
 
    @Title("Доступность страницы \"Таблица размеров\"")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testCheckOpenSizesTablePage() {
       app.footer().gotoStaticPage("Таблица размеров");
@@ -76,7 +78,7 @@ public class StaticPagesTests extends BaseTest {
    }
 
    @Title("Доступность страницы \"Полезная информация\"")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testCheckOpenHelpfulInfoPage() {
       app.footer().gotoStaticPage("Полезная информация");
@@ -84,7 +86,7 @@ public class StaticPagesTests extends BaseTest {
    }
 
    @Title("Доступность страницы \"Задать вопрос\"")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testCheckOpenFeedbackPage() {
       app.footer().gotoStaticPage("Задать вопрос");
@@ -92,7 +94,7 @@ public class StaticPagesTests extends BaseTest {
    }
 
    @Title("Доступность страницы \"Отзывы на Яндекс\"")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testCheckOpenReviewsOnYandexPage() {
       app.footer().gotoStaticPage("Отзывы на");
@@ -100,7 +102,7 @@ public class StaticPagesTests extends BaseTest {
    }
 
    @Title("Доступность страницы \"Оферта\"")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testCheckOpenOfferPage() {
       app.footer().gotoStaticPage("Оферта");
@@ -108,7 +110,7 @@ public class StaticPagesTests extends BaseTest {
    }
 
    @Title("Доступность страницы \"Instashop\"")
-   @Severity(SeverityLevel.NORMAL)
+   @Severity(NORMAL)
    @Test
    public void testCheckOpenInstashopPage() {
       app.footer().gotoStaticPage("Instashop");
