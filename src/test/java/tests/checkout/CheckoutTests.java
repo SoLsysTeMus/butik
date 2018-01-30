@@ -33,7 +33,7 @@ public class CheckoutTests extends BaseTest {
       app.authorization().submitPopUpLoginData();
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-gubka/");
       app.productCard().addToCart();
-      app.productCard().pressCheckoutButtonOnPopUp();
+      app.header().pressCheckoutButtonOnPopUp();
       app.checkout().submitOrder();
 
       Assert.assertTrue(app.checkout().isSuccessOrder());
@@ -54,7 +54,7 @@ public class CheckoutTests extends BaseTest {
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-odezhda-dzhinsy-skinni-alcott-5t2952dw649-grey-dzhinsy/");
       app.productCard().selectSize(1);
       app.productCard().addToCart();
-      app.productCard().pressCheckoutButtonOnPopUp();
+      app.header().pressCheckoutButtonOnPopUp();
       app.checkout().addNewAddress();
       app.checkout().selectCityForDelivery("Москва");
       app.checkout().selectDeliveryService("Butik доставка");
@@ -74,7 +74,7 @@ public class CheckoutTests extends BaseTest {
 
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-obuv-sredstva-po-ukhodu-za-obuvyu-collonil-mobil-gubka/");
       app.productCard().addToCart();
-      app.productCard().pressCheckoutButtonOnPopUp();
+      app.header().pressCheckoutButtonOnPopUp();
       app.checkout().fillBuyerFrom(name, phone, email);
       app.checkout().selectCityForDelivery("Анапа");
       app.checkout().selectDeliveryService("DPD курьерская доставка");
@@ -98,7 +98,7 @@ public class CheckoutTests extends BaseTest {
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-odezhda-dzhinsy-skinni-alcott-5t2952dw649-grey-dzhinsy/");
       app.productCard().selectSize(1);
       app.productCard().addToCart();
-      app.productCard().pressCheckoutButtonOnPopUp();
+      app.header().pressCheckoutButtonOnPopUp();
       app.checkout().fillBuyerFrom(name, phone, email);
       app.checkout().selectCityForDelivery("Москва");
       app.checkout().selectDeliveryService("Доставка до пункта выдачи");

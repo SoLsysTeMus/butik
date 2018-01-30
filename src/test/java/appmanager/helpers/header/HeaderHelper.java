@@ -3,6 +3,7 @@ package appmanager.helpers.header;
 import appmanager.helpers.BaseHelper;
 import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -67,5 +68,10 @@ public class HeaderHelper extends BaseHelper {
 
    public void pressSearchButton() {
       $(By.xpath("//div[contains(@data-bind,'sendQuery')]")).shouldBe(Condition.visible).click();
+   }
+
+   @Step("Нажатие кнопки \"Оформить заказ\" на PopUp")
+   public void pressCheckoutButtonOnPopUp() {
+      click(By.xpath("//a[contains(text(),'ОФОРМИТЬ ЗАКАЗ')]"));
    }
 }

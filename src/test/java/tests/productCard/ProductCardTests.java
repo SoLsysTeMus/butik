@@ -33,7 +33,7 @@ public class ProductCardTests extends BaseTest {
       app.productCard().addToCart();
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-sumki-sumki-malenkie-sumki-i-klatchi-fornarina-ae17be207p094-klatch/");
       app.productCard().addToCart();
-      app.productCard().pressCheckoutButtonOnPopUp();
+      app.header().pressCheckoutButtonOnPopUp();
 
       Assert.assertEquals(app.checkout().getCartItemsCount().size(), 2);
    }
@@ -45,7 +45,7 @@ public class ProductCardTests extends BaseTest {
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-odezhda-dzhinsy-skinni-alcott-5t2952dw649-grey-dzhinsy/");
       app.productCard().selectSize(1);
       app.productCard().addToCart();
-      app.productCard().pressCheckoutButtonOnPopUp();
+      app.header().pressCheckoutButtonOnPopUp();
 
       Assert.assertEquals(app.checkout().getCartItemsCount().size(), 1);
    }
@@ -64,7 +64,7 @@ public class ProductCardTests extends BaseTest {
       app.productCard().addToCart();
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-sumki-sumki-malenkie-sumki-i-klatchi-fornarina-ae17be207p094-klatch/");
       app.productCard().addToCart();
-      app.productCard().pressCheckoutButtonOnPopUp();
+      app.header().pressCheckoutButtonOnPopUp();
 
       Assert.assertEquals(app.checkout().getCartItemsCount().size(), 2);
 
@@ -85,7 +85,7 @@ public class ProductCardTests extends BaseTest {
       app.navigation().openUrl(baseUrl + "products/zhenshchinam-odezhda-dzhinsy-skinni-alcott-5t2952dw649-grey-dzhinsy/");
       app.productCard().selectSize(1);
       app.productCard().addToCart();
-      app.productCard().pressCheckoutButtonOnPopUp();
+      app.header().pressCheckoutButtonOnPopUp();
 
       Assert.assertEquals(app.checkout().getCartItemsCount().size(), 1);
       app.checkout().removeAllProducts();

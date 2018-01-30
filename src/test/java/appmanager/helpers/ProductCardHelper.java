@@ -38,11 +38,6 @@ public class ProductCardHelper extends BaseHelper {
       click(By.xpath("//button[contains(@data-bind,'addToCart')]"));
    }
 
-   @Step("Нажатие кнопки \"Оформить заказ\" на PopUp")
-   public void pressCheckoutButtonOnPopUp() {
-      click(By.xpath("//a[contains(text(),'Оформить заказ')]"));
-   }
-
    public List getProductRusSizes() {
 
       List<String> sizes = new ArrayList<>();
