@@ -46,8 +46,6 @@ public class BaseTest {
 
       if (!systemProperties.containsKey("gradle")) {
          Configuration.browser = "chrome";
-      } else if (Configuration.browser.equals("opera")) {
-         Configuration.browserBinary = "/usr/bin/opera-beta";
       }
 
       baseUrl = testProperties.getProperty("baseUrl");
